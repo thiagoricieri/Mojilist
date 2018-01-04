@@ -1,0 +1,22 @@
+{
+  "name": "Saw",
+  "version": "0.1.0",
+  "summary": "A short description of Saw.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/thiagoricieri/Saw",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "thiagoricieri": "thiago.ricieri@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/thiagoricieri/Saw.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Saw/Pod/**/*"
+}

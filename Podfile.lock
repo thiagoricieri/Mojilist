@@ -1,0 +1,21 @@
+PODS:
+  - Saw (0.1.0)
+
+DEPENDENCIES:
+  - Saw (from `https://github.com/thiagoricieri/Saw-iOS.git`)
+
+EXTERNAL SOURCES:
+  Saw:
+    :git: https://github.com/thiagoricieri/Saw-iOS.git
+
+CHECKOUT OPTIONS:
+  Saw:
+    :commit: 617ee5ae336356764bac96085b8d9abf1a721172
+    :git: https://github.com/thiagoricieri/Saw-iOS.git
+
+SPEC CHECKSUMS:
+  Saw: bdb357186d16670f919f44306ae2f81836c79052
+
+PODFILE CHECKSUM: 3ac3e4aae49c964d5401ea864bb128b473011165
+
+COCOAPODS: 1.4.0.rc.1
