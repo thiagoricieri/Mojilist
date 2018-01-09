@@ -11,7 +11,7 @@
 		38B9BD12E67C93F4457D853C /* Pods_Emojilist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA8F7FA04B9CF012E9ADACA /* Pods_Emojilist.framework */; };
 		A9ED710255E3A6AFF67D9DBF /* Pods_EmojilistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B10D6AB784EDC4883C172BB /* Pods_EmojilistUITests.framework */; };
 		B01C292D1FEAA46300C1AF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C292C1FEAA46300C1AF22 /* AppDelegate.swift */; };
-		B01C292F1FEAA46300C1AF22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C292E1FEAA46300C1AF22 /* ViewController.swift */; };
+		B01C292F1FEAA46300C1AF22 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C292E1FEAA46300C1AF22 /* ListsViewController.swift */; };
 		B01C29341FEAA46300C1AF22 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01C29331FEAA46300C1AF22 /* assets.xcassets */; };
 		B01C29421FEAA46300C1AF22 /* EmojilistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C29411FEAA46300C1AF22 /* EmojilistTests.swift */; };
 		B01C294D1FEAA46300C1AF22 /* EmojilistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C294C1FEAA46300C1AF22 /* EmojilistUITests.swift */; };
@@ -27,6 +27,12 @@
 		B035FE0E1FFE5FE6003A332B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035FE0B1FFE5FE6003A332B /* Extensions.swift */; };
 		B035FE0F1FFE5FE6003A332B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035FE0C1FFE5FE6003A332B /* Operators.swift */; };
 		B0D119582004FC3E005B2CBB /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D119572004FC3E005B2CBB /* Launcher.swift */; };
+		B0D1195C20050703005B2CBB /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D1195B20050703005B2CBB /* Store.storyboard */; };
+		B0D1195E20050711005B2CBB /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D1195D20050711005B2CBB /* About.storyboard */; };
+		B0D119612005074C005B2CBB /* StoryboardContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D119602005074C005B2CBB /* StoryboardContext.swift */; };
+		B0D11967200508AC005B2CBB /* CreateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D11966200508AC005B2CBB /* CreateListViewController.swift */; };
+		B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D11968200508C1005B2CBB /* AboutViewController.swift */; };
+		B0D1196B200508D7005B2CBB /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1196A200508D7005B2CBB /* StoreViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +60,7 @@
 		6E3FA68C9C4C7C455BF80C4A /* Pods-Emojilist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emojilist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emojilist/Pods-Emojilist.release.xcconfig"; sourceTree = "<group>"; };
 		B01C29291FEAA46300C1AF22 /* Emojilist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emojilist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01C292C1FEAA46300C1AF22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B01C292E1FEAA46300C1AF22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B01C292E1FEAA46300C1AF22 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
 		B01C29331FEAA46300C1AF22 /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = assets.xcassets; sourceTree = "<group>"; };
 		B01C29381FEAA46300C1AF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B01C293D1FEAA46300C1AF22 /* EmojilistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojilistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +81,12 @@
 		B035FE0B1FFE5FE6003A332B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B035FE0C1FFE5FE6003A332B /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		B0D119572004FC3E005B2CBB /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
+		B0D1195B20050703005B2CBB /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
+		B0D1195D20050711005B2CBB /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		B0D119602005074C005B2CBB /* StoryboardContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardContext.swift; sourceTree = "<group>"; };
+		B0D11966200508AC005B2CBB /* CreateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListViewController.swift; sourceTree = "<group>"; };
+		B0D11968200508C1005B2CBB /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		B0D1196A200508D7005B2CBB /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		B2B70D1DCBD46AA3E171A8F4 /* Pods-EmojilistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojilistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojilistTests/Pods-EmojilistTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB0A7D7F2B5B4BAE3E1E4ECD /* Pods-EmojilistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojilistUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojilistUITests/Pods-EmojilistUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D782899657D80424DE5D977F /* Pods-Emojilist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emojilist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emojilist/Pods-Emojilist.debug.xcconfig"; sourceTree = "<group>"; };
@@ -189,6 +201,7 @@
 				B0D119572004FC3E005B2CBB /* Launcher.swift */,
 				B035FE011FFE5E8E003A332B /* Funcs.swift */,
 				B035FE0C1FFE5FE6003A332B /* Operators.swift */,
+				B0D119602005074C005B2CBB /* StoryboardContext.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -196,7 +209,10 @@
 		B035FDF61FFE5DAF003A332B /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B01C292E1FEAA46300C1AF22 /* ViewController.swift */,
+				B0D11965200507CB005B2CBB /* creating */,
+				B0D11964200507C5005B2CBB /* listing */,
+				B0D11963200507C1005B2CBB /* about */,
+				B0D11962200507B5005B2CBB /* store */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -205,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				B035FDFB1FFE5E1F003A332B /* Main.storyboard */,
+				B0D1195D20050711005B2CBB /* About.storyboard */,
+				B0D1195B20050703005B2CBB /* Store.storyboard */,
 				B035FDFA1FFE5E1F003A332B /* LaunchScreen.storyboard */,
 			);
 			path = views;
@@ -213,6 +231,8 @@
 		B035FDF81FFE5DBC003A332B /* models */ = {
 			isa = PBXGroup;
 			children = (
+				B0D1195A2005069F005B2CBB /* local */,
+				B0D119592005069B005B2CBB /* external */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -231,6 +251,52 @@
 				B035FE0A1FFE5FE6003A332B /* Router.swift */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		B0D119592005069B005B2CBB /* external */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = external;
+			sourceTree = "<group>";
+		};
+		B0D1195A2005069F005B2CBB /* local */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = local;
+			sourceTree = "<group>";
+		};
+		B0D11962200507B5005B2CBB /* store */ = {
+			isa = PBXGroup;
+			children = (
+				B0D1196A200508D7005B2CBB /* StoreViewController.swift */,
+			);
+			path = store;
+			sourceTree = "<group>";
+		};
+		B0D11963200507C1005B2CBB /* about */ = {
+			isa = PBXGroup;
+			children = (
+				B0D11968200508C1005B2CBB /* AboutViewController.swift */,
+			);
+			path = about;
+			sourceTree = "<group>";
+		};
+		B0D11964200507C5005B2CBB /* listing */ = {
+			isa = PBXGroup;
+			children = (
+				B01C292E1FEAA46300C1AF22 /* ListsViewController.swift */,
+			);
+			path = listing;
+			sourceTree = "<group>";
+		};
+		B0D11965200507CB005B2CBB /* creating */ = {
+			isa = PBXGroup;
+			children = (
+				B0D11966200508AC005B2CBB /* CreateListViewController.swift */,
+			);
+			path = creating;
 			sourceTree = "<group>";
 		};
 		E4247954843961EC9577E195 /* Frameworks */ = {
@@ -361,6 +427,8 @@
 			files = (
 				B035FDFC1FFE5E1F003A332B /* LaunchScreen.storyboard in Resources */,
 				B01C29341FEAA46300C1AF22 /* assets.xcassets in Resources */,
+				B0D1195E20050711005B2CBB /* About.storyboard in Resources */,
+				B0D1195C20050703005B2CBB /* Store.storyboard in Resources */,
 				B035FDF21FFE5C73003A332B /* fastlane in Resources */,
 				B035FDFD1FFE5E1F003A332B /* Main.storyboard in Resources */,
 			);
@@ -551,14 +619,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0D11967200508AC005B2CBB /* CreateListViewController.swift in Sources */,
+				B0D119612005074C005B2CBB /* StoryboardContext.swift in Sources */,
 				B035FE0D1FFE5FE6003A332B /* Router.swift in Sources */,
 				B035FE0F1FFE5FE6003A332B /* Operators.swift in Sources */,
 				B035FE061FFE5E8F003A332B /* Constants.swift in Sources */,
+				B0D1196B200508D7005B2CBB /* StoreViewController.swift in Sources */,
 				B035FE041FFE5E8F003A332B /* AppConfig.swift in Sources */,
-				B01C292F1FEAA46300C1AF22 /* ViewController.swift in Sources */,
+				B01C292F1FEAA46300C1AF22 /* ListsViewController.swift in Sources */,
 				B035FE081FFE5E8F003A332B /* Aliases.swift in Sources */,
 				B0D119582004FC3E005B2CBB /* Launcher.swift in Sources */,
 				B035FE071FFE5E8F003A332B /* Funcs.swift in Sources */,
+				B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */,
 				B035FE091FFE5E8F003A332B /* App.swift in Sources */,
 				B01C292D1FEAA46300C1AF22 /* AppDelegate.swift in Sources */,
 				B035FE0E1FFE5FE6003A332B /* Extensions.swift in Sources */,
