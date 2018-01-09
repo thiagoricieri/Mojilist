@@ -10,6 +10,7 @@ def shared_pods
     pod 'RealmSwift'
     pod 'Google/Analytics'
     pod 'HTTPStatusCodes', '~> 3.1.0'
+    pod 'DateToolsSwift'
 end
 
 target 'Emojilist' do

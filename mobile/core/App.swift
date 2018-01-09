@@ -12,10 +12,7 @@ import DateToolsSwift
 public protocol App {
 	
 	var config: AppConfig { get }
-	var bundle: LocalBundle { get }
 	var documentPath: String { get }
-    
-    var currentUser: User? { get set }
 	
 	var humamFormatter: DateFormatter { get }
 	var posixFormatter: DateFormatter { get }
@@ -33,11 +30,8 @@ public protocol App {
 
 // MARK: - Production App
 open class ProductionAppImpl: App {
-    
-    public var currentUser: User?
 	
 	fileprivate(set) public var config: AppConfig
-	fileprivate(set) public var bundle: LocalBundle
 	fileprivate(set) public var documentPath:String
 	
 	fileprivate(set) public lazy var humamFormatter: DateFormatter = self.initHumanFormatter()
@@ -48,32 +42,33 @@ open class ProductionAppImpl: App {
 	
 	public init() {
 		self.config = ProductionAppConfigImpl()
-		self.bundle = LocalBundleImpl()
 		self.documentPath = ""
-        self.currentUser = self.bundle.loadUser()
 	}
-    
-    public func userLogout() {
-        currentUser = nil
-    }
 	
 	// Init formatters
 	fileprivate func initHumanFormatter() -> DateFormatter {
-        return DateFormatter(dateFormat: "dd/MM/yyyy")
+        let df = DateFormatter()
+        df.dateFormat = "dd/MM/yyyy"
+        return df
 	}
     
 	fileprivate func initPosixFormatter() -> DateFormatter {
-		let df = DateFormatter(dateFormat: "yyyyMMdd'T'HHmmssZZZ")
-		df.locale = Locale(identifier:"en_US_POSIX")
-		return df
+        let df = DateFormatter()
+        df.dateFormat = "yyyyMMdd'T'HHmmssZZZ"
+        df.locale = Locale(identifier:"en_US_POSIX")
+        return df
 	}
     
 	fileprivate func initSqlFormatter() -> DateFormatter {
-		return DateFormatter(dateFormat: "yyyy-MM-dd HH:mm:ss")
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return df
 	}
     
     fileprivate func initSimpleSqlFormatter() -> DateFormatter {
-        return DateFormatter(dateFormat: "yyyy-MM-dd")
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd"
+        return df
     }
     
 	fileprivate func initCurrencyFormatter() -> NumberFormatter {
@@ -108,7 +103,8 @@ open class ProductionAppImpl: App {
     }
     
     public func dateToHuman(from: String, toFormat: String) -> String {
-        let df = DateFormatter(dateFormat: toFormat)
+        let df = DateFormatter()
+        df.dateFormat = toFormat
         if let date = sqlFormatter.date(from: from) {
             return df.string(from: date)
         }

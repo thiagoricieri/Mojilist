@@ -26,6 +26,7 @@
 		B035FE0D1FFE5FE6003A332B /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035FE0A1FFE5FE6003A332B /* Router.swift */; };
 		B035FE0E1FFE5FE6003A332B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035FE0B1FFE5FE6003A332B /* Extensions.swift */; };
 		B035FE0F1FFE5FE6003A332B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035FE0C1FFE5FE6003A332B /* Operators.swift */; };
+		B0D119562004F772005B2CBB /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D119552004F772005B2CBB /* Brain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		B035FE0A1FFE5FE6003A332B /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		B035FE0B1FFE5FE6003A332B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B035FE0C1FFE5FE6003A332B /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		B0D119552004F772005B2CBB /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		B2B70D1DCBD46AA3E171A8F4 /* Pods-EmojilistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojilistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojilistTests/Pods-EmojilistTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB0A7D7F2B5B4BAE3E1E4ECD /* Pods-EmojilistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojilistUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojilistUITests/Pods-EmojilistUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D782899657D80424DE5D977F /* Pods-Emojilist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emojilist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emojilist/Pods-Emojilist.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,8 +149,10 @@
 			isa = PBXGroup;
 			children = (
 				B01C292C1FEAA46300C1AF22 /* AppDelegate.swift */,
+				B0D119552004F772005B2CBB /* Brain.swift */,
 				B01C29381FEAA46300C1AF22 /* Info.plist */,
 				B035FDF51FFE5DA4003A332B /* core */,
+				B0D119542004F6CC005B2CBB /* data */,
 				B035FDF81FFE5DBC003A332B /* models */,
 				B035FDF61FFE5DAF003A332B /* controllers */,
 				B035FDF71FFE5DB5003A332B /* views */,
@@ -185,7 +189,6 @@
 				B035FE0B1FFE5FE6003A332B /* Extensions.swift */,
 				B035FE011FFE5E8E003A332B /* Funcs.swift */,
 				B035FE0C1FFE5FE6003A332B /* Operators.swift */,
-				B035FE0A1FFE5FE6003A332B /* Router.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -220,6 +223,14 @@
 				B01C29331FEAA46300C1AF22 /* assets.xcassets */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		B0D119542004F6CC005B2CBB /* data */ = {
+			isa = PBXGroup;
+			children = (
+				B035FE0A1FFE5FE6003A332B /* Router.swift */,
+			);
+			path = data;
 			sourceTree = "<group>";
 		};
 		E4247954843961EC9577E195 /* Frameworks */ = {
@@ -492,9 +503,26 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Emojilist/Pods-Emojilist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -527,6 +555,7 @@
 				B035FE0F1FFE5FE6003A332B /* Operators.swift in Sources */,
 				B035FE061FFE5E8F003A332B /* Constants.swift in Sources */,
 				B035FE041FFE5E8F003A332B /* AppConfig.swift in Sources */,
+				B0D119562004F772005B2CBB /* Brain.swift in Sources */,
 				B01C292F1FEAA46300C1AF22 /* ViewController.swift in Sources */,
 				B035FE081FFE5E8F003A332B /* Aliases.swift in Sources */,
 				B035FE071FFE5E8F003A332B /* Funcs.swift in Sources */,
@@ -682,7 +711,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8H5Z8M869P;
-				INFOPLIST_FILE = Emojilist/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/mobile/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ghostship.ios.Emojilist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -698,7 +727,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8H5Z8M869P;
-				INFOPLIST_FILE = Emojilist/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/mobile/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ghostship.ios.Emojilist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
