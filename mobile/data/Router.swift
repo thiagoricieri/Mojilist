@@ -13,7 +13,7 @@ import HTTPStatusCodes
 // MARK: - Router
 enum Router: URLRequestConvertible {
     
-    static let baseUrlString = Brain.app.config.restUrl
+    static let baseUrlString = ""
     
     // -------------------
     // MARK: - Me

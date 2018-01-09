@@ -11,13 +11,27 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var launcher = Launcher()
     var window: UIWindow?
+    var app: App = {
+        #if DEBUG
+            return StagingAppImpl()
+        #else
+            return ProductionAppImpl()
+        #endif
+    }()
 
     func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
-    -> Bool {
+        didFinishLaunchingWithOptions launchOptions: LaunchParams?) -> Bool {
         
-        
+        launcher
+            .setWindow(window)
+            .shouldProvideCredentials(false)
+            .setFabric()
+            .setFacebook()
+            .setTwitter()
+            .setLaunchOptions(launchOptions)
+            .startWith(app: app)
         
         return true
     }
