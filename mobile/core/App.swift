@@ -8,11 +8,13 @@
 
 import Foundation
 import DateToolsSwift
+import RealmSwift
 
 public protocol App {
 	
 	var config: AppConfig { get }
 	var documentPath: String { get }
+    var realm: Realm { get }
 	
 	var humamFormatter: DateFormatter { get }
 	var posixFormatter: DateFormatter { get }
@@ -32,8 +34,9 @@ public protocol App {
 open class ProductionAppImpl: App {
 	
 	fileprivate(set) public var config: AppConfig
-	fileprivate(set) public var documentPath:String
-	
+	fileprivate(set) public var documentPath: String
+    
+    fileprivate(set) public lazy var realm: Realm = self.initRealm()
 	fileprivate(set) public lazy var humamFormatter: DateFormatter = self.initHumanFormatter()
 	fileprivate(set) public lazy var posixFormatter: DateFormatter = self.initPosixFormatter()
     fileprivate(set) public lazy var sqlFormatter: DateFormatter = self.initSqlFormatter()
@@ -44,6 +47,10 @@ open class ProductionAppImpl: App {
 		self.config = ProductionAppConfigImpl()
 		self.documentPath = ""
 	}
+    
+    fileprivate func initRealm() -> Realm {
+        return try! Realm()
+    }
 	
 	// Init formatters
 	fileprivate func initHumanFormatter() -> DateFormatter {

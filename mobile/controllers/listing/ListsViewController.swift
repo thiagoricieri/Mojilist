@@ -8,15 +8,40 @@
 
 import UIKit
 
-class ListsViewController: UIViewController {
+protocol ListsView: BaseTableView {
+}
 
+class ListsViewController: BaseTableViewController, ListsView {
+    
+    @IBOutlet weak var newListButton: FloatButton!
+    @IBOutlet weak var storeButton: FloatButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        presenter = ListsPresenterImpl(view: self)
+        
+        title = "Lists.Title".localized
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListCell.identifier) as! ListCell
+        
+        let item = presenter.item(at: indexPath.row) as! REmojiList
+        cell.configure(with: item)
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return ListCell.cellHeight
+    }
+    
+    // MARK: - Button Actions
+    @IBAction func actionNewList(_ sender: UIView) {
+        successAlert(message: "New List!")
+    }
+    
+    @IBAction func actionStore(_ sender: UIView) {
+        successAlert(message: "Open Store!")
     }
 }

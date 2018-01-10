@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Emojilist
+
+  Created by Thiago Ricieri on 10/01/2018.
+  Copyright © 2018 Ghost Ship. All rights reserved.
+*/
+
+// Base
+"OK" = "OK";
+"Warning" = "Atenção!";
+"Success" = "Sucesso!";
+
+// Lists
+"Lists.Title" = "Suas listas";
