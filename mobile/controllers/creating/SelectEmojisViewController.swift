@@ -18,6 +18,7 @@ class SelectEmojisViewController: BaseCollectionViewController, SelectEmojisView
     var presenter: SelectEmojisPresenter!
     
     @IBOutlet weak var animationContainer: UIView!
+    @IBOutlet weak var createButton: UIButton!
     
     override func instantiateDependencies() {
         basePresenter = SelectEmojisPresenterImpl(view: self)
@@ -26,6 +27,8 @@ class SelectEmojisViewController: BaseCollectionViewController, SelectEmojisView
     
     override func setViewStyle() {
         title = "SelectEmojis.Title".localized
+        createButton.setTitle("SelectEmojis.Create".localized, for: .normal)
+        createButton.setTitle("SelectEmojis.Create".localized, for: .disabled)
     }
     
     override func prepareViewForUser() {

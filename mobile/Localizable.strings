@@ -20,4 +20,5 @@
 "CreateList.Label" = "Dê um nome à sua lista";
 
 // Select emojis
-"SelectEmojis.Title" = "Escolha os emojis!";
+"SelectEmojis.Title" = "O que vai na lista?";
+"SelectEmojis.Create" = "Criar";

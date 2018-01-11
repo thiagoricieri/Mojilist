@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,10 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launcher
             .setWindow(window)
             .shouldProvideCredentials(false)
+            .migrateRealm()
             .setFabric()
             .setFacebook()
             .setTwitter()
-            .migrateRealm()
             .setLaunchOptions(launchOptions)
             .startWith(app: app)
         

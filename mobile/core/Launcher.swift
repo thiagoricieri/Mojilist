@@ -79,6 +79,22 @@ public class Launcher {
         return self
     }
     
+    public func sampleEmojiData() -> Self {
+        let realm = try! Realm()
+        
+        let emojis = "🍎🥕🌵🍔🍖☕️🍏🍐🍊🍋🍌🍉🍇🍓🍈🍒🍑🍆🥥🍍🌶🌽🥝🍅🥔🥨🍞".map { return $0 }
+        
+        try! realm.write {
+            for ec in emojis {
+                let e = REmoji()
+                e.name = String(ec)
+                realm.add(e)
+            }
+        }
+        
+        return self
+    }
+    
     // MARK: - Third-Party Integrations
     
     public func setFacebook() -> Self {
