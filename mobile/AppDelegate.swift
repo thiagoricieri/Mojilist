@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .setFabric()
             .setFacebook()
             .setTwitter()
+            .migrateRealm()
             .setLaunchOptions(launchOptions)
             .startWith(app: app)
         

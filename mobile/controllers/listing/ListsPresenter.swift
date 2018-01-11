@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-protocol ListsPresenter: BaseTablePresenter {
+protocol ListsPresenter: BaseDataPresenter {
 }
 
 class ListsPresenterImpl: ListsPresenter {

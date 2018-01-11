@@ -29,19 +29,25 @@
 		B064A1BE200640F9001ADB0E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B064A1BD200640F9001ADB0E /* Localizable.strings */; };
 		B064A1C120064149001ADB0E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1C020064149001ADB0E /* BaseViewController.swift */; };
 		B064A1C320064353001ADB0E /* REmojiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1C220064353001ADB0E /* REmojiList.swift */; };
-		B064A1C52006440E001ADB0E /* REmojiItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1C42006440E001ADB0E /* REmojiItem.swift */; };
+		B064A1C52006440E001ADB0E /* REmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1C42006440E001ADB0E /* REmoji.swift */; };
 		B064A1C7200644C4001ADB0E /* REmojiPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1C6200644C4001ADB0E /* REmojiPack.swift */; };
 		B064A1C92006455F001ADB0E /* REmojiPackItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1C82006455F001ADB0E /* REmojiPackItem.swift */; };
 		B064A1CD20064825001ADB0E /* ListsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1CC20064825001ADB0E /* ListsPresenter.swift */; };
 		B064A1CF20064A5E001ADB0E /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1CE20064A5E001ADB0E /* BasePresenter.swift */; };
 		B064A1D120064A74001ADB0E /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D020064A74001ADB0E /* BaseView.swift */; };
 		B064A1D320064AC7001ADB0E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D220064AC7001ADB0E /* BaseTableViewController.swift */; };
-		B064A1D720064B0E001ADB0E /* BaseTablePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D620064B0E001ADB0E /* BaseTablePresenter.swift */; };
+		B064A1D720064B0E001ADB0E /* BaseDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */; };
 		B064A1D920064ED4001ADB0E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */; };
 		B064A1DB20064F21001ADB0E /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DA20064F21001ADB0E /* ListCell.swift */; };
 		B064A1DD200658BC001ADB0E /* FloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DC200658BC001ADB0E /* FloatButton.swift */; };
 		B089DE9D200793AE002D3879 /* MainStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DE9C200793AE002D3879 /* MainStoryboard.swift */; };
 		B089DE9F20079507002D3879 /* CreateListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DE9E20079507002D3879 /* CreateListPresenter.swift */; };
+		B089DEA120079BF1002D3879 /* SelectEmojisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEA020079BF1002D3879 /* SelectEmojisViewController.swift */; };
+		B089DEA320079BFD002D3879 /* SelectEmojisPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEA220079BFD002D3879 /* SelectEmojisPresenter.swift */; };
+		B089DEA720079F88002D3879 /* BaseEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEA620079F88002D3879 /* BaseEmojiCell.swift */; };
+		B089DEA920079FE7002D3879 /* AsciiEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEA820079FE7002D3879 /* AsciiEmojiCell.swift */; };
+		B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */; };
+		B089DEAD2007A1F7002D3879 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */; };
 		B0D119582004FC3E005B2CBB /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D119572004FC3E005B2CBB /* Launcher.swift */; };
 		B0D1195C20050703005B2CBB /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D1195B20050703005B2CBB /* Store.storyboard */; };
 		B0D1195E20050711005B2CBB /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D1195D20050711005B2CBB /* About.storyboard */; };
@@ -99,19 +105,25 @@
 		B064A1BD200640F9001ADB0E /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		B064A1C020064149001ADB0E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B064A1C220064353001ADB0E /* REmojiList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REmojiList.swift; sourceTree = "<group>"; };
-		B064A1C42006440E001ADB0E /* REmojiItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REmojiItem.swift; sourceTree = "<group>"; };
+		B064A1C42006440E001ADB0E /* REmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REmoji.swift; sourceTree = "<group>"; };
 		B064A1C6200644C4001ADB0E /* REmojiPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REmojiPack.swift; sourceTree = "<group>"; };
 		B064A1C82006455F001ADB0E /* REmojiPackItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = REmojiPackItem.swift; sourceTree = "<group>"; };
 		B064A1CC20064825001ADB0E /* ListsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsPresenter.swift; sourceTree = "<group>"; };
 		B064A1CE20064A5E001ADB0E /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		B064A1D020064A74001ADB0E /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		B064A1D220064AC7001ADB0E /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
-		B064A1D620064B0E001ADB0E /* BaseTablePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTablePresenter.swift; sourceTree = "<group>"; };
+		B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataPresenter.swift; sourceTree = "<group>"; };
 		B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		B064A1DA20064F21001ADB0E /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		B064A1DC200658BC001ADB0E /* FloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatButton.swift; sourceTree = "<group>"; };
 		B089DE9C200793AE002D3879 /* MainStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryboard.swift; sourceTree = "<group>"; };
 		B089DE9E20079507002D3879 /* CreateListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListPresenter.swift; sourceTree = "<group>"; };
+		B089DEA020079BF1002D3879 /* SelectEmojisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmojisViewController.swift; sourceTree = "<group>"; };
+		B089DEA220079BFD002D3879 /* SelectEmojisPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmojisPresenter.swift; sourceTree = "<group>"; };
+		B089DEA620079F88002D3879 /* BaseEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseEmojiCell.swift; sourceTree = "<group>"; };
+		B089DEA820079FE7002D3879 /* AsciiEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsciiEmojiCell.swift; sourceTree = "<group>"; };
+		B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEmojiCell.swift; sourceTree = "<group>"; };
+		B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 		B0D119572004FC3E005B2CBB /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		B0D1195B20050703005B2CBB /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
 		B0D1195D20050711005B2CBB /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
@@ -243,8 +255,10 @@
 			isa = PBXGroup;
 			children = (
 				B064A1BF2006413B001ADB0E /* common */,
+				B089DEA420079E74002D3879 /* launch */,
 				B0D11964200507C5005B2CBB /* listing */,
 				B0D11965200507CB005B2CBB /* creating */,
+				B089DEA520079F6E002D3879 /* collection */,
 				B0D11963200507C1005B2CBB /* about */,
 				B0D11962200507B5005B2CBB /* store */,
 			);
@@ -287,11 +301,29 @@
 				B064A1C020064149001ADB0E /* BaseViewController.swift */,
 				B064A1D020064A74001ADB0E /* BaseView.swift */,
 				B064A1D220064AC7001ADB0E /* BaseTableViewController.swift */,
-				B064A1D620064B0E001ADB0E /* BaseTablePresenter.swift */,
 				B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */,
+				B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */,
+				B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */,
 				B064A1DC200658BC001ADB0E /* FloatButton.swift */,
 			);
 			path = common;
+			sourceTree = "<group>";
+		};
+		B089DEA420079E74002D3879 /* launch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = launch;
+			sourceTree = "<group>";
+		};
+		B089DEA520079F6E002D3879 /* collection */ = {
+			isa = PBXGroup;
+			children = (
+				B089DEA620079F88002D3879 /* BaseEmojiCell.swift */,
+				B089DEA820079FE7002D3879 /* AsciiEmojiCell.swift */,
+				B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */,
+			);
+			path = collection;
 			sourceTree = "<group>";
 		};
 		B0D119542004F6CC005B2CBB /* data */ = {
@@ -313,7 +345,7 @@
 			isa = PBXGroup;
 			children = (
 				B064A1C220064353001ADB0E /* REmojiList.swift */,
-				B064A1C42006440E001ADB0E /* REmojiItem.swift */,
+				B064A1C42006440E001ADB0E /* REmoji.swift */,
 				B064A1C6200644C4001ADB0E /* REmojiPack.swift */,
 				B064A1C82006455F001ADB0E /* REmojiPackItem.swift */,
 			);
@@ -351,6 +383,8 @@
 			children = (
 				B0D11966200508AC005B2CBB /* CreateListViewController.swift */,
 				B089DE9E20079507002D3879 /* CreateListPresenter.swift */,
+				B089DEA020079BF1002D3879 /* SelectEmojisViewController.swift */,
+				B089DEA220079BFD002D3879 /* SelectEmojisPresenter.swift */,
 			);
 			path = creating;
 			sourceTree = "<group>";
@@ -680,24 +714,30 @@
 				B0D11967200508AC005B2CBB /* CreateListViewController.swift in Sources */,
 				B0D119612005074C005B2CBB /* StoryboardContext.swift in Sources */,
 				B035FE0D1FFE5FE6003A332B /* Router.swift in Sources */,
+				B089DEA720079F88002D3879 /* BaseEmojiCell.swift in Sources */,
 				B035FE0F1FFE5FE6003A332B /* Operators.swift in Sources */,
 				B035FE061FFE5E8F003A332B /* Constants.swift in Sources */,
-				B064A1D720064B0E001ADB0E /* BaseTablePresenter.swift in Sources */,
+				B064A1D720064B0E001ADB0E /* BaseDataPresenter.swift in Sources */,
 				B0D1196B200508D7005B2CBB /* StoreViewController.swift in Sources */,
 				B064A1CD20064825001ADB0E /* ListsPresenter.swift in Sources */,
+				B089DEA920079FE7002D3879 /* AsciiEmojiCell.swift in Sources */,
 				B064A1C92006455F001ADB0E /* REmojiPackItem.swift in Sources */,
 				B035FE041FFE5E8F003A332B /* AppConfig.swift in Sources */,
-				B064A1C52006440E001ADB0E /* REmojiItem.swift in Sources */,
+				B089DEA120079BF1002D3879 /* SelectEmojisViewController.swift in Sources */,
+				B064A1C52006440E001ADB0E /* REmoji.swift in Sources */,
 				B01C292F1FEAA46300C1AF22 /* ListsViewController.swift in Sources */,
 				B035FE081FFE5E8F003A332B /* Aliases.swift in Sources */,
 				B0D119582004FC3E005B2CBB /* Launcher.swift in Sources */,
 				B064A1C320064353001ADB0E /* REmojiList.swift in Sources */,
 				B035FE071FFE5E8F003A332B /* Funcs.swift in Sources */,
 				B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */,
+				B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */,
 				B064A1DD200658BC001ADB0E /* FloatButton.swift in Sources */,
 				B035FE091FFE5E8F003A332B /* App.swift in Sources */,
+				B089DEA320079BFD002D3879 /* SelectEmojisPresenter.swift in Sources */,
 				B089DE9F20079507002D3879 /* CreateListPresenter.swift in Sources */,
 				B064A1D320064AC7001ADB0E /* BaseTableViewController.swift in Sources */,
+				B089DEAD2007A1F7002D3879 /* BaseCollectionViewController.swift in Sources */,
 				B064A1C120064149001ADB0E /* BaseViewController.swift in Sources */,
 				B064A1D120064A74001ADB0E /* BaseView.swift in Sources */,
 				B01C292D1FEAA46300C1AF22 /* AppDelegate.swift in Sources */,

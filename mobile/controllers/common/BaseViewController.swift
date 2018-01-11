@@ -17,6 +17,8 @@ open class BaseViewController : UIViewController, BaseView {
         get { return UIApplication.shared.delegate as! AppDelegate }
     }
     
+    var basePresenter: BasePresenter!
+    
     fileprivate(set) var currentHud: MBProgressHUD?
     fileprivate(set) var previousBottomBar : UIView?
     
@@ -48,6 +50,11 @@ open class BaseViewController : UIViewController, BaseView {
     }
     
     open func prepareViewForUser() {
+    }
+    
+    deinit {
+        basePresenter.unload()
+        basePresenter = nil
     }
 }
 

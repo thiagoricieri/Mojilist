@@ -9,6 +9,8 @@
 import Foundation
 
 protocol CreateListPresenter: BasePresenter {
+    
+    func validateInput(listName: String?) -> Bool
 }
 
 class CreateListPresenterImpl: CreateListPresenter {
@@ -17,6 +19,10 @@ class CreateListPresenterImpl: CreateListPresenter {
     
     init(view: CreateListView) {
         self.view = view
+    }
+    
+    func validateInput(listName: String?) -> Bool {
+        return listName != nil && !listName!.isEmpty
     }
     
     // MARK: - Base Presenter

@@ -16,8 +16,11 @@ class ListsViewController: BaseTableViewController, ListsView {
     @IBOutlet weak var newListButton: FloatButton!
     @IBOutlet weak var storeButton: FloatButton!
     
+    var presenter: ListsPresenter!
+    
     override func instantiateDependencies() {
-        presenter = ListsPresenterImpl(view: self)
+        basePresenter = ListsPresenterImpl(view: self)
+        presenter = basePresenter as! ListsPresenter
     }
     
     override func setViewStyle() {

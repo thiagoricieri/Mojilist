@@ -11,7 +11,6 @@ def shared_pods
     pod 'Google/Analytics'
     pod 'HTTPStatusCodes', '~> 3.1.0'
     pod 'DateToolsSwift'
-    pod 'lottie-ios'
 end
 
 target 'Emojilist' do

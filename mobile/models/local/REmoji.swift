@@ -9,7 +9,7 @@
 import Foundation
 import RealmSwift
 
-class REmojiItem: Object {
+class REmoji: Object {
     
     @objc dynamic var name = ""
     @objc dynamic var imageUrl = ""

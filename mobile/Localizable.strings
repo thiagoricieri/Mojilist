@@ -16,3 +16,8 @@
 
 // Create List
 "CreateList.Title" = "Nova Lista";
+"CreateList.Text.Placeholder" = "Compras da semana";
+"CreateList.Label" = "Dê um nome à sua lista";
+
+// Select emojis
+"SelectEmojis.Title" = "Escolha os emojis!";

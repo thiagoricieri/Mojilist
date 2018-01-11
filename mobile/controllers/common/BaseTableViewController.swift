@@ -17,8 +17,6 @@ class BaseTableViewController: BaseViewController,
         UITableViewDelegate,
         UITableViewDataSource {
     
-    var presenter: BaseTablePresenter!
-    
     // Outlets
     @IBOutlet weak var table: UITableView!
     
@@ -30,8 +28,11 @@ class BaseTableViewController: BaseViewController,
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        presenter.loadSource()
-        presenter.downloadSource()
+        
+        if let dataPresenter = basePresenter as? BaseDataPresenter {
+            dataPresenter.loadSource()
+            dataPresenter.downloadSource()
+        }
     }
     
     // MARK: - Convenience
@@ -40,17 +41,16 @@ class BaseTableViewController: BaseViewController,
     }
     
     // MARK: - Table Delegate
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.sourceCount()
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
+        if let dataPresenter = basePresenter as? BaseDataPresenter {
+            return dataPresenter.sourceCount()
+        }
+        return 0
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView,
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return BaseTableViewCell()
-    }
-    
-    // MARK: - Base View
-    deinit {
-        presenter.unload()
-        presenter = nil
     }
 }

@@ -15,5 +15,5 @@ class REmojiList: Object {
     @objc dynamic var dateCreated: Date? = nil
     @objc dynamic var timesUsed = 0
     
-    let emojis = List<REmojiItem>()
+    let emojis = List<REmoji>()
 }

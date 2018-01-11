@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol BaseTablePresenter: BasePresenter {
+protocol BaseDataPresenter: BasePresenter {
     
     func loadSource()
     func downloadSource()
