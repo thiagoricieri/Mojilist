@@ -11,6 +11,12 @@ import RealmSwift
 
 protocol BaseView {
     
+    // Basic flow
+    func instantiateDependencies()
+    func setViewStyle()
+    func prepareViewForUser()
+    
+    // Providing
     func provideApp() -> App
     func provideRealm() -> Realm
 }

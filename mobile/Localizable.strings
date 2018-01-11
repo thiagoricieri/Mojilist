@@ -13,3 +13,6 @@
 
 // Lists
 "Lists.Title" = "Suas listas";
+
+// Create List
+"CreateList.Title" = "Nova Lista";

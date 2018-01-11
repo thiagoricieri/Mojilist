@@ -119,11 +119,50 @@
                         <outlet property="newListButton" destination="RDV-ki-WX4" id="3qY-nr-4gd"/>
                         <outlet property="storeButton" destination="nwg-qn-USE" id="AqM-Rs-3iT"/>
                         <outlet property="table" destination="aSx-a0-ZWl" id="Sa9-Jz-ooI"/>
+                        <segue destination="NLF-xp-QLX" kind="show" identifier="toCreate" id="6GM-Ch-WXS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9A8-3L-59s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325.60000000000002" y="98.50074962518741"/>
+        </scene>
+        <!--Create List View Controller-->
+        <scene sceneID="gks-Af-BzI">
+            <objects>
+                <viewController storyboardIdentifier="CreateList" id="NLF-xp-QLX" customClass="CreateListViewController" customModule="Emojilist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yoV-p9-SnQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="{placeholder}" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ixz-lP-0dF">
+                                <rect key="frame" x="26" y="179" width="323" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="T0r-Oi-C8L"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NLF-xp-QLX" id="MeL-4q-gLb"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ixz-lP-0dF" firstAttribute="top" secondItem="06b-JJ-fHy" secondAttribute="top" constant="115" id="CEg-fh-hzm"/>
+                            <constraint firstItem="Ixz-lP-0dF" firstAttribute="leading" secondItem="06b-JJ-fHy" secondAttribute="leading" constant="26" id="MeT-4b-pwT"/>
+                            <constraint firstItem="06b-JJ-fHy" firstAttribute="trailing" secondItem="Ixz-lP-0dF" secondAttribute="trailing" constant="26" id="oHs-Wl-oaK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="06b-JJ-fHy"/>
+                    </view>
+                    <connections>
+                        <outlet property="listNameField" destination="Ixz-lP-0dF" id="hRY-Bn-IcX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mCT-1V-vfz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1207.2" y="98.50074962518741"/>
         </scene>
     </scenes>
 </document>

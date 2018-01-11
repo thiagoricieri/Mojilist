@@ -16,10 +16,11 @@ class ListsViewController: BaseTableViewController, ListsView {
     @IBOutlet weak var newListButton: FloatButton!
     @IBOutlet weak var storeButton: FloatButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func instantiateDependencies() {
         presenter = ListsPresenterImpl(view: self)
-        
+    }
+    
+    override func setViewStyle() {
         title = "Lists.Title".localized
     }
     
@@ -38,7 +39,7 @@ class ListsViewController: BaseTableViewController, ListsView {
     
     // MARK: - Button Actions
     @IBAction func actionNewList(_ sender: UIView) {
-        successAlert(message: "New List!")
+        performSegue(withIdentifier: MainStoryboard.Segue.toCreate, sender: nil)
     }
     
     @IBAction func actionStore(_ sender: UIView) {

@@ -29,6 +29,26 @@ open class BaseViewController : UIViewController, BaseView {
     func provideRealm() -> Realm {
         return provideApp().realm
     }
+    
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        instantiateDependencies()
+        setViewStyle()
+    }
+    
+    open override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        prepareViewForUser()
+    }
+    
+    open func instantiateDependencies() {
+    }
+    
+    open func setViewStyle() {
+    }
+    
+    open func prepareViewForUser() {
+    }
 }
 
 // MARK: - HUD
