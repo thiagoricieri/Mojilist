@@ -11,6 +11,7 @@ def shared_pods
     pod 'Google/Analytics'
     pod 'HTTPStatusCodes', '~> 3.1.0'
     pod 'DateToolsSwift'
+    pod 'PopupDialog', '~> 0.6'
 end
 
 target 'Emojilist' do

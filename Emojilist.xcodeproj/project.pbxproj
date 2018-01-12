@@ -40,6 +40,9 @@
 		B064A1D920064ED4001ADB0E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */; };
 		B064A1DB20064F21001ADB0E /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DA20064F21001ADB0E /* ListCell.swift */; };
 		B064A1DD200658BC001ADB0E /* FloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DC200658BC001ADB0E /* FloatButton.swift */; };
+		B07A09612008D561005957C1 /* SelectPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A095F2008D560005957C1 /* SelectPackViewController.swift */; };
+		B07A09622008D561005957C1 /* SelectPackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09602008D560005957C1 /* SelectPackPresenter.swift */; };
+		B07A09642008D5A3005957C1 /* PackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09632008D5A3005957C1 /* PackCell.swift */; };
 		B089DE9D200793AE002D3879 /* MainStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DE9C200793AE002D3879 /* MainStoryboard.swift */; };
 		B089DE9F20079507002D3879 /* CreateListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DE9E20079507002D3879 /* CreateListPresenter.swift */; };
 		B089DEA120079BF1002D3879 /* SelectEmojisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEA020079BF1002D3879 /* SelectEmojisViewController.swift */; };
@@ -116,6 +119,9 @@
 		B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		B064A1DA20064F21001ADB0E /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		B064A1DC200658BC001ADB0E /* FloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatButton.swift; sourceTree = "<group>"; };
+		B07A095F2008D560005957C1 /* SelectPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPackViewController.swift; sourceTree = "<group>"; };
+		B07A09602008D560005957C1 /* SelectPackPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPackPresenter.swift; sourceTree = "<group>"; };
+		B07A09632008D5A3005957C1 /* PackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCell.swift; sourceTree = "<group>"; };
 		B089DE9C200793AE002D3879 /* MainStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryboard.swift; sourceTree = "<group>"; };
 		B089DE9E20079507002D3879 /* CreateListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListPresenter.swift; sourceTree = "<group>"; };
 		B089DEA020079BF1002D3879 /* SelectEmojisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmojisViewController.swift; sourceTree = "<group>"; };
@@ -385,6 +391,9 @@
 				B089DE9E20079507002D3879 /* CreateListPresenter.swift */,
 				B089DEA020079BF1002D3879 /* SelectEmojisViewController.swift */,
 				B089DEA220079BFD002D3879 /* SelectEmojisPresenter.swift */,
+				B07A09632008D5A3005957C1 /* PackCell.swift */,
+				B07A09602008D560005957C1 /* SelectPackPresenter.swift */,
+				B07A095F2008D560005957C1 /* SelectPackViewController.swift */,
 			);
 			path = creating;
 			sourceTree = "<group>";
@@ -668,6 +677,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -679,6 +689,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -717,7 +728,9 @@
 				B089DEA720079F88002D3879 /* BaseEmojiCell.swift in Sources */,
 				B035FE0F1FFE5FE6003A332B /* Operators.swift in Sources */,
 				B035FE061FFE5E8F003A332B /* Constants.swift in Sources */,
+				B07A09622008D561005957C1 /* SelectPackPresenter.swift in Sources */,
 				B064A1D720064B0E001ADB0E /* BaseDataPresenter.swift in Sources */,
+				B07A09642008D5A3005957C1 /* PackCell.swift in Sources */,
 				B0D1196B200508D7005B2CBB /* StoreViewController.swift in Sources */,
 				B064A1CD20064825001ADB0E /* ListsPresenter.swift in Sources */,
 				B089DEA920079FE7002D3879 /* AsciiEmojiCell.swift in Sources */,
@@ -729,6 +742,7 @@
 				B035FE081FFE5E8F003A332B /* Aliases.swift in Sources */,
 				B0D119582004FC3E005B2CBB /* Launcher.swift in Sources */,
 				B064A1C320064353001ADB0E /* REmojiList.swift in Sources */,
+				B07A09612008D561005957C1 /* SelectPackViewController.swift in Sources */,
 				B035FE071FFE5E8F003A332B /* Funcs.swift in Sources */,
 				B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */,
 				B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */,

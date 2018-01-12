@@ -20,6 +20,6 @@ class BaseEmojiCell: UICollectionViewCell {
         protectionBackground.layer.cornerRadius = protectionBackground.bounds.width/2
     }
     
-    func configure(with emoji: REmoji) {
+    func configure(with emoji: REmojiPackItem) {
     }
 }

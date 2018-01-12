@@ -15,7 +15,7 @@ class AsciiEmojiCell: BaseEmojiCell {
     
     @IBOutlet weak var emojiText: UILabel!
     
-    override func configure(with emoji: REmoji) {
+    override func configure(with emoji: REmojiPackItem) {
         super.configure(with: emoji)
         emojiText.text = emoji.name
     }

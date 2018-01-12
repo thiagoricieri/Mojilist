@@ -1,31 +1,33 @@
 //
-//  ListCell.swift
+//  PackCell.swift
 //  Emojilist
 //
-//  Created by Thiago Ricieri on 10/01/2018.
+//  Created by Thiago Ricieri on 12/01/2018.
 //  Copyright © 2018 Ghost Ship. All rights reserved.
 //
 
 import Foundation
 import UIKit
+import SDWebImage
 
-class BaseListCell: BaseTableViewCell {
+class BasePackCell: BaseTableViewCell {
     
-    @IBOutlet weak var listName: UILabel!
+    static let cellHeight = CGFloat(100)
     
-    func configure(with item: REmojiList) {
-        listName.text = item.name
+    @IBOutlet weak var packName: UILabel!
+    
+    func configure(with item: REmojiPack) {
+        packName.text = item.name
     }
 }
 
-class ImageListCell: BaseListCell {
+class ImagePackCell: BasePackCell {
     
-    static let identifier = "ImageListCell"
-    static let cellHeight = CGFloat(100)
+    static let identifier = "ImagePackCell"
     
     @IBOutlet var emojiImages: [UIImageView]!
     
-    override func configure(with item: REmojiList) {
+    override func configure(with item: REmojiPack) {
         super.configure(with: item)
         
         let maxEmojis = 7
@@ -45,17 +47,16 @@ class ImageListCell: BaseListCell {
     }
 }
 
-class ListCell: BaseListCell {
+class AsciiPackCell: BasePackCell {
     
-    static let identifier = "ListCell"
-    static let cellHeight = CGFloat(100)
+    static let identifier = "AsciiPackCell"
     
     @IBOutlet weak var emojiText: UILabel!
     
-    override func configure(with item: REmojiList) {
+    override func configure(with item: REmojiPack) {
         super.configure(with: item)
         
-        let maxEmojis = 10
+        let maxEmojis = 7
         let allEmojis = item.emojis.count > maxEmojis ?
             item.emojis[0...maxEmojis].map { $0 } :
             item.emojis.map { $0 }

@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .setWindow(window)
             .shouldProvideCredentials(false)
             .migrateRealm()
+            .includeStandardPack()
             .setFabric()
             .setFacebook()
             .setTwitter()
@@ -36,5 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .startWith(app: app)
         
         return true
+    }
+    
+    func standardEmojiPack() -> REmojiPack {
+        return app.realm.objects(REmojiPack.self).filter("ascii = true").first!
     }
 }

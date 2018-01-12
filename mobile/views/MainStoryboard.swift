@@ -13,6 +13,7 @@ class MainStoryboard: StoryboardContext {
     struct Segue {
         static let toCreate = "toCreate"
         static let toSelectEmojis = "toSelectEmojis"
+        static let toSelectPack = "toSelectPack"
     }
     
     func createListViewController() -> CreateListViewController {
@@ -21,5 +22,9 @@ class MainStoryboard: StoryboardContext {
     
     func selectEmojisViewController() -> SelectEmojisViewController {
         return controller(name: "SelectEmojis") as! SelectEmojisViewController
+    }
+    
+    func selectPackViewController() -> SelectPackViewController {
+        return controller(name: "SelectPack") as! SelectPackViewController
     }
 }

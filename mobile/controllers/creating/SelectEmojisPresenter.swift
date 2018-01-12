@@ -10,13 +10,16 @@ import Foundation
 import RealmSwift
 
 protocol SelectEmojisPresenter: BaseDataPresenter {
+    
+    var pack: REmojiPack! { get set }
 }
 
 class SelectEmojisPresenterImpl: SelectEmojisPresenter {
     
     var view: SelectEmojisView!
     var listName: String!
-    var source: Results<REmoji>!
+    var source: List<REmojiPackItem>!
+    var pack: REmojiPack!
     
     init(view: SelectEmojisView) {
         self.view = view
@@ -24,8 +27,7 @@ class SelectEmojisPresenterImpl: SelectEmojisPresenter {
     
     // MARK: - Data Presenter
     func loadSource() {
-        let realm = view.provideRealm()
-        source = realm.objects(REmoji.self).sorted(byKeyPath: "name")
+        source = pack.emojis
     }
     
     func downloadSource() {

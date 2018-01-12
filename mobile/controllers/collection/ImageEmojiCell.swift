@@ -16,7 +16,7 @@ class ImageEmojiCell: BaseEmojiCell {
     
     @IBOutlet weak var emojiImage: UIImageView!
     
-    override func configure(with emoji: REmoji) {
+    override func configure(with emoji: REmojiPackItem) {
         super.configure(with: emoji)
         emojiImage.sd_setImage(with: URL(string: emoji.imageUrl))
     }

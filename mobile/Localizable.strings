@@ -11,6 +11,9 @@
 "Warning" = "Atenção!";
 "Success" = "Sucesso!";
 
+// Pack
+"Pack.EmojiThings" = "Emojis de Coisas!";
+
 // Lists
 "Lists.Title" = "Suas listas";
 
@@ -22,3 +25,7 @@
 // Select emojis
 "SelectEmojis.Title" = "O que vai na lista?";
 "SelectEmojis.Create" = "Criar";
+"SelectEmojis.SelectPack" = "Pacote selecionado:";
+
+// Select Pack
+"SelectPack.Title" = "Pacotes";
