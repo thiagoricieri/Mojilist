@@ -20,4 +20,10 @@ class ImageEmojiCell: BaseEmojiCell {
         super.configure(with: emoji)
         emojiImage.sd_setImage(with: URL(string: emoji.imageUrl))
     }
+    
+    override func configure(with emoji: REmoji) {
+        super.configure(with: emoji)
+        emojiImage.sd_setImage(with: URL(string: emoji.imageUrl))
+        emojiImage.alpha = emoji.checked ? 1 : 0.2
+    }
 }

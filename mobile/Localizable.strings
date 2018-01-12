@@ -19,6 +19,9 @@
 "Lists.New" = "Nova";
 "Lists.Settings" = "Ajustes";
 
+// Using List
+"UsingList.Done" = "Pronto!";
+
 // Create List
 "CreateList.Title" = "Nova Lista";
 "CreateList.Text.Placeholder" = "Compras da semana";

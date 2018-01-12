@@ -14,6 +14,7 @@ class MainStoryboard: StoryboardContext {
         static let toCreate = "toCreate"
         static let toSelectEmojis = "toSelectEmojis"
         static let toSelectPack = "toSelectPack"
+        static let toUsingList = "toUsingList"
     }
     
     func createListViewController() -> CreateListViewController {
@@ -26,5 +27,9 @@ class MainStoryboard: StoryboardContext {
     
     func selectPackViewController() -> SelectPackViewController {
         return controller(name: "SelectPack") as! SelectPackViewController
+    }
+    
+    func usingListViewController() -> UsingListViewController {
+        return controller(name: "UsingList") as! UsingListViewController
     }
 }

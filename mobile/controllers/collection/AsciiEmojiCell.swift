@@ -19,4 +19,10 @@ class AsciiEmojiCell: BaseEmojiCell {
         super.configure(with: emoji)
         emojiText.text = emoji.name
     }
+    
+    override func configure(with emoji: REmoji) {
+        super.configure(with: emoji)
+        emojiText.text = emoji.name
+        emojiText.alpha = emoji.checked ? 1 : 0.2
+    }
 }

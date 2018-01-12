@@ -1,0 +1,57 @@
+//
+//  UsingListPresenter.swift
+//  Emojilist
+//
+//  Created by Thiago Ricieri on 12/01/2018.
+//  Copyright © 2018 Ghost Ship. All rights reserved.
+//
+
+import Foundation
+import RealmSwift
+
+protocol UsingListPresenter: BaseDataPresenter {
+    
+    var source: List<REmoji>! { get set }
+    
+    func toggleEmoji(at: Int)
+}
+
+class UsingListPresenterImpl: UsingListPresenter {
+    
+    var view: UsingListView!
+    var source: List<REmoji>!
+    
+    init(view: UsingListView) {
+        self.view = view
+    }
+    
+    // MARK: - Data Presenter
+    func loadSource() {
+        // None
+    }
+    
+    func downloadSource() {
+        // None
+    }
+    
+    func sourceCount() -> Int {
+        return source.count
+    }
+    
+    func item(at: Int) -> AnyObject {
+        return source[at]
+    }
+    
+    func toggleEmoji(at: Int) {
+        let emoji = item(at: at) as! REmoji
+        let realm = view.provideRealm()
+        try! realm.write {
+            emoji.setValue(!emoji.checked, forKey: "checked")
+        }
+    }
+    
+    // MARK: - Base Presenter
+    func unload() {
+        self.view = nil
+    }
+}

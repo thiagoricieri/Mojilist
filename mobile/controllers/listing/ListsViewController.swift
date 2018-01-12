@@ -39,8 +39,22 @@ class ListsViewController: BaseTableViewController, ListsView {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(
+            withIdentifier: MainStoryboard.Segue.toUsingList,
+            sender: presenter.item(at: indexPath.row))
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ListCell.cellHeight
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == MainStoryboard.Segue.toUsingList {
+            let dest = segue.destination as! UsingListViewController
+            dest.emojiList = sender as! REmojiList
+        }
     }
     
     // MARK: - Button Actions

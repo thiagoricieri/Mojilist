@@ -22,4 +22,7 @@ class BaseEmojiCell: UICollectionViewCell {
     
     func configure(with emoji: REmojiPackItem) {
     }
+    
+    func configure(with emoji: REmoji) {
+    }
 }
