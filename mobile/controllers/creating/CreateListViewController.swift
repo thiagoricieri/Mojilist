@@ -36,7 +36,7 @@ class CreateListViewController: BaseViewController, CreateListView {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == MainStoryboard.Segue.toCreate {
+        if segue.identifier == MainStoryboard.Segue.toSelectEmojis {
             let dest = segue.destination as! SelectEmojisViewController
             dest.listName = listNameField.text
         }

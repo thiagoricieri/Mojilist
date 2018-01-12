@@ -29,10 +29,6 @@ class SelectPackViewController: BaseTableViewController, SelectPackView {
         presenter = basePresenter as! SelectPackPresenter
     }
     
-    override func prepareViewForUser() {
-        super.prepareViewForUser()
-    }
-    
     override func setViewStyle() {
         title = "SelectPack.Title".localized
     }

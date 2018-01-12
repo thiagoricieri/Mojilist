@@ -55,7 +55,7 @@ class ListCell: BaseListCell {
     override func configure(with item: REmojiList) {
         super.configure(with: item)
         
-        let maxEmojis = 10
+        let maxEmojis = 7
         let allEmojis = item.emojis.count > maxEmojis ?
             item.emojis[0...maxEmojis].map { $0 } :
             item.emojis.map { $0 }

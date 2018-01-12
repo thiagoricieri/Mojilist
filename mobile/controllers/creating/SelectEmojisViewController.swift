@@ -10,6 +10,9 @@ import Foundation
 import UIKit
 
 protocol SelectEmojisView: BaseView {
+    
+    func updateEmojiInListCount(to: Int)
+    func listCreated()
 }
 
 class SelectEmojisViewController: BaseCollectionViewController,
@@ -22,6 +25,9 @@ class SelectEmojisViewController: BaseCollectionViewController,
     @IBOutlet weak var animationContainer: UIView!
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var selectedPackButton: UIButton!
+    @IBOutlet weak var badgeView: UIView!
+    @IBOutlet weak var badgeCountLabel: UILabel!
+    @IBOutlet weak var clearBarItem: UIBarButtonItem!
     
     override func instantiateDependencies() {
         basePresenter = SelectEmojisPresenterImpl(view: self)
@@ -35,10 +41,9 @@ class SelectEmojisViewController: BaseCollectionViewController,
         title = "SelectEmojis.Title".localized
         createButton.setTitle("SelectEmojis.Create".localized, for: .normal)
         createButton.setTitle("SelectEmojis.Create".localized, for: .disabled)
-    }
-    
-    override func prepareViewForUser() {
-        reload()
+        clearBarItem.title = "SelectEmojis.Clear".localized
+        badgeView.layer.cornerRadius = badgeView.bounds.width/2
+        badgeView.clipsToBounds = true
     }
     
     override func reload() {
@@ -67,6 +72,26 @@ class SelectEmojisViewController: BaseCollectionViewController,
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: false)
+        presenter.selectEmoji(at: indexPath.row)
+    }
+    
+    func updateEmojiInListCount(to: Int) {
+        if to > 0 {
+            badgeView.isHidden = false
+            createButton.isEnabled = true
+            badgeCountLabel.text = String(to)
+        } else {
+            badgeView.isHidden = true
+            createButton.isEnabled = false
+        }
+    }
+    
+    func listCreated() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     // MARK: - Connect to Selection of Pack
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == MainStoryboard.Segue.toSelectPack {
@@ -86,11 +111,15 @@ class SelectEmojisViewController: BaseCollectionViewController,
     }
     
     // MARK: - Actions
-    @IBAction func actionCreate(sender: UIView) {
-        
+    @IBAction func actionCreate(sender: Any) {
+        presenter.createList(with: listName)
     }
     
-    @IBAction func actionSelectedPack(sender: UIView) {
+    @IBAction func actionSelectedPack(sender: Any) {
         performSegue(withIdentifier: MainStoryboard.Segue.toSelectPack, sender: nil)
+    }
+    
+    @IBAction func actionClear(_ sender: Any) {
+        presenter.clearList()
     }
 }

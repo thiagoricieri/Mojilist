@@ -16,6 +16,8 @@
 
 // Lists
 "Lists.Title" = "Suas listas";
+"Lists.New" = "Nova";
+"Lists.Settings" = "Ajustes";
 
 // Create List
 "CreateList.Title" = "Nova Lista";
@@ -25,6 +27,7 @@
 // Select emojis
 "SelectEmojis.Title" = "O que vai na lista?";
 "SelectEmojis.Create" = "Criar";
+"SelectEmojis.Clear" = "Esvaziar";
 "SelectEmojis.SelectPack" = "Pacote selecionado:";
 
 // Select Pack

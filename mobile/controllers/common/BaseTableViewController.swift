@@ -32,6 +32,7 @@ class BaseTableViewController: BaseViewController,
         if let dataPresenter = basePresenter as? BaseDataPresenter {
             dataPresenter.loadSource()
             dataPresenter.downloadSource()
+            reload()
         }
     }
     

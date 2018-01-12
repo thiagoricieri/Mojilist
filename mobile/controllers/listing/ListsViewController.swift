@@ -15,6 +15,7 @@ class ListsViewController: BaseTableViewController, ListsView {
     
     @IBOutlet weak var newListButton: FloatButton!
     @IBOutlet weak var storeButton: FloatButton!
+    @IBOutlet weak var settingsBarItem: UIBarButtonItem!
     
     var presenter: ListsPresenter!
     
@@ -25,6 +26,8 @@ class ListsViewController: BaseTableViewController, ListsView {
     
     override func setViewStyle() {
         title = "Lists.Title".localized
+        newListButton.setTitle("Lists.New".localized, for: .normal)
+        settingsBarItem.title = "Lists.Settings".localized
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
