@@ -13,8 +13,8 @@ protocol ListsView: BaseTableView {
 
 class ListsViewController: BaseTableViewController, ListsView {
     
-    @IBOutlet weak var newListButton: FloatButton!
-    @IBOutlet weak var storeButton: FloatButton!
+    @IBOutlet weak var newListButton: PrimaryFloatingButton!
+    @IBOutlet weak var storeButton: PrimaryFloatingButton!
     @IBOutlet weak var settingsBarItem: UIBarButtonItem!
     
     var presenter: ListsPresenter!

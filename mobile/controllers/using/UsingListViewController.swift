@@ -27,7 +27,6 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     }
     
     override func setViewStyle() {
-        doneButton.setTitle("UsingList.Done".localized, for: .normal)
         listNameLabel.text = emojiList.name
     }
     
@@ -60,6 +59,14 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func actionSettings(sender: Any) {
+        
+    }
+    
+    @IBAction func actionRedo(sender: Any) {
+        
+    }
+
     deinit {
         presenter.unload()
         presenter = nil
