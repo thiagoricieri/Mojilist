@@ -25,4 +25,8 @@ class AsciiEmojiCell: BaseEmojiCell {
         emojiText.text = emoji.name
         emojiText.alpha = emoji.checked ? 1 : 0.2
     }
+    
+    override func uncheckEmoji() {
+        emojiText.alpha = 0.2
+    }
 }

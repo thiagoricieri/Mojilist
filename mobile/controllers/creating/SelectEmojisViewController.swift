@@ -75,6 +75,16 @@ class SelectEmojisViewController: BaseCollectionViewController,
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
         presenter.selectEmoji(at: indexPath.row)
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? BaseEmojiCell {
+            cell.springView.animation = "pop"
+            cell.springView.curve = "easeInOut"
+            cell.springView.duration = 0.7
+            cell.springView.animate()
+        }
+        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
     }
     
     func updateEmojiInListCount(to: Int) {

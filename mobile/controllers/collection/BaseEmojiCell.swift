@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import Spring
 
 class BaseEmojiCell: UICollectionViewCell {
 
     @IBOutlet weak var protectionBackground: UIView!
+    @IBOutlet weak var springView: SpringView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,9 +22,7 @@ class BaseEmojiCell: UICollectionViewCell {
         protectionBackground.layer.cornerRadius = protectionBackground.bounds.width/2
     }
     
-    func configure(with emoji: REmojiPackItem) {
-    }
-    
-    func configure(with emoji: REmoji) {
-    }
+    func configure(with emoji: REmojiPackItem) { }
+    func configure(with emoji: REmoji) { }
+    func uncheckEmoji() {  }
 }

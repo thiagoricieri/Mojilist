@@ -14,6 +14,7 @@ protocol UsingListPresenter: BaseDataPresenter {
     var source: List<REmoji>! { get set }
     
     func toggleEmoji(at: Int)
+    func resetCheckedEmojis()
 }
 
 class UsingListPresenterImpl: UsingListPresenter {
@@ -46,7 +47,15 @@ class UsingListPresenterImpl: UsingListPresenter {
         let emoji = item(at: at) as! REmoji
         let realm = view.provideRealm()
         try! realm.write {
-            emoji.setValue(!emoji.checked, forKey: "checked")
+            emoji.checked = !emoji.checked
+        }
+    }
+    
+    func resetCheckedEmojis() {
+        let checkedEmojis = source.filter("checked = true")
+        let realm = view.provideRealm()
+        try! realm.write {
+            checkedEmojis.setValue(false, forKey: "checked")
         }
     }
     

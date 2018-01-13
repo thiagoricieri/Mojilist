@@ -52,19 +52,46 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
         presenter.toggleEmoji(at: indexPath.row)
-        reload()
+        
+        if let cell = collectionView.cellForItem(at: indexPath) as? BaseEmojiCell {
+            cell.configure(with: presenter.item(at: indexPath.row) as! REmoji)
+        }
+        
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
     }
     
     @IBAction func actionDone(sender: Any) {
         dismiss(animated: true, completion: nil)
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
     }
     
     @IBAction func actionSettings(sender: Any) {
-        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
     }
     
     @IBAction func actionRedo(sender: Any) {
+        for cell in collection.visibleCells {
+            cell.clipsToBounds = false
+            
+            let indexPath = collection.indexPath(for: cell)
+            let emoji = presenter.item(at: indexPath!.row) as! REmoji
+            
+            if let ccell = cell as? BaseEmojiCell, emoji.checked {
+                ccell.springView.animation = "pop"
+                ccell.springView.curve = "easeInOut"
+                ccell.springView.duration = 0.7
+                ccell.springView.animate()
+                ccell.uncheckEmoji()
+            }
+        }
         
+        presenter.resetCheckedEmojis()
+        
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
     }
 
     deinit {
