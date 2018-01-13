@@ -26,4 +26,8 @@ class ImageEmojiCell: BaseEmojiCell {
         emojiImage.sd_setImage(with: URL(string: emoji.imageUrl))
         emojiImage.alpha = emoji.checked ? 1 : 0.2
     }
+    
+    override func uncheckEmoji() {
+        emojiImage.alpha = 0.2
+    }
 }

@@ -33,6 +33,7 @@ PODS:
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
+  - Spring (1.0.5)
 
 DEPENDENCIES:
   - Alamofire
@@ -46,15 +47,21 @@ DEPENDENCIES:
   - RealmSwift
   - Saw (from `https://github.com/thiagoricieri/Saw-iOS.git`)
   - SDWebImage (~> 3.7.3)
+  - Spring (from `https://github.com/MengTo/Spring.git`)
 
 EXTERNAL SOURCES:
   Saw:
     :git: https://github.com/thiagoricieri/Saw-iOS.git
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
   Saw:
     :commit: 617ee5ae336356764bac96085b8d9abf1a721172
     :git: https://github.com/thiagoricieri/Saw-iOS.git
+  Spring:
+    :commit: 19b04d730d3edabbb02a39e58121d1d3220690ee
+    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -74,7 +81,8 @@ SPEC CHECKSUMS:
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
   Saw: bdb357186d16670f919f44306ae2f81836c79052
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  Spring: 48aad470f3ead043b2da98b64e0bf0630b7ebc42
 
-PODFILE CHECKSUM: a4802a0b62e7da70706abe6609104fe213f1adf0
+PODFILE CHECKSUM: 51132cd1c4295f1a961785cfb87d0ee1ed435b3b
 
 COCOAPODS: 1.4.0.rc.1
