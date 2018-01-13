@@ -16,6 +16,9 @@ protocol SelectEmojisPresenter: BaseDataPresenter {
     func selectEmoji(at: Int)
     func clearList()
     func createList(with name: String)
+    
+    func selectedItem(at: Int) -> REmojiPackItem
+    func selectedCount() -> Int
 }
 
 class SelectEmojisPresenterImpl: SelectEmojisPresenter {
@@ -23,7 +26,7 @@ class SelectEmojisPresenterImpl: SelectEmojisPresenter {
     var view: SelectEmojisView!
     var source: List<REmojiPackItem>!
     var pack: REmojiPack!
-    var emojisToList = [REmojiPackItem: Int]()
+    var emojisToList = [REmojiPackItem]()
     
     init(view: SelectEmojisView) {
         self.view = view
@@ -48,18 +51,12 @@ class SelectEmojisPresenterImpl: SelectEmojisPresenter {
     
     func selectEmoji(at: Int) {
         let emoji = item(at: at) as! REmojiPackItem
-        
-        if let count = emojisToList[emoji] {
-            emojisToList[emoji] = count + 1
-        } else {
-            emojisToList[emoji] = 1
-        }
-        
+        emojisToList.insert(emoji, at: 0)
         view.updateEmojiInListCount(to: emojisToList.count)
     }
     
     func clearList() {
-        emojisToList = [:]
+        emojisToList = []
         view.updateEmojiInListCount(to: emojisToList.count)
     }
     
@@ -71,7 +68,7 @@ class SelectEmojisPresenterImpl: SelectEmojisPresenter {
             list.name = name
             list.timesUsed = 0
             list.dateCreated = Date()
-            list.emojis.append(objectsIn: emojisToList.map { item, _ -> REmoji in
+            list.emojis.append(objectsIn: emojisToList.map { item -> REmoji in
                 let emoji = REmoji()
                 emoji.name = item.name
                 emoji.checked = false
@@ -84,8 +81,17 @@ class SelectEmojisPresenterImpl: SelectEmojisPresenter {
         view.listCreated()
     }
     
+    func selectedCount() -> Int {
+        return emojisToList.count
+    }
+    
+    func selectedItem(at: Int) -> REmojiPackItem {
+        return emojisToList[at]
+    }
+    
     // MARK: - Base Presenter
     func unload() {
         self.view = nil
     }
 }
+

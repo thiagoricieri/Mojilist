@@ -55,6 +55,10 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         
         if let cell = collectionView.cellForItem(at: indexPath) as? BaseEmojiCell {
             cell.configure(with: presenter.item(at: indexPath.row) as! REmoji)
+            cell.springView.animation = "pop"
+            cell.springView.curve = "easeOut"
+            cell.springView.duration = 0.5
+            cell.springView.animate()
         }
         
         let generator = UIImpactFeedbackGenerator(style: .heavy)
@@ -74,13 +78,11 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     
     @IBAction func actionRedo(sender: Any) {
         for cell in collection.visibleCells {
-            cell.clipsToBounds = false
-            
             let indexPath = collection.indexPath(for: cell)
             let emoji = presenter.item(at: indexPath!.row) as! REmoji
             
             if let ccell = cell as? BaseEmojiCell, emoji.checked {
-                ccell.springView.animation = "pop"
+                ccell.springView.animation = "swing"
                 ccell.springView.curve = "easeInOut"
                 ccell.springView.duration = 0.7
                 ccell.springView.animate()
