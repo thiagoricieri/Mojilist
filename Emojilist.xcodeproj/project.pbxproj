@@ -55,6 +55,7 @@
 		B089DEAD2007A1F7002D3879 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */; };
 		B0B8A270200A582C003BA3FB /* Resources.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B8A26F200A582C003BA3FB /* Resources.xib */; };
 		B0B8A272200A5861003BA3FB /* EmojiDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B8A271200A5861003BA3FB /* EmojiDropView.swift */; };
+		B0B8A274200A6A2F003BA3FB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B8A273200A6A2F003BA3FB /* Theme.swift */; };
 		B0D119582004FC3E005B2CBB /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D119572004FC3E005B2CBB /* Launcher.swift */; };
 		B0D1195C20050703005B2CBB /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D1195B20050703005B2CBB /* Store.storyboard */; };
 		B0D1195E20050711005B2CBB /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D1195D20050711005B2CBB /* About.storyboard */; };
@@ -138,6 +139,7 @@
 		B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 		B0B8A26F200A582C003BA3FB /* Resources.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Resources.xib; sourceTree = "<group>"; };
 		B0B8A271200A5861003BA3FB /* EmojiDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDropView.swift; sourceTree = "<group>"; };
+		B0B8A273200A6A2F003BA3FB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		B0D119572004FC3E005B2CBB /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		B0D1195B20050703005B2CBB /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
 		B0D1195D20050711005B2CBB /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				B035FE011FFE5E8E003A332B /* Funcs.swift */,
 				B035FE0C1FFE5FE6003A332B /* Operators.swift */,
 				B0D119602005074C005B2CBB /* StoryboardContext.swift */,
+				B0B8A273200A6A2F003BA3FB /* Theme.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -774,6 +777,7 @@
 				B07A09682008F3A6005957C1 /* UsingListViewController.swift in Sources */,
 				B064A1DD200658BC001ADB0E /* FloatingButtons.swift in Sources */,
 				B035FE091FFE5E8F003A332B /* App.swift in Sources */,
+				B0B8A274200A6A2F003BA3FB /* Theme.swift in Sources */,
 				B089DEA320079BFD002D3879 /* SelectEmojisPresenter.swift in Sources */,
 				B089DE9F20079507002D3879 /* CreateListPresenter.swift in Sources */,
 				B064A1D320064AC7001ADB0E /* BaseTableViewController.swift in Sources */,

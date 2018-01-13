@@ -22,23 +22,6 @@ public struct Env {
     }
 }
 
-// MARK: - Visuals
-public struct Visuals {
-    
-    // Typefaces
-    public enum Typeface : String {
-        case DinProBold = "DINPro-CondBold"
-    }
-    
-    // Colors
-    public enum Colors : Int {
-        case grayLight = 0xA6A6A6
-        func color() -> UIColor {
-            return UIColorFromRGB(rgb: UInt(self.rawValue))
-        }
-    }
-}
-
 // MARK: - Credentials
 protocol Credentials {
     static var clientId : String { get }

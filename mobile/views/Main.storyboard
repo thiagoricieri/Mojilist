@@ -269,6 +269,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="06b-JJ-fHy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="g5i-Mb-esz">
+                        <barButtonItem key="backBarButtonItem" title=" " id="qCH-fK-zgg"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="listNameField" destination="Ixz-lP-0dF" id="hRY-Bn-IcX"/>
                         <outlet property="listNameLabel" destination="vcC-2c-fBk" id="SDx-tE-uBt"/>
@@ -418,6 +421,20 @@
                                     <action selector="actionSelectedPackWithSender:" destination="M4g-AY-cRZ" eventType="touchUpInside" id="9VD-2m-Kef"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="indicator" translatesAutoresizingMaskIntoConstraints="NO" id="JTY-vJ-kQC">
+                                <rect key="frame" x="343" y="81" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="F1W-e3-uKk"/>
+                                    <constraint firstAttribute="height" constant="16" id="qeB-Rb-1dP"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBb-gX-Q0C">
+                                <rect key="frame" x="0.0" y="113" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="6Ux-6x-5nC"/>
+                                </constraints>
+                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="qLz-rp-n5d">
                                 <rect key="frame" x="0.0" y="611" width="375" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -568,6 +585,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="LBb-gX-Q0C" secondAttribute="trailing" id="0CM-VT-aDF"/>
                             <constraint firstItem="TSr-x5-EgF" firstAttribute="leading" secondItem="nZA-EP-Yzh" secondAttribute="leading" id="1m9-7K-qpl"/>
                             <constraint firstItem="R1F-cM-6d6" firstAttribute="trailing" secondItem="nZA-EP-Yzh" secondAttribute="trailing" id="2gD-VB-F0E"/>
                             <constraint firstItem="VbS-G6-kOY" firstAttribute="top" secondItem="R1F-cM-6d6" secondAttribute="bottom" constant="-1" id="36p-s2-YzT"/>
@@ -575,12 +593,15 @@
                             <constraint firstItem="Mx4-rj-E28" firstAttribute="leading" secondItem="nZA-EP-Yzh" secondAttribute="leading" id="8Sf-fe-RdI"/>
                             <constraint firstItem="cFd-i0-Fb9" firstAttribute="centerX" secondItem="nZA-EP-Yzh" secondAttribute="centerX" id="8VM-Wg-jDp"/>
                             <constraint firstAttribute="bottom" secondItem="qLz-rp-n5d" secondAttribute="bottom" constant="-44" id="94R-dX-uYx"/>
+                            <constraint firstItem="JTY-vJ-kQC" firstAttribute="centerY" secondItem="R1F-cM-6d6" secondAttribute="centerY" id="9aa-uz-adl"/>
                             <constraint firstItem="nZA-EP-Yzh" firstAttribute="bottom" secondItem="cFd-i0-Fb9" secondAttribute="bottom" constant="36" id="CFj-DJ-GPt"/>
                             <constraint firstItem="R1F-cM-6d6" firstAttribute="top" secondItem="nZA-EP-Yzh" secondAttribute="top" id="FCv-bz-BSE"/>
+                            <constraint firstItem="nZA-EP-Yzh" firstAttribute="trailing" secondItem="JTY-vJ-kQC" secondAttribute="trailing" constant="16" id="FVp-Ld-moW"/>
                             <constraint firstItem="Mx4-rj-E28" firstAttribute="trailing" secondItem="nZA-EP-Yzh" secondAttribute="trailing" id="GRg-Em-8AR"/>
                             <constraint firstItem="nZA-EP-Yzh" firstAttribute="bottom" secondItem="TSr-x5-EgF" secondAttribute="bottom" constant="150" id="Hft-oB-SBi"/>
                             <constraint firstItem="teg-Nd-c76" firstAttribute="leading" secondItem="nZA-EP-Yzh" secondAttribute="leading" id="HxQ-MM-OQH"/>
                             <constraint firstItem="R1F-cM-6d6" firstAttribute="leading" secondItem="nZA-EP-Yzh" secondAttribute="leading" id="QbJ-qe-kuf"/>
+                            <constraint firstItem="LBb-gX-Q0C" firstAttribute="leading" secondItem="2MO-OF-DiD" secondAttribute="leading" id="RUB-Vq-VfH"/>
                             <constraint firstItem="Mx4-rj-E28" firstAttribute="bottom" secondItem="nZA-EP-Yzh" secondAttribute="bottom" id="RWK-cQ-HK3"/>
                             <constraint firstItem="VbS-G6-kOY" firstAttribute="leading" secondItem="nZA-EP-Yzh" secondAttribute="leading" id="SSu-Uj-ZRO"/>
                             <constraint firstItem="teg-Nd-c76" firstAttribute="top" secondItem="nZA-EP-Yzh" secondAttribute="top" constant="40" id="Sgh-BF-xJD"/>
@@ -590,6 +611,7 @@
                             <constraint firstItem="TSr-x5-EgF" firstAttribute="trailing" secondItem="nZA-EP-Yzh" secondAttribute="trailing" id="dLw-89-9lO"/>
                             <constraint firstAttribute="trailing" secondItem="teg-Nd-c76" secondAttribute="trailing" id="k8T-OQ-nP4"/>
                             <constraint firstItem="qLz-rp-n5d" firstAttribute="trailing" secondItem="nZA-EP-Yzh" secondAttribute="trailing" id="lZC-gO-St7"/>
+                            <constraint firstItem="LBb-gX-Q0C" firstAttribute="top" secondItem="R1F-cM-6d6" secondAttribute="bottom" id="uOt-Yl-70U"/>
                             <constraint firstItem="TSr-x5-EgF" firstAttribute="bottom" secondItem="VbS-G6-kOY" secondAttribute="bottom" id="yYK-8C-PqQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nZA-EP-Yzh"/>
@@ -988,6 +1010,7 @@
     <resources>
         <image name="fade-bottom" width="375" height="80"/>
         <image name="fade-top" width="375" height="80"/>
+        <image name="indicator" width="16" height="16"/>
         <image name="like" width="32" height="32"/>
         <image name="redo" width="32" height="32"/>
         <image name="settings" width="32" height="32"/>
