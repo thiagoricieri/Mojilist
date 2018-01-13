@@ -15,6 +15,7 @@ public protocol App {
 	var config: AppConfig { get }
 	var documentPath: String { get }
     var realm: Realm { get }
+    //var theme: Theme { get set }
 	
 	var humamFormatter: DateFormatter { get }
 	var posixFormatter: DateFormatter { get }
