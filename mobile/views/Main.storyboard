@@ -173,22 +173,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwg-qn-USE" customClass="FloatButton" customModule="Emojilist" customModuleProvider="target">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwg-qn-USE" customClass="PrimaryFloatingButton" customModule="Emojilist" customModuleProvider="target">
                                 <rect key="frame" x="277" y="593" width="80" height="50"/>
                                 <color key="backgroundColor" red="0.37844690679999998" green="0.84825617070000003" blue="0.21206393840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="TDt-Z4-R2I"/>
                                     <constraint firstAttribute="width" constant="80" id="aMs-PS-MOU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                <state key="normal" title="Store">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="store"/>
                                 <connections>
                                     <action selector="actionStore:" destination="smI-Aa-Uwf" eventType="touchUpInside" id="kKO-dN-4LV"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDV-ki-WX4" customClass="FloatButton" customModule="Emojilist" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RDV-ki-WX4" customClass="PrimaryFloatingButton" customModule="Emojilist" customModuleProvider="target">
                                 <rect key="frame" x="142.5" y="593" width="90" height="50"/>
                                 <color key="backgroundColor" red="0.00063899887030000003" green="0.63360309599999998" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -372,7 +370,7 @@
                                     <constraint firstAttribute="height" constant="80" id="F5b-6X-Qho"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mx4-rj-E28">
+                            <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mx4-rj-E28">
                                 <rect key="frame" x="0.0" y="452" width="375" height="215"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="215" id="aBB-C9-heo"/>
@@ -731,7 +729,7 @@
                                     <outlet property="delegate" destination="olF-hI-A1H" id="rNm-Ta-beA"/>
                                 </connections>
                             </collectionView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="fade-top" translatesAutoresizingMaskIntoConstraints="NO" id="yMi-fh-tcj">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="fade-top" translatesAutoresizingMaskIntoConstraints="NO" id="yMi-fh-tcj">
                                 <rect key="frame" x="0.0" y="85" width="375" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="dXJ-MA-zbq"/>
@@ -743,25 +741,51 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="fade-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="oFu-xy-8QE">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="fade-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="oFu-xy-8QE">
                                 <rect key="frame" x="0.0" y="568" width="375" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="NfK-0c-DpB"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nd-x0-8wa" customClass="FloatButton" customModule="Emojilist" customModuleProvider="target">
-                                <rect key="frame" x="142" y="583" width="90" height="50"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nd-x0-8wa" customClass="PrimaryFloatingButton" customModule="Emojilist" customModuleProvider="target">
+                                <rect key="frame" x="152" y="561" width="70" height="70"/>
                                 <color key="backgroundColor" red="0.00063899887030000003" green="0.63360309599999998" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="Gjd-5e-w21"/>
-                                    <constraint firstAttribute="height" constant="50" id="RXu-an-e6U"/>
+                                    <constraint firstAttribute="width" constant="70" id="1Ma-zs-yys"/>
+                                    <constraint firstAttribute="height" constant="70" id="M8d-nq-qW3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" red="0.88235294119999996" green="0.98039215690000003" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="like">
+                                    <color key="titleColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="actionDoneWithSender:" destination="olF-hI-A1H" eventType="touchUpInside" id="uDu-Jo-gfk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYs-Ug-GsN" customClass="SecondaryFloatingButton" customModule="Emojilist" customModuleProvider="target">
+                                <rect key="frame" x="254" y="574" width="48" height="48"/>
+                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="EEb-TL-UyA"/>
+                                    <constraint firstAttribute="width" constant="48" id="jOI-ry-MvE"/>
+                                </constraints>
+                                <color key="tintColor" red="0.2341767132" green="0.2341767132" blue="0.2341767132" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="settings"/>
+                                <connections>
+                                    <action selector="actionSettingsWithSender:" destination="olF-hI-A1H" eventType="touchUpInside" id="wXg-yl-HKu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAW-X5-lY7" customClass="SecondaryFloatingButton" customModule="Emojilist" customModuleProvider="target">
+                                <rect key="frame" x="72" y="574" width="48" height="48"/>
+                                <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="mNf-Px-7sh"/>
+                                    <constraint firstAttribute="width" constant="48" id="rvz-qB-aG2"/>
+                                </constraints>
+                                <color key="tintColor" red="0.2341767132" green="0.2341767132" blue="0.2341767132" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="redo"/>
+                                <connections>
+                                    <action selector="actionRedoWithSender:" destination="olF-hI-A1H" eventType="touchUpInside" id="jbb-nx-cIE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -770,17 +794,21 @@
                             <constraint firstItem="oFu-xy-8QE" firstAttribute="leading" secondItem="kcF-Id-Xhh" secondAttribute="leading" id="2Oz-EQ-z1E"/>
                             <constraint firstItem="kcF-Id-Xhh" firstAttribute="bottom" secondItem="Liq-Hg-SQX" secondAttribute="bottom" constant="30" id="5TT-wG-Zv9"/>
                             <constraint firstItem="yMi-fh-tcj" firstAttribute="top" secondItem="kcF-Id-Xhh" secondAttribute="top" constant="65" id="6Wb-FS-XcY"/>
-                            <constraint firstItem="8nd-x0-8wa" firstAttribute="centerX" secondItem="kcF-Id-Xhh" secondAttribute="centerX" id="GXN-xv-6k4"/>
                             <constraint firstItem="Liq-Hg-SQX" firstAttribute="leading" secondItem="kcF-Id-Xhh" secondAttribute="leading" id="HDG-5X-0ng"/>
                             <constraint firstItem="Sgd-J3-IgY" firstAttribute="leading" secondItem="kcF-Id-Xhh" secondAttribute="leading" constant="16" id="HgG-7L-kWf"/>
+                            <constraint firstItem="8nd-x0-8wa" firstAttribute="centerX" secondItem="kcF-Id-Xhh" secondAttribute="centerX" id="Ix4-6n-BCh"/>
                             <constraint firstItem="Liq-Hg-SQX" firstAttribute="top" secondItem="Sgd-J3-IgY" secondAttribute="bottom" constant="20" id="Oz6-IL-6oa"/>
+                            <constraint firstItem="8nd-x0-8wa" firstAttribute="leading" secondItem="lAW-X5-lY7" secondAttribute="trailing" constant="32" id="PZU-i6-1DT"/>
                             <constraint firstItem="kcF-Id-Xhh" firstAttribute="trailing" secondItem="Sgd-J3-IgY" secondAttribute="trailing" constant="16" id="RD4-DM-iXm"/>
-                            <constraint firstItem="kcF-Id-Xhh" firstAttribute="bottom" secondItem="8nd-x0-8wa" secondAttribute="bottom" constant="34" id="Tc5-zw-3hZ"/>
                             <constraint firstItem="oFu-xy-8QE" firstAttribute="trailing" secondItem="kcF-Id-Xhh" secondAttribute="trailing" id="dEo-h4-8cO"/>
+                            <constraint firstItem="kcF-Id-Xhh" firstAttribute="bottom" secondItem="lAW-X5-lY7" secondAttribute="bottom" constant="45" id="dOo-Ey-UQq"/>
                             <constraint firstItem="yMi-fh-tcj" firstAttribute="leading" secondItem="kcF-Id-Xhh" secondAttribute="leading" id="eeu-kw-44G"/>
                             <constraint firstItem="kcF-Id-Xhh" firstAttribute="bottom" secondItem="oFu-xy-8QE" secondAttribute="bottom" constant="19" id="hfz-sy-lKD"/>
                             <constraint firstItem="yMi-fh-tcj" firstAttribute="trailing" secondItem="kcF-Id-Xhh" secondAttribute="trailing" id="lBE-g5-B8F"/>
                             <constraint firstItem="Sgd-J3-IgY" firstAttribute="top" secondItem="kcF-Id-Xhh" secondAttribute="top" constant="20" id="nz4-kE-GSO"/>
+                            <constraint firstItem="QYs-Ug-GsN" firstAttribute="leading" secondItem="8nd-x0-8wa" secondAttribute="trailing" constant="32" id="qBT-nB-BqJ"/>
+                            <constraint firstItem="kcF-Id-Xhh" firstAttribute="bottom" secondItem="8nd-x0-8wa" secondAttribute="bottom" constant="36" id="tQU-CX-nGA"/>
+                            <constraint firstItem="kcF-Id-Xhh" firstAttribute="bottom" secondItem="QYs-Ug-GsN" secondAttribute="bottom" constant="45" id="w1R-YA-jfc"/>
                             <constraint firstItem="Liq-Hg-SQX" firstAttribute="trailing" secondItem="kcF-Id-Xhh" secondAttribute="trailing" id="yQJ-XO-oUX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kcF-Id-Xhh"/>
@@ -800,5 +828,9 @@
     <resources>
         <image name="fade-bottom" width="375" height="80"/>
         <image name="fade-top" width="375" height="80"/>
+        <image name="like" width="32" height="32"/>
+        <image name="redo" width="32" height="32"/>
+        <image name="settings" width="32" height="32"/>
+        <image name="store" width="32" height="32"/>
     </resources>
 </document>

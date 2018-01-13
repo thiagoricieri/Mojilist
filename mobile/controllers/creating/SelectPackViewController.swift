@@ -18,8 +18,8 @@ protocol SelectPackView: BaseTableView {
 
 class SelectPackViewController: BaseTableViewController, SelectPackView {
     
-    @IBOutlet weak var newListButton: FloatButton!
-    @IBOutlet weak var storeButton: FloatButton!
+    @IBOutlet weak var newListButton: PrimaryFloatingButton!
+    @IBOutlet weak var storeButton: PrimaryFloatingButton!
     
     var presenter: SelectPackPresenter!
     var delegate: SelectPackDelegate!

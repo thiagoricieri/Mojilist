@@ -39,7 +39,7 @@
 		B064A1D720064B0E001ADB0E /* BaseDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */; };
 		B064A1D920064ED4001ADB0E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */; };
 		B064A1DB20064F21001ADB0E /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DA20064F21001ADB0E /* ListCell.swift */; };
-		B064A1DD200658BC001ADB0E /* FloatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DC200658BC001ADB0E /* FloatButton.swift */; };
+		B064A1DD200658BC001ADB0E /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DC200658BC001ADB0E /* FloatingButton.swift */; };
 		B07A09612008D561005957C1 /* SelectPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A095F2008D560005957C1 /* SelectPackViewController.swift */; };
 		B07A09622008D561005957C1 /* SelectPackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09602008D560005957C1 /* SelectPackPresenter.swift */; };
 		B07A09642008D5A3005957C1 /* PackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09632008D5A3005957C1 /* PackCell.swift */; };
@@ -120,7 +120,7 @@
 		B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataPresenter.swift; sourceTree = "<group>"; };
 		B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		B064A1DA20064F21001ADB0E /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
-		B064A1DC200658BC001ADB0E /* FloatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatButton.swift; sourceTree = "<group>"; };
+		B064A1DC200658BC001ADB0E /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		B07A095F2008D560005957C1 /* SelectPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPackViewController.swift; sourceTree = "<group>"; };
 		B07A09602008D560005957C1 /* SelectPackPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPackPresenter.swift; sourceTree = "<group>"; };
 		B07A09632008D5A3005957C1 /* PackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCell.swift; sourceTree = "<group>"; };
@@ -315,7 +315,7 @@
 				B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */,
 				B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */,
 				B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */,
-				B064A1DC200658BC001ADB0E /* FloatButton.swift */,
+				B064A1DC200658BC001ADB0E /* FloatingButton.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -762,7 +762,7 @@
 				B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */,
 				B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */,
 				B07A09682008F3A6005957C1 /* UsingListViewController.swift in Sources */,
-				B064A1DD200658BC001ADB0E /* FloatButton.swift in Sources */,
+				B064A1DD200658BC001ADB0E /* FloatingButton.swift in Sources */,
 				B035FE091FFE5E8F003A332B /* App.swift in Sources */,
 				B089DEA320079BFD002D3879 /* SelectEmojisPresenter.swift in Sources */,
 				B089DE9F20079507002D3879 /* CreateListPresenter.swift in Sources */,

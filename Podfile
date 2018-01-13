@@ -2,6 +2,7 @@ use_frameworks!
 
 def shared_pods
     pod 'Saw', :git => 'https://github.com/thiagoricieri/Saw-iOS.git'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
     pod 'MBProgressHUD'
     pod 'SDWebImage', '~> 3.7.3'
     pod 'Alamofire'

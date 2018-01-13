@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class FloatButton: UIButton {
+class PrimaryFloatingButton: UIButton {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,5 +19,18 @@ class FloatButton: UIButton {
         self.layer.shadowRadius = 5
         self.layer.shadowOpacity = 0.2
         self.layer.shadowOffset = CGSize(width: 0, height: 8)
+    }
+}
+
+class SecondaryFloatingButton: UIButton {
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        self.layer.cornerRadius = 8
+        self.layer.shadowColor = UIColorFromRGB(rgb: 0x000000).cgColor
+        self.layer.shadowRadius = 3
+        self.layer.shadowOpacity = 0.2
+        self.layer.shadowOffset = CGSize(width: 0, height: 6)
     }
 }
