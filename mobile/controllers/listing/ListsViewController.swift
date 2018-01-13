@@ -27,7 +27,6 @@ class ListsViewController: BaseTableViewController, ListsView {
     override func setViewStyle() {
         title = "Lists.Title".localized
         newListButton.setTitle("Lists.New".localized, for: .normal)
-        settingsBarItem.title = "Lists.Settings".localized
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -39,7 +39,7 @@
 		B064A1D720064B0E001ADB0E /* BaseDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */; };
 		B064A1D920064ED4001ADB0E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */; };
 		B064A1DB20064F21001ADB0E /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DA20064F21001ADB0E /* ListCell.swift */; };
-		B064A1DD200658BC001ADB0E /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DC200658BC001ADB0E /* FloatingButton.swift */; };
+		B064A1DD200658BC001ADB0E /* FloatingButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DC200658BC001ADB0E /* FloatingButtons.swift */; };
 		B07A09612008D561005957C1 /* SelectPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A095F2008D560005957C1 /* SelectPackViewController.swift */; };
 		B07A09622008D561005957C1 /* SelectPackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09602008D560005957C1 /* SelectPackPresenter.swift */; };
 		B07A09642008D5A3005957C1 /* PackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09632008D5A3005957C1 /* PackCell.swift */; };
@@ -53,6 +53,8 @@
 		B089DEA920079FE7002D3879 /* AsciiEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEA820079FE7002D3879 /* AsciiEmojiCell.swift */; };
 		B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */; };
 		B089DEAD2007A1F7002D3879 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */; };
+		B0B8A270200A582C003BA3FB /* Resources.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B8A26F200A582C003BA3FB /* Resources.xib */; };
+		B0B8A272200A5861003BA3FB /* EmojiDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B8A271200A5861003BA3FB /* EmojiDropView.swift */; };
 		B0D119582004FC3E005B2CBB /* Launcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D119572004FC3E005B2CBB /* Launcher.swift */; };
 		B0D1195C20050703005B2CBB /* Store.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D1195B20050703005B2CBB /* Store.storyboard */; };
 		B0D1195E20050711005B2CBB /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0D1195D20050711005B2CBB /* About.storyboard */; };
@@ -120,7 +122,7 @@
 		B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataPresenter.swift; sourceTree = "<group>"; };
 		B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		B064A1DA20064F21001ADB0E /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
-		B064A1DC200658BC001ADB0E /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
+		B064A1DC200658BC001ADB0E /* FloatingButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtons.swift; sourceTree = "<group>"; };
 		B07A095F2008D560005957C1 /* SelectPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPackViewController.swift; sourceTree = "<group>"; };
 		B07A09602008D560005957C1 /* SelectPackPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPackPresenter.swift; sourceTree = "<group>"; };
 		B07A09632008D5A3005957C1 /* PackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCell.swift; sourceTree = "<group>"; };
@@ -134,6 +136,8 @@
 		B089DEA820079FE7002D3879 /* AsciiEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsciiEmojiCell.swift; sourceTree = "<group>"; };
 		B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEmojiCell.swift; sourceTree = "<group>"; };
 		B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		B0B8A26F200A582C003BA3FB /* Resources.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Resources.xib; sourceTree = "<group>"; };
+		B0B8A271200A5861003BA3FB /* EmojiDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDropView.swift; sourceTree = "<group>"; };
 		B0D119572004FC3E005B2CBB /* Launcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Launcher.swift; sourceTree = "<group>"; };
 		B0D1195B20050703005B2CBB /* Store.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Store.storyboard; sourceTree = "<group>"; };
 		B0D1195D20050711005B2CBB /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
@@ -284,6 +288,7 @@
 				B0D1195D20050711005B2CBB /* About.storyboard */,
 				B0D1195B20050703005B2CBB /* Store.storyboard */,
 				B035FDFA1FFE5E1F003A332B /* LaunchScreen.storyboard */,
+				B0B8A26F200A582C003BA3FB /* Resources.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -315,7 +320,7 @@
 				B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */,
 				B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */,
 				B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */,
-				B064A1DC200658BC001ADB0E /* FloatingButton.swift */,
+				B064A1DC200658BC001ADB0E /* FloatingButtons.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -325,6 +330,7 @@
 			children = (
 				B07A09672008F3A6005957C1 /* UsingListViewController.swift */,
 				B07A09692008F3AD005957C1 /* UsingListPresenter.swift */,
+				B0B8A271200A5861003BA3FB /* EmojiDropView.swift */,
 			);
 			path = using;
 			sourceTree = "<group>";
@@ -539,6 +545,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B035FDFC1FFE5E1F003A332B /* LaunchScreen.storyboard in Resources */,
+				B0B8A270200A582C003BA3FB /* Resources.xib in Resources */,
 				B01C29341FEAA46300C1AF22 /* assets.xcassets in Resources */,
 				B0D1195E20050711005B2CBB /* About.storyboard in Resources */,
 				B064A1BE200640F9001ADB0E /* Localizable.strings in Resources */,
@@ -753,6 +760,7 @@
 				B064A1C92006455F001ADB0E /* REmojiPackItem.swift in Sources */,
 				B035FE041FFE5E8F003A332B /* AppConfig.swift in Sources */,
 				B089DEA120079BF1002D3879 /* SelectEmojisViewController.swift in Sources */,
+				B0B8A272200A5861003BA3FB /* EmojiDropView.swift in Sources */,
 				B07A096A2008F3AD005957C1 /* UsingListPresenter.swift in Sources */,
 				B064A1C52006440E001ADB0E /* REmoji.swift in Sources */,
 				B01C292F1FEAA46300C1AF22 /* ListsViewController.swift in Sources */,
@@ -764,7 +772,7 @@
 				B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */,
 				B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */,
 				B07A09682008F3A6005957C1 /* UsingListViewController.swift in Sources */,
-				B064A1DD200658BC001ADB0E /* FloatingButton.swift in Sources */,
+				B064A1DD200658BC001ADB0E /* FloatingButtons.swift in Sources */,
 				B035FE091FFE5E8F003A332B /* App.swift in Sources */,
 				B089DEA320079BFD002D3879 /* SelectEmojisPresenter.swift in Sources */,
 				B089DE9F20079507002D3879 /* CreateListPresenter.swift in Sources */,

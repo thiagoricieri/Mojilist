@@ -14,7 +14,7 @@ class PrimaryFloatingButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = 14
         self.layer.shadowColor = UIColorFromRGB(rgb: 0x000000).cgColor
         self.layer.shadowRadius = 5
         self.layer.shadowOpacity = 0.2
