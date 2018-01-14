@@ -82,27 +82,28 @@ public class Launcher {
     public func includeStandardPack() -> Self {
         let realm = try! Realm()
         let query = realm.objects(REmojiPack.self).filter("ascii = true")
+        
         guard query.count < 1 else {
             print("Standard pack is already included")
             return self
         }
         
         try! realm.write {
-            let pack = REmojiPack()
-            pack.name = "Pack.EmojiThings".localized
-            pack.ascii = true
-            pack.url = ""
-            
-            let emojis = "🍏🍎🍐🍊🍋🍌🍉🍇🍓🍈🍒🍑🍍🥥🥝🍅🍆🥑🥦🥒🌶🌽🥕🥔🍠🥐🍞🥖🥨🧀🥚🥞🥓🥩🍗🍖🌭🍔🍟🍕🥪🥙🌮🌯🥗🥘🥫🍝🍜🍲🍛🍣🍱🥟🍤🍙🍚🍘🍥🥠🍢🍡🍧🍨🍦🥧🍰🎂🍮🍭🍬🍫🍿🍩🍪🌰🥜🍯🥛☕️🍵🥤🍶🍺🍷🥃🍸🍹🥂🍾🍴🥣💧☂️🔥🎄🌲🌹🌻🌸🍄🍁🦀🐠🦑🐙🐟🐌👔👖👚👕👢👗👙🧦🧤🧣🎩🧢🎒👛🌂👞👟👡👠👓🕶💄👀👅⚽️🏀🏈⚾️🎾🏐🏉🎱🏓🏸🏒🏑🏏🎣🥊⛸🛷🎿🎫🎟🎭🎤🎧🎹🥁🎷🎺🎸🎻🎲🎯🎳🎮🛴🛵🚲🚗🚕🚙🏍✈️🗺⛱🏝⌚️📱💻⌨️🖥🖱🖨🕹📷📹📞☎️⏰🔦🕯🗑💵💶💴💷💎🔧🔨🔪🔩⚙️💊🛍🎁🖼🎈✉️📁🗞📔📎📌✂️🖊🖌✏️🖍".map { return $0 }
-            
-            for ec in emojis {
-                let e = REmojiPackItem()
-                e.name = String(ec)
-                pack.emojis.append(e)
+            [(name: "Pack.EmojiThings".localized, emojis: thingsEmoji()),
+             (name: "Pack.AllEmojis".localized, emojis: allEmojis())].forEach { emojiPack in
+                let pack = REmojiPack()
+                pack.name = emojiPack.name
+                pack.ascii = true
+                pack.url = ""
+                
+                for ec in emojiPack.emojis {
+                    let e = REmojiPackItem()
+                    e.name = String(ec)
+                    pack.emojis.append(e)
+                }
+                
+                realm.add(pack)
             }
-            
-            print("Added \(pack.emojis.count) emojis to \(pack.name) pack")
-            realm.add(pack)
         }
         
         return self

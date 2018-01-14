@@ -94,8 +94,7 @@ class SelectEmojisViewController: BaseCollectionViewController,
             cell.springView.animate()
         }
         
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
+        lightImpact()
         
         let basketIndex = IndexPath(
             item: 0,

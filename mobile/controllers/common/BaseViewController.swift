@@ -78,6 +78,25 @@ extension BaseViewController {
     }
 }
 
+// MARK: - Impact Generator
+extension BaseViewController {
+    
+    func heavyImpact() {
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
+        generator.impactOccurred()
+    }
+    
+    func mediumImpact() {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
+    }
+    
+    func lightImpact() {
+        let generator = UIImpactFeedbackGenerator(style: .light)
+        generator.impactOccurred()
+    }
+}
+
 // MARK: - Observing Keyboard
 extension BaseViewController {
     
