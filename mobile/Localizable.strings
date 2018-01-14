@@ -27,12 +27,15 @@
 "CreateList.Title" = "Nova Lista";
 "CreateList.Text.Placeholder" = "Compras da semana";
 "CreateList.Label" = "Dê um nome à sua lista";
+"CreateList.Hint" = "Você selecionará os items da lista na próxima etapa.";
+"CreateList.Next" = "Seguinte";
 
 // Select emojis
 "SelectEmojis.Title" = "O que vai na lista?";
 "SelectEmojis.Create" = "Criar";
 "SelectEmojis.Clear" = "Esvaziar";
 "SelectEmojis.SelectPack" = "Pacote selecionado:";
+"SelectEmojis.ItemsInList" = "Itens na lista:";
 
 // Select Pack
 "SelectPack.Title" = "Pacotes";

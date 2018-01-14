@@ -17,6 +17,8 @@ class CreateListViewController: BaseViewController, CreateListView {
     
     @IBOutlet weak var listNameField: UITextField!
     @IBOutlet weak var listNameLabel: UILabel!
+    @IBOutlet weak var hintLabel: UILabel!
+    @IBOutlet weak var nextBarButton: UIBarButtonItem!
     
     var presenter: CreateListPresenter!
     
@@ -29,6 +31,8 @@ class CreateListViewController: BaseViewController, CreateListView {
         title = "CreateList.Title".localized
         listNameField.placeholder = "CreateList.Text.Placeholder".localized
         listNameLabel.text = "CreateList.Label".localized
+        hintLabel.text = "CreateList.Hint".localized
+        nextBarButton.title = "CreateList.Next".localized
     }
     
     override func prepareViewForUser() {
@@ -45,15 +49,19 @@ class CreateListViewController: BaseViewController, CreateListView {
     func goToSelectEmojis() {
         performSegue(withIdentifier: MainStoryboard.Segue.toSelectEmojis, sender: nil)
     }
+    
+    @IBAction func actionNext(sender: Any?) {
+        if presenter.validateInput(listName: listNameField.text) {
+            goToSelectEmojis()
+        }
+    }
 }
 
 // MARK: - Text Field Delegate
 extension CreateListViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if presenter.validateInput(listName: listNameField.text) {
-            goToSelectEmojis()
-        }
+        actionNext(sender: nil)
         return true
     }
 }

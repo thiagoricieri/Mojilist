@@ -12,8 +12,10 @@ import Spring
 
 protocol SelectEmojisView: BaseView {
     
-    func updateEmojiInListCount(to: Int)
     func listCreated()
+    func addIndexToBasked(_ indexPath: IndexPath)
+    func removeIndexFromBasket(_ indexPath: IndexPath)
+    func updateEmojiInListCount(to: Int)
 }
 
 class SelectEmojisViewController: BaseCollectionViewController,
@@ -29,6 +31,7 @@ class SelectEmojisViewController: BaseCollectionViewController,
     @IBOutlet weak var badgeView: SpringView!
     @IBOutlet weak var badgeCountLabel: UILabel!
     @IBOutlet weak var clearBarItem: UIBarButtonItem!
+    @IBOutlet weak var itemsInListLabel: UILabel!
     
     // Extra collection
     @IBOutlet weak var basketCollection: UICollectionView!
@@ -42,10 +45,11 @@ class SelectEmojisViewController: BaseCollectionViewController,
     }
     
     override func setViewStyle() {
-        title = "SelectEmojis.Title".localized
+        title = listName
         createButton.setTitle("SelectEmojis.Create".localized, for: .normal)
         createButton.setTitle("SelectEmojis.Create".localized, for: .disabled)
         clearBarItem.title = "SelectEmojis.Clear".localized
+        itemsInListLabel.text = "SelectEmojis.ItemsInList".localized
         badgeView.layer.cornerRadius = badgeView.bounds.width/2
         badgeView.clipsToBounds = true
     }
@@ -82,27 +86,27 @@ class SelectEmojisViewController: BaseCollectionViewController,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard collectionView == collection else { return }
-        
         collectionView.deselectItem(at: indexPath, animated: false)
-        presenter.selectEmoji(at: indexPath.row)
         
-        if let cell = collectionView.cellForItem(at: indexPath) as? BaseEmojiCell {
-            cell.springView.animation = "pop"
-            cell.springView.curve = "easeOut"
-            cell.springView.duration = 0.5
-            cell.springView.animate()
+        if collectionView == collection {
+            presenter.selectEmoji(at: indexPath.row)
+            
+            if let cell = collectionView.cellForItem(at: indexPath) as? BaseEmojiCell {
+                cell.springView.animation = "pop"
+                cell.springView.curve = "easeOut"
+                cell.springView.duration = 0.5
+                cell.springView.animate()
+            }
+            
+            lightImpact()
+            addIndexToBasked(IndexPath(item: 0, section: 0))
         }
-        
-        lightImpact()
-        
-        let basketIndex = IndexPath(
-            item: 0,
-            section: 0)
-        
-        basketCollection.performBatchUpdates({
-            self.basketCollection.insertItems(at: [basketIndex])
-        }, completion: nil)
+        else {
+            presenter.removeEmoji(at: indexPath.row)
+            
+            lightImpact()
+            removeIndexFromBasket(indexPath)
+        }
     }
     
     override func collectionView(_ collectionView: UICollectionView,
@@ -112,6 +116,32 @@ class SelectEmojisViewController: BaseCollectionViewController,
         } else {
             return presenter.selectedCount()
         }
+    }
+    
+    func listCreated() {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func packSelected(pack: REmojiPack) {
+        presenter.pack = pack
+        navigationController?.popViewController(animated: true)
+        reload()
+    }
+    
+    func selectedPack() -> REmojiPack {
+        return presenter.pack
+    }
+    
+    func addIndexToBasked(_ indexPath: IndexPath) {
+        basketCollection.performBatchUpdates({
+            self.basketCollection.insertItems(at: [indexPath])
+        }, completion: nil)
+    }
+    
+    func removeIndexFromBasket(_ indexPath: IndexPath) {
+        basketCollection.performBatchUpdates({
+            self.basketCollection.deleteItems(at: [indexPath])
+        }, completion: nil)
     }
     
     func updateEmojiInListCount(to: Int) {
@@ -126,10 +156,17 @@ class SelectEmojisViewController: BaseCollectionViewController,
             badgeView.isHidden = true
             createButton.isEnabled = false
         }
-    }
-    
-    func listCreated() {
-        navigationController?.popToRootViewController(animated: true)
+        
+        if to >= 1 && to <= 2 && itemsInListLabel.alpha == 0 {
+            UIView.animate(withDuration: 0.6) {
+                self.itemsInListLabel.alpha = 1
+            }
+        }
+        else if (to == 0 || to > 2) && itemsInListLabel.alpha == 1 {
+            UIView.animate(withDuration: 0.6) {
+                self.itemsInListLabel.alpha = 0
+            }
+        }
     }
     
     // MARK: - Connect to Selection of Pack
@@ -138,16 +175,6 @@ class SelectEmojisViewController: BaseCollectionViewController,
             let dest = segue.destination as! SelectPackViewController
             dest.delegate = self
         }
-    }
-    
-    func packSelected(pack: REmojiPack) {
-        presenter.pack = pack
-        navigationController?.popViewController(animated: true)
-        reload()
-    }
-    
-    func selectedPack() -> REmojiPack {
-        return presenter.pack
     }
     
     // MARK: - Actions

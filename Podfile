@@ -9,7 +9,6 @@ def shared_pods
     pod 'Fabric'
     pod 'Crashlytics', '~>  3.8'
     pod 'RealmSwift'
-    pod 'Google/Analytics'
     pod 'HTTPStatusCodes', '~> 3.1.0'
     pod 'DateToolsSwift'
     pod 'PopupDialog', '~> 0.6'

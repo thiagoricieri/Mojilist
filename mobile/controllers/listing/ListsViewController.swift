@@ -30,7 +30,7 @@ class ListsViewController: BaseTableViewController, ListsView {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: ListCell.identifier) as! ListCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: AsciiListCell.identifier) as! AsciiListCell
         
         let item = presenter.item(at: indexPath.row) as! REmojiList
         cell.configure(with: item)
@@ -46,7 +46,7 @@ class ListsViewController: BaseTableViewController, ListsView {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return ListCell.cellHeight
+        return AsciiListCell.cellHeight
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
