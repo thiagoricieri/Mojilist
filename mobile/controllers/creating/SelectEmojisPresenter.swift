@@ -14,6 +14,7 @@ protocol SelectEmojisPresenter: BaseDataPresenter {
     var pack: REmojiPack! { get set }
     
     func selectEmoji(at: Int)
+    func removeEmoji(at: Int)
     func clearList()
     func createList(with name: String)
     
@@ -55,6 +56,11 @@ class SelectEmojisPresenterImpl: SelectEmojisPresenter {
         view.updateEmojiInListCount(to: emojisToList.count)
     }
     
+    func removeEmoji(at: Int) {
+        emojisToList.remove(at: at)
+        view.updateEmojiInListCount(to: emojisToList.count)
+    }
+    
     func clearList() {
         emojisToList = []
         view.updateEmojiInListCount(to: emojisToList.count)
@@ -73,6 +79,7 @@ class SelectEmojisPresenterImpl: SelectEmojisPresenter {
                 emoji.name = item.name
                 emoji.checked = false
                 emoji.imageUrl = item.imageUrl
+                emoji.pack = item.pack
                 return emoji
             })
             realm.add(list)

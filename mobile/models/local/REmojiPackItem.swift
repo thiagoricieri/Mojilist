@@ -13,4 +13,5 @@ class REmojiPackItem: Object {
     
     @objc dynamic var name = ""
     @objc dynamic var imageUrl = ""
+    @objc dynamic var pack = ""
 }

@@ -47,6 +47,7 @@ class SelectPackViewController: BaseTableViewController, SelectPackView {
                 withIdentifier: ImagePackCell.identifier) as! ImagePackCell
         }
         cell.configure(with: item)
+        cell.isHighlighted = true
         
         return cell
     }

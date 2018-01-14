@@ -12,6 +12,8 @@ import UIKit
 class BaseListCell: BaseTableViewCell {
     
     @IBOutlet weak var listName: UILabel!
+    @IBOutlet weak var backgroundOverlay: UIView!
+    @IBOutlet weak var separatorView: UIView!
     
     func configure(with item: REmojiList) {
         listName.text = item.name
@@ -45,7 +47,7 @@ class ImageListCell: BaseListCell {
     }
 }
 
-class ListCell: BaseListCell {
+class AsciiListCell: BaseListCell {
     
     static let identifier = "ListCell"
     static let cellHeight = CGFloat(100)
