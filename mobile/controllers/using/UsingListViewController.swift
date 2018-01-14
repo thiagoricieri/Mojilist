@@ -8,8 +8,12 @@
 
 import Foundation
 import UIKit
+import PopupDialog
 
 protocol UsingListView: BaseCollectionView {
+    
+    func listDeleted()
+    func shareImage(image: UIImage)
 }
 
 class UsingListViewController: BaseCollectionViewController, UsingListView {
@@ -65,12 +69,62 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         heavyImpact()
     }
     
+    func settingsOptions() {
+        let title = "UsingList.Settings.Title".localized
+        let message = "UsingList.Settings.Msg".localized
+        let popup = PopupDialog(title: title, message: message)
+        
+        let dismissButton = CancelButton(title: "Dismiss".localized) {
+            print("You canceled the car dialog.")
+        }
+        
+        let deleteButton = DefaultButton(
+                title: "UsingList.Settings.DeleteList".localized,
+                dismissOnTap: true) {
+            self.confirmDeletion()
+        }
+        
+        let shareButton = DefaultButton(
+                title: "UsingList.Settings.ShareList".localized,
+                dismissOnTap: true) {
+            self.presenter.shareList(list: self.emojiList)
+        }
+        
+        popup.addButtons([dismissButton, deleteButton, shareButton])
+        self.present(popup, animated: true, completion: nil)
+    }
+    
+    func confirmDeletion() {
+        let title = "UsingList.Settings.DeleteList".localized
+        let message = "UsingList.Delete.Msg".localized
+        let popup = PopupDialog(title: title, message: message)
+        
+        let dismissButton = CancelButton(title: "No".localized) { }
+        let deleteButton = DefaultButton(
+                title: "UsingList.Settings.DeleteListConfirmation".localized,
+                dismissOnTap: true) {
+            self.presenter.deleteList(list: self.emojiList)
+        }
+        
+        popup.addButtons([dismissButton, deleteButton])
+        self.present(popup, animated: true, completion: nil)
+    }
+    
+    func shareImage(image: UIImage) {
+        
+    }
+    
+    func listDeleted() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func actionDone(sender: Any) {
         dismiss(animated: true, completion: nil)
         mediumImpact()
     }
     
     @IBAction func actionSettings(sender: Any) {
+        settingsOptions()
         lightImpact()
     }
     

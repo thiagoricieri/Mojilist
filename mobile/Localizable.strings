@@ -8,8 +8,12 @@
 
 // Base
 "OK" = "OK";
+"Yes" = "Sim";
+"No" = "Não";
 "Warning" = "Atenção!";
 "Success" = "Sucesso!";
+"Dismiss" = "Dispensar";
+"Cancel" = "Cancelar";
 
 // Pack
 "Pack.EmojiThings" = "Emojis de Coisas!";
@@ -22,6 +26,12 @@
 
 // Using List
 "UsingList.Done" = "Pronto!";
+"UsingList.Settings.Title" = "Ajustes da lista";
+"UsingList.Settings.Msg" = "Você pode remover sua lista por completo do seu aparelho ou compartilhar uma imagem dela nas suas redes sociais.";
+"UsingList.Settings.ShareList" = "Compartilhar esta lista";
+"UsingList.Settings.DeleteList" = "Deletar esta lista";
+"UsingList.Delete.Msg" = "Só para assegurar-se que você não tocou no botão de deletar sem querer, confirme a remoção da lista a seguir:";
+"UsingList.Settings.DeleteListConfirmation" = "Deletar a lista";
 
 // Create List
 "CreateList.Title" = "Nova Lista";

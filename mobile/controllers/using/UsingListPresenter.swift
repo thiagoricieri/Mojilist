@@ -15,6 +15,9 @@ protocol UsingListPresenter: BaseDataPresenter {
     
     func toggleEmoji(at: Int)
     func resetCheckedEmojis()
+    
+    func deleteList(list: REmojiList)
+    func shareList(list: REmojiList)
 }
 
 class UsingListPresenterImpl: UsingListPresenter {
@@ -57,6 +60,18 @@ class UsingListPresenterImpl: UsingListPresenter {
         try! realm.write {
             checkedEmojis.setValue(false, forKey: "checked")
         }
+    }
+    
+    func deleteList(list: REmojiList) {
+        let realm = view.provideRealm()
+        try! realm.write {
+            realm.delete(list)
+        }
+        view.listDeleted()
+    }
+    
+    func shareList(list: REmojiList) {
+        //view.shareImage(image: UIImage())
     }
     
     // MARK: - Base Presenter
