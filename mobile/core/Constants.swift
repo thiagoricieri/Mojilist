@@ -20,6 +20,10 @@ public struct Env {
     public struct Key {
         static let userAgent = "User-Agent"
     }
+    
+    public struct App {
+        static let shareUrl = "https://ghostship.co/mojilist"
+    }
 }
 
 // MARK: - Credentials

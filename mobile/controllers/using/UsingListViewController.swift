@@ -13,7 +13,7 @@ import PopupDialog
 protocol UsingListView: BaseCollectionView {
     
     func listDeleted()
-    func shareImage(image: UIImage)
+    func shareList()
 }
 
 class UsingListViewController: BaseCollectionViewController, UsingListView {
@@ -23,6 +23,7 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var listNameLabel: UILabel!
+    @IBOutlet weak var settingsButton: UIButton!
     
     override func instantiateDependencies() {
         basePresenter = UsingListPresenterImpl(view: self)
@@ -78,7 +79,7 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
             print("You canceled the car dialog.")
         }
         
-        let deleteButton = DefaultButton(
+        let deleteButton = DestructiveButton(
                 title: "UsingList.Settings.DeleteList".localized,
                 dismissOnTap: true) {
             self.confirmDeletion()
@@ -100,7 +101,7 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         let popup = PopupDialog(title: title, message: message)
         
         let dismissButton = CancelButton(title: "No".localized) { }
-        let deleteButton = DefaultButton(
+        let deleteButton = DestructiveButton(
                 title: "UsingList.Settings.DeleteListConfirmation".localized,
                 dismissOnTap: true) {
             self.presenter.deleteList(list: self.emojiList)
@@ -110,8 +111,16 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         self.present(popup, animated: true, completion: nil)
     }
     
-    func shareImage(image: UIImage) {
+    func shareList() {
+        let firstActivityItem = "\(emojiList.name) #mojilist"
+        let secondActivityItem = URL(string: Env.App.shareUrl)!
+        let image = UIImage(view: self.view)
         
+        let activityViewController = UIActivityViewController(
+                activityItems: [firstActivityItem, secondActivityItem, image],
+                applicationActivities: nil)
+        
+        self.present(activityViewController, animated: true) { }
     }
     
     func listDeleted() {
