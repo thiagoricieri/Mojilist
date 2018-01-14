@@ -71,7 +71,7 @@ class UsingListPresenterImpl: UsingListPresenter {
     }
     
     func shareList(list: REmojiList) {
-        //view.shareImage(image: UIImage())
+        view.shareList()
     }
     
     // MARK: - Base Presenter

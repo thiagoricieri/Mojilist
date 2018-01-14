@@ -1093,6 +1093,7 @@
                         <outlet property="collection" destination="Liq-Hg-SQX" id="lnq-Gx-GkM"/>
                         <outlet property="doneButton" destination="8nd-x0-8wa" id="wkp-Gn-XdL"/>
                         <outlet property="listNameLabel" destination="Sgd-J3-IgY" id="krV-rW-hag"/>
+                        <outlet property="settingsButton" destination="QYs-Ug-GsN" id="jJd-mZ-idq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6N-7I-nO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
