@@ -53,6 +53,7 @@
 		B089DEA920079FE7002D3879 /* AsciiEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEA820079FE7002D3879 /* AsciiEmojiCell.swift */; };
 		B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */; };
 		B089DEAD2007A1F7002D3879 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */; };
+		B09B3AC3200B84280064A126 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B3AC2200B84280064A126 /* Emojis.swift */; };
 		B0B8A270200A582C003BA3FB /* Resources.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B8A26F200A582C003BA3FB /* Resources.xib */; };
 		B0B8A272200A5861003BA3FB /* EmojiDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B8A271200A5861003BA3FB /* EmojiDropView.swift */; };
 		B0B8A274200A6A2F003BA3FB /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B8A273200A6A2F003BA3FB /* Theme.swift */; };
@@ -137,6 +138,7 @@
 		B089DEA820079FE7002D3879 /* AsciiEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsciiEmojiCell.swift; sourceTree = "<group>"; };
 		B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEmojiCell.swift; sourceTree = "<group>"; };
 		B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		B09B3AC2200B84280064A126 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 		B0B8A26F200A582C003BA3FB /* Resources.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Resources.xib; sourceTree = "<group>"; };
 		B0B8A271200A5861003BA3FB /* EmojiDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDropView.swift; sourceTree = "<group>"; };
 		B0B8A273200A6A2F003BA3FB /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 				B035FE031FFE5E8F003A332B /* App.swift */,
 				B035FDFE1FFE5E8E003A332B /* AppConfig.swift */,
 				B035FE001FFE5E8E003A332B /* Constants.swift */,
+				B09B3AC2200B84280064A126 /* Emojis.swift */,
 				B035FE0B1FFE5FE6003A332B /* Extensions.swift */,
 				B0D119572004FC3E005B2CBB /* Launcher.swift */,
 				B035FE011FFE5E8E003A332B /* Funcs.swift */,
@@ -789,6 +792,7 @@
 				B064A1DB20064F21001ADB0E /* ListCell.swift in Sources */,
 				B089DE9D200793AE002D3879 /* MainStoryboard.swift in Sources */,
 				B035FE0E1FFE5FE6003A332B /* Extensions.swift in Sources */,
+				B09B3AC3200B84280064A126 /* Emojis.swift in Sources */,
 				B064A1CF20064A5E001ADB0E /* BasePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

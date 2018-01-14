@@ -61,19 +61,16 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
             cell.springView.animate()
         }
         
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
+        heavyImpact()
     }
     
     @IBAction func actionDone(sender: Any) {
         dismiss(animated: true, completion: nil)
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
+        mediumImpact()
     }
     
     @IBAction func actionSettings(sender: Any) {
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
+        lightImpact()
     }
     
     @IBAction func actionRedo(sender: Any) {
@@ -91,9 +88,7 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         }
         
         presenter.resetCheckedEmojis()
-        
-        let generator = UIImpactFeedbackGenerator(style: .light)
-        generator.impactOccurred()
+        lightImpact()
     }
 
     deinit {
