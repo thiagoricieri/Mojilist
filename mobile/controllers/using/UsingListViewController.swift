@@ -129,24 +129,9 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     }
     
     func shareList() {
-        let firstActivityItem = "\(emojiList.name) #mojilist"
-        let secondActivityItem = URL(string: Env.App.shareUrl)!
-        //let shareView = Bundle.loadView(fromNib: "Resources", withType: ShareSnippetView.self)
-        //shareView.configure(with: emojiList)
-        doneButton.isHidden = true
-        settingsButton.isHidden = true
-        shareButton.isHidden = true
-        
-        let image = UIImage(view: self.view)
-        let activityViewController = UIActivityViewController(
-            activityItems: [firstActivityItem, secondActivityItem, image],
-            applicationActivities: nil)
-        
-        doneButton.isHidden = false
-        settingsButton.isHidden = false
-        shareButton.isHidden = false
-        
-        self.present(activityViewController, animated: true) { }
+        Marketing.share(object: emojiList) { activityController in
+            self.present(activityController, animated: true) { }
+        }
     }
     
     func listDeleted() {

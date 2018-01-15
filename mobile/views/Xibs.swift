@@ -8,8 +8,6 @@
 
 import Foundation
 
-class ShareStoryboard: StoryboardContext {
-    
-    struct Segue {
-    }
+struct Xibs {
+    static let resources = "Resources"
 }
