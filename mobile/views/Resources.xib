@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="ArialRoundedMTBold.ttf">
+            <string>ArialRoundedMTBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -51,6 +56,124 @@
                 <outlet property="emojiText" destination="TaM-Rc-xFS" id="lCn-kl-iIV"/>
                 <outlet property="protectedArea" destination="NAY-Mn-vJ3" id="Pk3-D4-cNl"/>
             </connections>
+        </view>
+        <view contentMode="scaleToFill" id="MBx-t8-Wh0" customClass="ShareSnippetView" customModule="Emojilist" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="750" height="750"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSp-vO-3wb">
+                    <rect key="frame" x="32" y="52" width="686" height="68"/>
+                    <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="58"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criado com Mojilist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNN-Zi-abB">
+                    <rect key="frame" x="32" y="689" width="327" height="29"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="327" id="3fB-IZ-HLj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criado com Mojilist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJc-Yz-X5Q">
+                    <rect key="frame" x="391" y="689" width="327" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQu-q8-SYe">
+                    <rect key="frame" x="32" y="151.5" width="686" height="505.5"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3eN-6l-vY7">
+                            <rect key="frame" x="16" y="16" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hm2-Ok-tSf">
+                            <rect key="frame" x="16" y="174" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oGd-7G-OPm">
+                            <rect key="frame" x="16" y="336" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LqO-9h-7Cn">
+                            <rect key="frame" x="354" y="16" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DYX-8D-VYs">
+                            <rect key="frame" x="354" y="174" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEf-GX-7D3">
+                            <rect key="frame" x="354" y="336" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ojR-Gl-U56">
+                            <rect key="frame" x="525" y="16" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFN-DU-PdT">
+                            <rect key="frame" x="525" y="174" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q2S-6r-Jic">
+                            <rect key="frame" x="525" y="336" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1aa-tD-1zL">
+                            <rect key="frame" x="184" y="16" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTg-Xy-Ztm">
+                            <rect key="frame" x="184" y="174" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mDf-Am-mqs">
+                            <rect key="frame" x="184" y="336" width="140" height="140"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="MQu-q8-SYe" firstAttribute="top" secondItem="PSp-vO-3wb" secondAttribute="bottom" constant="32" id="643-2U-aVK"/>
+                <constraint firstItem="3pm-Yy-xva" firstAttribute="bottom" secondItem="iNN-Zi-abB" secondAttribute="bottom" constant="32" id="7FU-Fa-XfO"/>
+                <constraint firstItem="3pm-Yy-xva" firstAttribute="trailing" secondItem="PSp-vO-3wb" secondAttribute="trailing" constant="32" id="Gye-bG-1Tm"/>
+                <constraint firstItem="iNN-Zi-abB" firstAttribute="leading" secondItem="3pm-Yy-xva" secondAttribute="leading" constant="32" id="JpT-hT-EAg"/>
+                <constraint firstItem="MQu-q8-SYe" firstAttribute="leading" secondItem="3pm-Yy-xva" secondAttribute="leading" constant="32" id="MS1-VX-Ccy"/>
+                <constraint firstItem="PSp-vO-3wb" firstAttribute="leading" secondItem="3pm-Yy-xva" secondAttribute="leading" constant="32" id="P3b-ew-prX"/>
+                <constraint firstItem="3pm-Yy-xva" firstAttribute="bottom" secondItem="eJc-Yz-X5Q" secondAttribute="bottom" constant="32" id="ROn-Un-fCp"/>
+                <constraint firstItem="3pm-Yy-xva" firstAttribute="trailing" secondItem="eJc-Yz-X5Q" secondAttribute="trailing" constant="32" id="Ufk-IZ-TBw"/>
+                <constraint firstItem="3pm-Yy-xva" firstAttribute="trailing" secondItem="MQu-q8-SYe" secondAttribute="trailing" constant="32" id="dBY-lM-rPb"/>
+                <constraint firstItem="iNN-Zi-abB" firstAttribute="top" secondItem="MQu-q8-SYe" secondAttribute="bottom" constant="32" id="eRW-Hk-pY9"/>
+                <constraint firstItem="PSp-vO-3wb" firstAttribute="top" secondItem="3pm-Yy-xva" secondAttribute="top" constant="32" id="jug-PX-j4v"/>
+                <constraint firstItem="eJc-Yz-X5Q" firstAttribute="leading" secondItem="iNN-Zi-abB" secondAttribute="trailing" constant="32" id="nMH-7a-5CO"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="3pm-Yy-xva"/>
+            <connections>
+                <outlet property="creditsName" destination="iNN-Zi-abB" id="N8L-aq-EMr"/>
+                <outlet property="creditsUrl" destination="eJc-Yz-X5Q" id="v53-FQ-ra6"/>
+                <outlet property="itemsContainer" destination="MQu-q8-SYe" id="yow-Yf-bRY"/>
+                <outlet property="listName" destination="PSp-vO-3wb" id="qs5-8M-Uc1"/>
+            </connections>
+            <point key="canvasLocation" x="-573" y="-138"/>
         </view>
     </objects>
 </document>

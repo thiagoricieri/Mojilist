@@ -45,6 +45,7 @@
 		B07A09642008D5A3005957C1 /* PackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09632008D5A3005957C1 /* PackCell.swift */; };
 		B07A09682008F3A6005957C1 /* UsingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09672008F3A6005957C1 /* UsingListViewController.swift */; };
 		B07A096A2008F3AD005957C1 /* UsingListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09692008F3AD005957C1 /* UsingListPresenter.swift */; };
+		B07F7AC9200CDF5400CFBF41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B07F7AC8200CDF5300CFBF41 /* GoogleService-Info.plist */; };
 		B089DE9D200793AE002D3879 /* MainStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DE9C200793AE002D3879 /* MainStoryboard.swift */; };
 		B089DE9F20079507002D3879 /* CreateListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DE9E20079507002D3879 /* CreateListPresenter.swift */; };
 		B089DEA120079BF1002D3879 /* SelectEmojisViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEA020079BF1002D3879 /* SelectEmojisViewController.swift */; };
@@ -53,6 +54,7 @@
 		B089DEA920079FE7002D3879 /* AsciiEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEA820079FE7002D3879 /* AsciiEmojiCell.swift */; };
 		B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */; };
 		B089DEAD2007A1F7002D3879 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */; };
+		B08CB104200CE2C900A6A605 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08CB103200CE2C900A6A605 /* Tracker.swift */; };
 		B09B3AC3200B84280064A126 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B3AC2200B84280064A126 /* Emojis.swift */; };
 		B0B8A270200A582C003BA3FB /* Resources.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B8A26F200A582C003BA3FB /* Resources.xib */; };
 		B0B8A272200A5861003BA3FB /* EmojiDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B8A271200A5861003BA3FB /* EmojiDropView.swift */; };
@@ -64,6 +66,8 @@
 		B0D11967200508AC005B2CBB /* CreateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D11966200508AC005B2CBB /* CreateListViewController.swift */; };
 		B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D11968200508C1005B2CBB /* AboutViewController.swift */; };
 		B0D1196B200508D7005B2CBB /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1196A200508D7005B2CBB /* StoreViewController.swift */; };
+		B0DCF9BA200BA1CB00558CEF /* ShareStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCF9B9200BA1CB00558CEF /* ShareStoryboard.swift */; };
+		B0DCF9BD200BA2EC00558CEF /* ShareSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCF9BC200BA2EC00558CEF /* ShareSnippetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +134,7 @@
 		B07A09632008D5A3005957C1 /* PackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCell.swift; sourceTree = "<group>"; };
 		B07A09672008F3A6005957C1 /* UsingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingListViewController.swift; sourceTree = "<group>"; };
 		B07A09692008F3AD005957C1 /* UsingListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingListPresenter.swift; sourceTree = "<group>"; };
+		B07F7AC8200CDF5300CFBF41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B089DE9C200793AE002D3879 /* MainStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryboard.swift; sourceTree = "<group>"; };
 		B089DE9E20079507002D3879 /* CreateListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListPresenter.swift; sourceTree = "<group>"; };
 		B089DEA020079BF1002D3879 /* SelectEmojisViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEmojisViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +143,7 @@
 		B089DEA820079FE7002D3879 /* AsciiEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsciiEmojiCell.swift; sourceTree = "<group>"; };
 		B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEmojiCell.swift; sourceTree = "<group>"; };
 		B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
+		B08CB103200CE2C900A6A605 /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 		B09B3AC2200B84280064A126 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 		B0B8A26F200A582C003BA3FB /* Resources.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Resources.xib; sourceTree = "<group>"; };
 		B0B8A271200A5861003BA3FB /* EmojiDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDropView.swift; sourceTree = "<group>"; };
@@ -149,6 +155,8 @@
 		B0D11966200508AC005B2CBB /* CreateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListViewController.swift; sourceTree = "<group>"; };
 		B0D11968200508C1005B2CBB /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		B0D1196A200508D7005B2CBB /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		B0DCF9B9200BA1CB00558CEF /* ShareStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareStoryboard.swift; sourceTree = "<group>"; };
+		B0DCF9BC200BA2EC00558CEF /* ShareSnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSnippetView.swift; sourceTree = "<group>"; };
 		B2B70D1DCBD46AA3E171A8F4 /* Pods-EmojilistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojilistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojilistTests/Pods-EmojilistTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB0A7D7F2B5B4BAE3E1E4ECD /* Pods-EmojilistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojilistUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojilistUITests/Pods-EmojilistUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D782899657D80424DE5D977F /* Pods-Emojilist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emojilist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Emojilist/Pods-Emojilist.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,6 +232,7 @@
 			children = (
 				B01C292C1FEAA46300C1AF22 /* AppDelegate.swift */,
 				B01C29381FEAA46300C1AF22 /* Info.plist */,
+				B07F7AC8200CDF5300CFBF41 /* GoogleService-Info.plist */,
 				B064A1BD200640F9001ADB0E /* Localizable.strings */,
 				B035FDF51FFE5DA4003A332B /* core */,
 				B0D119542004F6CC005B2CBB /* data */,
@@ -267,6 +276,7 @@
 				B035FE0C1FFE5FE6003A332B /* Operators.swift */,
 				B0D119602005074C005B2CBB /* StoryboardContext.swift */,
 				B0B8A273200A6A2F003BA3FB /* Theme.swift */,
+				B08CB103200CE2C900A6A605 /* Tracker.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -280,6 +290,7 @@
 				B07A09662008F383005957C1 /* using */,
 				B0D11965200507CB005B2CBB /* creating */,
 				B089DEA520079F6E002D3879 /* collection */,
+				B0DCF9BB200BA2D400558CEF /* share */,
 				B0D11963200507C1005B2CBB /* about */,
 				B0D11962200507B5005B2CBB /* store */,
 			);
@@ -290,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				B089DE9C200793AE002D3879 /* MainStoryboard.swift */,
+				B0DCF9B9200BA1CB00558CEF /* ShareStoryboard.swift */,
 				B035FDFB1FFE5E1F003A332B /* Main.storyboard */,
 				B0D1195D20050711005B2CBB /* About.storyboard */,
 				B0D1195B20050703005B2CBB /* Store.storyboard */,
@@ -418,10 +430,18 @@
 				B089DEA020079BF1002D3879 /* SelectEmojisViewController.swift */,
 				B089DEA220079BFD002D3879 /* SelectEmojisPresenter.swift */,
 				B07A09632008D5A3005957C1 /* PackCell.swift */,
-				B07A09602008D560005957C1 /* SelectPackPresenter.swift */,
 				B07A095F2008D560005957C1 /* SelectPackViewController.swift */,
+				B07A09602008D560005957C1 /* SelectPackPresenter.swift */,
 			);
 			path = creating;
+			sourceTree = "<group>";
+		};
+		B0DCF9BB200BA2D400558CEF /* share */ = {
+			isa = PBXGroup;
+			children = (
+				B0DCF9BC200BA2EC00558CEF /* ShareSnippetView.swift */,
+			);
+			path = share;
 			sourceTree = "<group>";
 		};
 		E4247954843961EC9577E195 /* Frameworks */ = {
@@ -552,6 +572,7 @@
 			files = (
 				B035FDFC1FFE5E1F003A332B /* LaunchScreen.storyboard in Resources */,
 				B0B8A270200A582C003BA3FB /* Resources.xib in Resources */,
+				B07F7AC9200CDF5400CFBF41 /* GoogleService-Info.plist in Resources */,
 				B01C29341FEAA46300C1AF22 /* assets.xcassets in Resources */,
 				B0D1195E20050711005B2CBB /* About.storyboard in Resources */,
 				B064A1BE200640F9001ADB0E /* Localizable.strings in Resources */,
@@ -701,6 +722,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Emojilist/Pods-Emojilist-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/HTTPStatusCodes/HTTPStatusCodes.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
@@ -708,11 +730,13 @@
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTPStatusCodes.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
@@ -720,6 +744,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -767,6 +792,7 @@
 				B0B8A272200A5861003BA3FB /* EmojiDropView.swift in Sources */,
 				B07A096A2008F3AD005957C1 /* UsingListPresenter.swift in Sources */,
 				B064A1C52006440E001ADB0E /* REmoji.swift in Sources */,
+				B0DCF9BA200BA1CB00558CEF /* ShareStoryboard.swift in Sources */,
 				B01C292F1FEAA46300C1AF22 /* ListsViewController.swift in Sources */,
 				B035FE081FFE5E8F003A332B /* Aliases.swift in Sources */,
 				B0D119582004FC3E005B2CBB /* Launcher.swift in Sources */,
@@ -776,9 +802,11 @@
 				B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */,
 				B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */,
 				B07A09682008F3A6005957C1 /* UsingListViewController.swift in Sources */,
+				B08CB104200CE2C900A6A605 /* Tracker.swift in Sources */,
 				B064A1DD200658BC001ADB0E /* FloatingButtons.swift in Sources */,
 				B035FE091FFE5E8F003A332B /* App.swift in Sources */,
 				B0B8A274200A6A2F003BA3FB /* Theme.swift in Sources */,
+				B0DCF9BD200BA2EC00558CEF /* ShareSnippetView.swift in Sources */,
 				B089DEA320079BFD002D3879 /* SelectEmojisPresenter.swift in Sources */,
 				B089DE9F20079507002D3879 /* CreateListPresenter.swift in Sources */,
 				B064A1D320064AC7001ADB0E /* BaseTableViewController.swift in Sources */,

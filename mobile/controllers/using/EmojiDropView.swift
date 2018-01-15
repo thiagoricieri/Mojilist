@@ -37,6 +37,18 @@ class EmojiDropView: SpringView {
         }
     }
     
+    func configure(with emoji: REmoji) {
+        if emoji.imageUrl.isEmpty {
+            emojiImage.isHidden = true
+            emojiText.isHidden = false
+            emojiText.text = emoji.name
+        } else {
+            emojiImage.isHidden = false
+            emojiText.isHidden = true
+            emojiImage.sd_setImage(with: URL(string: emoji.imageUrl)!)
+        }
+    }
+    
     func dropAnimation(toX: CGFloat, toY: CGFloat) {
         x = toX
         animateToNext {

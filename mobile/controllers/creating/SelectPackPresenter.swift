@@ -10,6 +10,8 @@ import Foundation
 import RealmSwift
 
 protocol SelectPackPresenter: BaseDataPresenter {
+    
+    func changedToPack(pack: REmojiPack)
 }
 
 class SelectPackPresenterImpl: SelectPackPresenter {
@@ -36,6 +38,10 @@ class SelectPackPresenterImpl: SelectPackPresenter {
     
     func downloadSource() {
         // None
+    }
+    
+    func changedToPack(pack: REmojiPack) {
+        Tracker.changedPack(packSlug: pack.slug)
     }
     
     // MARK: - Base Presenter

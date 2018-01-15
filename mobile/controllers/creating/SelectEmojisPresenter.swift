@@ -85,6 +85,7 @@ class SelectEmojisPresenterImpl: SelectEmojisPresenter {
             realm.add(list)
         }
         
+        Tracker.newList(itemsCount: emojisToList.count)
         view.listCreated()
     }
     
