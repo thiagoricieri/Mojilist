@@ -14,10 +14,11 @@ protocol UsingListPresenter: BaseDataPresenter {
     var source: List<REmoji>! { get set }
     
     func toggleEmoji(at: Int)
-    func resetCheckedEmojis()
     
     func deleteList(list: REmojiList)
     func shareList(list: REmojiList)
+    func completeList(list: REmojiList)
+    func reusedList(list: REmojiList)
 }
 
 class UsingListPresenterImpl: UsingListPresenter {
@@ -54,24 +55,36 @@ class UsingListPresenterImpl: UsingListPresenter {
         }
     }
     
-    func resetCheckedEmojis() {
-        let checkedEmojis = source.filter("checked = true")
-        let realm = view.provideRealm()
-        try! realm.write {
-            checkedEmojis.setValue(false, forKey: "checked")
-        }
-    }
-    
     func deleteList(list: REmojiList) {
+        Tracker.deleteList(itemsCount: list.emojis.count)
+        
         let realm = view.provideRealm()
         try! realm.write {
             realm.delete(list)
         }
+        
         view.listDeleted()
     }
     
     func shareList(list: REmojiList) {
         view.shareList()
+        Tracker.shareImage()
+    }
+    
+    func completeList(list: REmojiList) {
+        Tracker.completeList(
+            itemsCount: list.emojis.count,
+            itemsUsed: list.emojis.filter("checked = true").count)
+    }
+    
+    func reusedList(list: REmojiList) {
+        Tracker.reusedList(itemsCount: list.emojis.count)
+        
+        let checkedEmojis = source.filter("checked = true")
+        let realm = view.provideRealm()
+        try! realm.write {
+            checkedEmojis.setValue(false, forKey: "checked")
+        }
     }
     
     // MARK: - Base Presenter

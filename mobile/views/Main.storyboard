@@ -1058,9 +1058,9 @@
                                     <constraint firstAttribute="width" constant="50" id="rvz-qB-aG2"/>
                                 </constraints>
                                 <color key="tintColor" red="0.2341767132" green="0.2341767132" blue="0.2341767132" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="redo"/>
+                                <state key="normal" image="share"/>
                                 <connections>
-                                    <action selector="actionRedoWithSender:" destination="olF-hI-A1H" eventType="touchUpInside" id="jbb-nx-cIE"/>
+                                    <action selector="actionShareWithSender:" destination="olF-hI-A1H" eventType="touchUpInside" id="JBU-gy-VWv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1094,6 +1094,7 @@
                         <outlet property="doneButton" destination="8nd-x0-8wa" id="wkp-Gn-XdL"/>
                         <outlet property="listNameLabel" destination="Sgd-J3-IgY" id="krV-rW-hag"/>
                         <outlet property="settingsButton" destination="QYs-Ug-GsN" id="jJd-mZ-idq"/>
+                        <outlet property="shareButton" destination="lAW-X5-lY7" id="MV4-WC-ZdB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6N-7I-nO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1107,6 +1108,7 @@
         <image name="indicator" width="16" height="16"/>
         <image name="redo" width="32" height="32"/>
         <image name="settings" width="32" height="32"/>
+        <image name="share" width="32" height="32"/>
         <image name="store" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.1294099987" green="0.48234999179999999" blue="0.65881997349999999" alpha="1" colorSpace="calibratedRGB"/>

@@ -47,13 +47,13 @@ class SelectPackViewController: BaseTableViewController, SelectPackView {
                 withIdentifier: ImagePackCell.identifier) as! ImagePackCell
         }
         cell.configure(with: item)
-        cell.isHighlighted = true
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = presenter.item(at: indexPath.row) as! REmojiPack
+        presenter.changedToPack(pack: item)
         delegate.packSelected(pack: item)
     }
     

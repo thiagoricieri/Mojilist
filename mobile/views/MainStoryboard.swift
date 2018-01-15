@@ -15,6 +15,7 @@ class MainStoryboard: StoryboardContext {
         static let toSelectEmojis = "toSelectEmojis"
         static let toSelectPack = "toSelectPack"
         static let toUsingList = "toUsingList"
+        static let toShare = "toShare"
     }
     
     func createListViewController() -> CreateListViewController {

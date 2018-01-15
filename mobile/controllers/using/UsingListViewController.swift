@@ -21,9 +21,10 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     var presenter: UsingListPresenter!
     var emojiList: REmojiList!
     
-    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var listNameLabel: UILabel!
-    @IBOutlet weak var settingsButton: UIButton!
+    @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var settingsButton: SecondaryFloatingButton!
+    @IBOutlet weak var shareButton: SecondaryFloatingButton!
     
     override func instantiateDependencies() {
         basePresenter = UsingListPresenterImpl(view: self)
@@ -70,6 +71,22 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         heavyImpact()
     }
     
+    func redoList() {
+        for cell in collection.visibleCells {
+            let indexPath = collection.indexPath(for: cell)
+            let emoji = presenter.item(at: indexPath!.row) as! REmoji
+            
+            if let ccell = cell as? BaseEmojiCell, emoji.checked {
+                ccell.springView.animation = "swing"
+                ccell.springView.curve = "easeInOut"
+                ccell.springView.duration = 0.7
+                ccell.springView.animate()
+                ccell.uncheckEmoji()
+            }
+        }
+        presenter.reusedList(list: emojiList)
+    }
+    
     func settingsOptions() {
         let title = "UsingList.Settings.Title".localized
         let message = "UsingList.Settings.Msg".localized
@@ -85,13 +102,13 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
             self.confirmDeletion()
         }
         
-        let shareButton = DefaultButton(
-                title: "UsingList.Settings.ShareList".localized,
+        let reuseButton = DefaultButton(
+                title: "UsingList.Settings.Redo".localized,
                 dismissOnTap: true) {
-            self.presenter.shareList(list: self.emojiList)
+            self.redoList()
         }
         
-        popup.addButtons([dismissButton, deleteButton, shareButton])
+        popup.addButtons([dismissButton, deleteButton, reuseButton])
         self.present(popup, animated: true, completion: nil)
     }
     
@@ -114,11 +131,20 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     func shareList() {
         let firstActivityItem = "\(emojiList.name) #mojilist"
         let secondActivityItem = URL(string: Env.App.shareUrl)!
-        let image = UIImage(view: self.view)
+        //let shareView = Bundle.loadView(fromNib: "Resources", withType: ShareSnippetView.self)
+        //shareView.configure(with: emojiList)
+        doneButton.isHidden = true
+        settingsButton.isHidden = true
+        shareButton.isHidden = true
         
+        let image = UIImage(view: self.view)
         let activityViewController = UIActivityViewController(
-                activityItems: [firstActivityItem, secondActivityItem, image],
-                applicationActivities: nil)
+            activityItems: [firstActivityItem, secondActivityItem, image],
+            applicationActivities: nil)
+        
+        doneButton.isHidden = false
+        settingsButton.isHidden = false
+        shareButton.isHidden = false
         
         self.present(activityViewController, animated: true) { }
     }
@@ -137,21 +163,8 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         lightImpact()
     }
     
-    @IBAction func actionRedo(sender: Any) {
-        for cell in collection.visibleCells {
-            let indexPath = collection.indexPath(for: cell)
-            let emoji = presenter.item(at: indexPath!.row) as! REmoji
-            
-            if let ccell = cell as? BaseEmojiCell, emoji.checked {
-                ccell.springView.animation = "swing"
-                ccell.springView.curve = "easeInOut"
-                ccell.springView.duration = 0.7
-                ccell.springView.animate()
-                ccell.uncheckEmoji()
-            }
-        }
-        
-        presenter.resetCheckedEmojis()
+    @IBAction func actionShare(sender: Any) {
+        shareList()
         lightImpact()
     }
 

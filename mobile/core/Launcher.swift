@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RealmSwift
+import Firebase
 
 public class Launcher {
     
@@ -115,6 +116,11 @@ public class Launcher {
     }
     
     // MARK: - Third-Party Integrations
+    
+    public func setFirebase() -> Self {
+        FirebaseApp.configure()
+        return self
+    }
     
     public func setFacebook() -> Self {
         // TODO: Add credentials
