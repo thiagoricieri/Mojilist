@@ -55,6 +55,8 @@
 		B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */; };
 		B089DEAD2007A1F7002D3879 /* BaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */; };
 		B08CB104200CE2C900A6A605 /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08CB103200CE2C900A6A605 /* Tracker.swift */; };
+		B08CB106200CEDE900A6A605 /* Sharing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08CB105200CEDE900A6A605 /* Sharing.swift */; };
+		B08CB108200CF40A00A6A605 /* ShareCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B08CB107200CF40A00A6A605 /* ShareCell.xib */; };
 		B09B3AC3200B84280064A126 /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09B3AC2200B84280064A126 /* Emojis.swift */; };
 		B0B8A270200A582C003BA3FB /* Resources.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0B8A26F200A582C003BA3FB /* Resources.xib */; };
 		B0B8A272200A5861003BA3FB /* EmojiDropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B8A271200A5861003BA3FB /* EmojiDropView.swift */; };
@@ -66,7 +68,7 @@
 		B0D11967200508AC005B2CBB /* CreateListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D11966200508AC005B2CBB /* CreateListViewController.swift */; };
 		B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D11968200508C1005B2CBB /* AboutViewController.swift */; };
 		B0D1196B200508D7005B2CBB /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D1196A200508D7005B2CBB /* StoreViewController.swift */; };
-		B0DCF9BA200BA1CB00558CEF /* ShareStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCF9B9200BA1CB00558CEF /* ShareStoryboard.swift */; };
+		B0DCF9BA200BA1CB00558CEF /* Xibs.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCF9B9200BA1CB00558CEF /* Xibs.swift */; };
 		B0DCF9BD200BA2EC00558CEF /* ShareSnippetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DCF9BC200BA2EC00558CEF /* ShareSnippetView.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +146,8 @@
 		B089DEAA2007A021002D3879 /* ImageEmojiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEmojiCell.swift; sourceTree = "<group>"; };
 		B089DEAC2007A1F7002D3879 /* BaseCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewController.swift; sourceTree = "<group>"; };
 		B08CB103200CE2C900A6A605 /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
+		B08CB105200CEDE900A6A605 /* Sharing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sharing.swift; sourceTree = "<group>"; };
+		B08CB107200CF40A00A6A605 /* ShareCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShareCell.xib; sourceTree = "<group>"; };
 		B09B3AC2200B84280064A126 /* Emojis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 		B0B8A26F200A582C003BA3FB /* Resources.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Resources.xib; sourceTree = "<group>"; };
 		B0B8A271200A5861003BA3FB /* EmojiDropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDropView.swift; sourceTree = "<group>"; };
@@ -155,7 +159,7 @@
 		B0D11966200508AC005B2CBB /* CreateListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateListViewController.swift; sourceTree = "<group>"; };
 		B0D11968200508C1005B2CBB /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		B0D1196A200508D7005B2CBB /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
-		B0DCF9B9200BA1CB00558CEF /* ShareStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareStoryboard.swift; sourceTree = "<group>"; };
+		B0DCF9B9200BA1CB00558CEF /* Xibs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Xibs.swift; sourceTree = "<group>"; };
 		B0DCF9BC200BA2EC00558CEF /* ShareSnippetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSnippetView.swift; sourceTree = "<group>"; };
 		B2B70D1DCBD46AA3E171A8F4 /* Pods-EmojilistTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojilistTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojilistTests/Pods-EmojilistTests.release.xcconfig"; sourceTree = "<group>"; };
 		CB0A7D7F2B5B4BAE3E1E4ECD /* Pods-EmojilistUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojilistUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EmojilistUITests/Pods-EmojilistUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -277,6 +281,7 @@
 				B0D119602005074C005B2CBB /* StoryboardContext.swift */,
 				B0B8A273200A6A2F003BA3FB /* Theme.swift */,
 				B08CB103200CE2C900A6A605 /* Tracker.swift */,
+				B08CB105200CEDE900A6A605 /* Sharing.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -301,12 +306,13 @@
 			isa = PBXGroup;
 			children = (
 				B089DE9C200793AE002D3879 /* MainStoryboard.swift */,
-				B0DCF9B9200BA1CB00558CEF /* ShareStoryboard.swift */,
+				B0DCF9B9200BA1CB00558CEF /* Xibs.swift */,
 				B035FDFB1FFE5E1F003A332B /* Main.storyboard */,
 				B0D1195D20050711005B2CBB /* About.storyboard */,
 				B0D1195B20050703005B2CBB /* Store.storyboard */,
 				B035FDFA1FFE5E1F003A332B /* LaunchScreen.storyboard */,
 				B0B8A26F200A582C003BA3FB /* Resources.xib */,
+				B08CB107200CF40A00A6A605 /* ShareCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -575,6 +581,7 @@
 				B07F7AC9200CDF5400CFBF41 /* GoogleService-Info.plist in Resources */,
 				B01C29341FEAA46300C1AF22 /* assets.xcassets in Resources */,
 				B0D1195E20050711005B2CBB /* About.storyboard in Resources */,
+				B08CB108200CF40A00A6A605 /* ShareCell.xib in Resources */,
 				B064A1BE200640F9001ADB0E /* Localizable.strings in Resources */,
 				B0D1195C20050703005B2CBB /* Store.storyboard in Resources */,
 				B035FDF21FFE5C73003A332B /* fastlane in Resources */,
@@ -777,6 +784,7 @@
 				B0D11967200508AC005B2CBB /* CreateListViewController.swift in Sources */,
 				B0D119612005074C005B2CBB /* StoryboardContext.swift in Sources */,
 				B035FE0D1FFE5FE6003A332B /* Router.swift in Sources */,
+				B08CB106200CEDE900A6A605 /* Sharing.swift in Sources */,
 				B089DEA720079F88002D3879 /* BaseEmojiCell.swift in Sources */,
 				B035FE0F1FFE5FE6003A332B /* Operators.swift in Sources */,
 				B035FE061FFE5E8F003A332B /* Constants.swift in Sources */,
@@ -792,7 +800,7 @@
 				B0B8A272200A5861003BA3FB /* EmojiDropView.swift in Sources */,
 				B07A096A2008F3AD005957C1 /* UsingListPresenter.swift in Sources */,
 				B064A1C52006440E001ADB0E /* REmoji.swift in Sources */,
-				B0DCF9BA200BA1CB00558CEF /* ShareStoryboard.swift in Sources */,
+				B0DCF9BA200BA1CB00558CEF /* Xibs.swift in Sources */,
 				B01C292F1FEAA46300C1AF22 /* ListsViewController.swift in Sources */,
 				B035FE081FFE5E8F003A332B /* Aliases.swift in Sources */,
 				B0D119582004FC3E005B2CBB /* Launcher.swift in Sources */,
