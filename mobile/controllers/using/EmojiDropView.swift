@@ -18,11 +18,13 @@ class EmojiDropView: SpringView {
     @IBOutlet weak var protectedArea: UIView!
     
     override func awakeFromNib() {
+        emojiText.adjustsFontSizeToFitWidth = true
         protectedArea.layer.cornerRadius = protectedArea.bounds.width/2
-        protectedArea.layer.shadowColor = UIColorFromRGB(rgb: 0x000000).cgColor
-        protectedArea.layer.shadowRadius = 3
-        protectedArea.layer.shadowOpacity = 0.2
-        protectedArea.layer.shadowOffset = CGSize(width: 0, height: 6)
+        protectedArea.backgroundColor = UIColorFromRGB(rgb: 0xF1F1F1)
+        //protectedArea.layer.shadowColor = UIColorFromRGB(rgb: 0x000000).cgColor
+        //protectedArea.layer.shadowRadius = 3
+        //protectedArea.layer.shadowOpacity = 0.2
+        //protectedArea.layer.shadowOffset = CGSize(width: 0, height: 6)
     }
     
     func configure(with emoji: REmojiPackItem) {
@@ -47,6 +49,11 @@ class EmojiDropView: SpringView {
             emojiText.isHidden = true
             emojiImage.sd_setImage(with: URL(string: emoji.imageUrl)!)
         }
+    }
+    
+    func resize(square itemSize: Int) {
+        protectedArea.layer.cornerRadius = CGFloat(itemSize/2)
+        emojiText.font = UIFont(name: emojiText.font.fontName, size: CGFloat(itemSize) * 0.6)
     }
     
     func dropAnimation(toX: CGFloat, toY: CGFloat) {
