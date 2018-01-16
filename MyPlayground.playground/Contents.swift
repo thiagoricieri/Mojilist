@@ -2,22 +2,20 @@
 
 import UIKit
 
-var str = "Hello, playground"
+func itemsToFit(inWidth: Int, inHeight: Int, withMargin: Int, withSize: Int) -> Int {
+    let rows = (inHeight - withMargin) / withSize
+    let columns = (inWidth - withMargin * 2) / withSize
+    print("Size \(withSize) = Rows \(rows) Columns \(columns) > \(columns * rows) items max")
+    return columns * rows
+}
 
-let emojiRanges = [
-    0x1F601...0x1F64F,
-    0x2702...0x27B0,
-    0x1F680...0x1F6C0,
-    0x1F600...0x1F636,
-    0x1F681...0x1F6C5,
-    0x1F30D...0x1F567
-]
+let minSize = 50
+let maxSize = 220
+let maxWidth = 686
+let maxHeight = 514
+let margin = 8
 
-for range in emojiRanges {
-    print("Range-----------")
-    for i in range {
-        var c = ""
-        c.unicodeScalars.append(UnicodeScalar(i)!)
-        print(c)
-    }
+//
+for i in minSize...maxSize {
+    itemsToFit(inWidth: maxWidth, inHeight: maxHeight, withMargin: margin, withSize: i)
 }
