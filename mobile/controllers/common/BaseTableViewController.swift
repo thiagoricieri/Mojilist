@@ -36,6 +36,11 @@ class BaseTableViewController: BaseViewController,
         }
     }
     
+    override func applyTheme(_ theme: Theme) {
+        super.applyTheme(theme)
+        theme.background(table)
+    }
+    
     // MARK: - Convenience
     func reload() {
         table.reloadData()
@@ -48,6 +53,14 @@ class BaseTableViewController: BaseViewController,
             return dataPresenter.sourceCount()
         }
         return 0
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   willDisplay cell: UITableViewCell,
+                   forRowAt indexPath: IndexPath) {
+        if let c = cell as? BaseTableViewCell {
+            c.applyTheme(provideApp().theme)
+        }
     }
     
     func tableView(_ tableView: UITableView,

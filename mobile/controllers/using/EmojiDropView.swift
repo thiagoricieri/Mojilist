@@ -27,6 +27,11 @@ class EmojiDropView: SpringView {
         //protectedArea.layer.shadowOffset = CGSize(width: 0, height: 6)
     }
     
+    func applyTheme(_ theme: Theme) {
+        theme.darkBackground(protectedArea)
+        theme.primaryText(emojiText)
+    }
+    
     func configure(with emoji: REmojiPackItem) {
         if emoji.imageUrl.isEmpty {
             emojiImage.isHidden = true

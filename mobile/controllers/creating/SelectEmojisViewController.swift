@@ -33,6 +33,10 @@ class SelectEmojisViewController: BaseCollectionViewController,
     @IBOutlet weak var clearBarItem: UIBarButtonItem!
     @IBOutlet weak var itemsInListLabel: UILabel!
     
+    @IBOutlet weak var separator: UIView!
+    @IBOutlet weak var topFadeDecoration: UIImageView!
+    @IBOutlet weak var bottomFadeDecoration: UIImageView!
+    
     // Extra collection
     @IBOutlet weak var basketCollection: UICollectionView!
     
@@ -42,6 +46,16 @@ class SelectEmojisViewController: BaseCollectionViewController,
         
         // Start using default pack:
         presenter.pack = appDelegate.standardEmojiPack()
+    }
+    
+    override func applyTheme(_ theme: Theme) {
+        super.applyTheme(theme)
+        theme.separator(separator)
+        theme.background(basketCollection)
+        theme.actionButton(createButton)
+        theme.badge(badgeView)
+        topFadeDecoration.image = UIImage(named: theme.topDecoration())
+        bottomFadeDecoration.image = UIImage(named: theme.bottomDecoration())
     }
     
     override func setViewStyle() {

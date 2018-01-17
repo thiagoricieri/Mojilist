@@ -18,6 +18,13 @@ class BaseListCell: BaseTableViewCell {
     func configure(with item: REmojiList) {
         listName.text = item.name
     }
+    
+    override func applyTheme(_ theme: Theme) {
+        super.applyTheme(theme)
+        theme.primaryText(listName)
+        theme.cellBackground(backgroundOverlay)
+        theme.separator(separatorView)
+    }
 }
 
 class ImageListCell: BaseListCell {

@@ -22,6 +22,10 @@ class BaseEmojiCell: UICollectionViewCell {
         protectionBackground.layer.cornerRadius = protectionBackground.bounds.width/2
     }
     
+    func applyTheme(_ theme: Theme) {
+        theme.darkBackground(protectionBackground)
+    }
+    
     func configure(with emoji: REmojiPackItem) { }
     func configure(with emoji: REmoji) { }
     func uncheckEmoji() {  }

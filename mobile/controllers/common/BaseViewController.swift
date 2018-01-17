@@ -11,13 +11,14 @@ import UIKit
 import MBProgressHUD
 import RealmSwift
 
-open class BaseViewController : UIViewController, BaseView {
+class BaseViewController : UIViewController, BaseView {
     
     var appDelegate: AppDelegate {
         get { return UIApplication.shared.delegate as! AppDelegate }
     }
     
     var basePresenter: BasePresenter!
+    var currentTheme: String?
     
     fileprivate(set) var currentHud: MBProgressHUD?
     fileprivate(set) var previousBottomBar : UIView?
@@ -32,24 +33,45 @@ open class BaseViewController : UIViewController, BaseView {
         return provideApp().realm
     }
     
-    open override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
+        
         instantiateDependencies()
+        let appTheme = provideApp().theme.identifier()
+        if currentTheme == nil || currentTheme != appTheme {
+            currentTheme = appTheme
+            applyTheme(provideApp().theme)
+        }
         setViewStyle()
     }
     
-    open override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         prepareViewForUser()
     }
     
-    open func instantiateDependencies() {
+    func instantiateDependencies() {
     }
     
-    open func setViewStyle() {
+    func applyTheme(_ theme: Theme) {
+        theme.background(self.view)
+        theme.tintAccent(self.view)
+        
+        if let nc = navigationController {
+            theme.styleNavigationBar(nc.navigationBar)
+        }
+        
+        setNeedsStatusBarAppearanceUpdate()
     }
     
-    open func prepareViewForUser() {
+    func setViewStyle() {
+    }
+    
+    func prepareViewForUser() {
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return provideApp().theme.statusBarStyle()
     }
     
     deinit {
@@ -61,7 +83,7 @@ open class BaseViewController : UIViewController, BaseView {
 // MARK: - HUD
 extension BaseViewController {
     
-    open func hudShow (message: String? = nil) {
+    func hudShow (message: String? = nil) {
         currentHud = MBProgressHUD.showAdded(to: self.view, animated: true)
         currentHud?.mode = .indeterminate
         
@@ -70,7 +92,7 @@ extension BaseViewController {
         }
     }
     
-    open func hudDismiss() {
+    func hudDismiss() {
         if currentHud != nil {
             currentHud?.hide(animated: true)
             currentHud = nil

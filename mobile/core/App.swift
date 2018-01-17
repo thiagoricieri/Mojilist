@@ -10,12 +10,12 @@ import Foundation
 import DateToolsSwift
 import RealmSwift
 
-public protocol App {
+protocol App {
 	
 	var config: AppConfig { get }
 	var documentPath: String { get }
     var realm: Realm { get }
-    //var theme: Theme { get set }
+    var theme: Theme { get set }
 	
 	var humamFormatter: DateFormatter { get }
 	var posixFormatter: DateFormatter { get }
@@ -32,17 +32,19 @@ public protocol App {
 }
 
 // MARK: - Production App
-open class ProductionAppImpl: App {
+class ProductionAppImpl: App {
 	
-	fileprivate(set) public var config: AppConfig
+    lazy var theme: Theme = self.initTheme()
+    
+	fileprivate(set) var config: AppConfig
 	fileprivate(set) public var documentPath: String
     
-    fileprivate(set) public lazy var realm: Realm = self.initRealm()
-	fileprivate(set) public lazy var humamFormatter: DateFormatter = self.initHumanFormatter()
-	fileprivate(set) public lazy var posixFormatter: DateFormatter = self.initPosixFormatter()
-    fileprivate(set) public lazy var sqlFormatter: DateFormatter = self.initSqlFormatter()
-    fileprivate(set) public lazy var simpleSqlFormatter: DateFormatter = self.initSimpleSqlFormatter()
-	fileprivate(set) public lazy var currencyFormatter: NumberFormatter = self.initCurrencyFormatter()
+    fileprivate(set) lazy var realm: Realm = self.initRealm()
+	fileprivate(set) lazy var humamFormatter: DateFormatter = self.initHumanFormatter()
+	fileprivate(set) lazy var posixFormatter: DateFormatter = self.initPosixFormatter()
+    fileprivate(set) lazy var sqlFormatter: DateFormatter = self.initSqlFormatter()
+    fileprivate(set) lazy var simpleSqlFormatter: DateFormatter = self.initSimpleSqlFormatter()
+	fileprivate(set) lazy var currencyFormatter: NumberFormatter = self.initCurrencyFormatter()
 	
 	public init() {
 		self.config = ProductionAppConfigImpl()
@@ -51,6 +53,14 @@ open class ProductionAppImpl: App {
     
     fileprivate func initRealm() -> Realm {
         return try! Realm()
+    }
+    
+    fileprivate func initTheme() -> Theme {
+        let defaults = UserDefaults.standard
+        if let theme = defaults.string(forKey: Env.App.theming) {
+            return Theme(visualString: theme)
+        }
+        return Theme(visuals: DarkVisual())
     }
 	
 	// Init formatters
@@ -125,7 +135,7 @@ open class ProductionAppImpl: App {
 }
 
 // MARK: - Staging App
-open class StagingAppImpl: ProductionAppImpl {
+class StagingAppImpl: ProductionAppImpl {
 	
 	public override init() {
 		super.init()

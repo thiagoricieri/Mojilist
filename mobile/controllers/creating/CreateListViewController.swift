@@ -27,6 +27,14 @@ class CreateListViewController: BaseViewController, CreateListView {
         presenter = basePresenter as! CreateListPresenter
     }
     
+    override func applyTheme(_ theme: Theme) {
+        super.applyTheme(theme)
+        theme.darkBackground(listNameField)
+        theme.primaryText(listNameLabel)
+        theme.primaryText(listNameField)
+        theme.secondaryText(hintLabel)
+    }
+    
     override func setViewStyle() {
         title = "CreateList.Title".localized
         listNameField.placeholder = "CreateList.Text.Placeholder".localized
