@@ -29,6 +29,13 @@ class ListsViewController: BaseTableViewController, ListsView {
         newListButton.setTitle("Lists.New".localized, for: .normal)
     }
     
+    override func applyTheme(_ theme: Theme) {
+        super.applyTheme(theme)
+        theme.actionButton(newListButton)
+    }
+    
+    // MARK: - Table View
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: AsciiListCell.identifier) as! AsciiListCell
         

@@ -10,4 +10,12 @@ import Foundation
 import UIKit
 
 class BaseTableViewCell: UITableViewCell {
+    
+    func applyTheme(_ theme: Theme) {
+        theme.background(self)
+        theme.background(self.contentView)
+        
+        if let v = self.backgroundView { theme.background(v) }
+        if let v = self.selectedBackgroundView { theme.darkBackground(v) }
+    }
 }

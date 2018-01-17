@@ -26,16 +26,32 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     @IBOutlet weak var settingsButton: SecondaryFloatingButton!
     @IBOutlet weak var shareButton: SecondaryFloatingButton!
     
+    @IBOutlet weak var topFadeDecoration: UIImageView!
+    @IBOutlet weak var bottomFadeDecoration: UIImageView!
+    
     override func instantiateDependencies() {
         basePresenter = UsingListPresenterImpl(view: self)
         presenter = basePresenter as! UsingListPresenter
         presenter.source = emojiList.emojis
     }
     
+    override func applyTheme(_ theme: Theme) {
+        super.applyTheme(theme)
+        topFadeDecoration.image = UIImage(named: theme.topDecoration())
+        bottomFadeDecoration.image = UIImage(named: theme.bottomDecoration())
+        theme.actionButton(doneButton)
+        theme.background(self.view)
+        theme.primaryText(listNameLabel)
+        theme.secondaryButton(shareButton)
+        theme.secondaryButton(settingsButton)
+    }
+    
     override func setViewStyle() {
         listNameLabel.text = emojiList.name
         doneButton.setTitle("UsingList.Done".localized, for: .normal)
     }
+    
+    // MARK: - Collection
     
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -70,6 +86,8 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         
         heavyImpact()
     }
+    
+    // MARK: - Actions
     
     func redoList() {
         for cell in collection.visibleCells {

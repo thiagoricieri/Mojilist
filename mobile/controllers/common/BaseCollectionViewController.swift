@@ -36,6 +36,11 @@ class BaseCollectionViewController: BaseViewController,
         }
     }
     
+    override func applyTheme(_ theme: Theme) {
+        super.applyTheme(theme)
+        theme.background(collection)
+    }
+    
     // MARK: - Convenience
     func reload() {
         collection.reloadData()
@@ -48,6 +53,15 @@ class BaseCollectionViewController: BaseViewController,
             return dataPresenter.sourceCount()
         }
         return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        willDisplay cell: UICollectionViewCell,
+                        forItemAt indexPath: IndexPath) {
+        
+        if let c = cell as? BaseEmojiCell {
+            c.applyTheme(provideApp().theme)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView,

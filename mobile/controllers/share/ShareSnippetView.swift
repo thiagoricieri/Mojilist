@@ -10,7 +10,9 @@ import Foundation
 import UIKit
 import RealmSwift
 
-class ShareSnippetView: UIView, UICollectionViewDelegate, UICollectionViewDataSource {
+class ShareSnippetView: UIView,
+        UICollectionViewDelegate,
+        UICollectionViewDataSource {
     
     @IBOutlet weak var listName: UILabel!
     @IBOutlet weak var collection: UICollectionView!
@@ -31,6 +33,17 @@ class ShareSnippetView: UIView, UICollectionViewDelegate, UICollectionViewDataSo
         collection.register(nib, forCellWithReuseIdentifier: ShareCell.identifier)
         collection.delegate = self
         collection.dataSource = self
+        
+        let del = UIApplication.shared.delegate as! AppDelegate
+        applyTheme(del.app.theme)
+    }
+    
+    func applyTheme(_ theme: Theme) {
+        theme.primaryText(listName)
+        theme.secondaryText(creditsName)
+        theme.secondaryText(creditsUrl)
+        theme.background(self)
+        theme.background(collection)
     }
     
     func configure(with emojiList: REmojiList) {
@@ -98,9 +111,11 @@ class ShareSnippetView: UIView, UICollectionViewDelegate, UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: ShareCell.identifier,
             for: indexPath) as! ShareCell
+        let del = UIApplication.shared.delegate as! AppDelegate
         
         if let item = list?.emojis[indexPath.row] {
             cell.configure(with: item, squareSize: itemSize)
+            cell.applyTheme(del.app.theme)
         }
         
         return cell
@@ -120,5 +135,9 @@ class ShareCell: UICollectionViewCell {
     func configure(with emoji: REmoji, squareSize: Int) {
         emojiView.configure(with: emoji)
         emojiView.resize(square: squareSize)
+    }
+    
+    func applyTheme(_ theme: Theme) {
+        emojiView.applyTheme(theme)
     }
 }

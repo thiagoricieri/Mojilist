@@ -16,6 +16,9 @@ protocol BaseView {
     func setViewStyle()
     func prepareViewForUser()
     
+    // Theming
+    func applyTheme(_ theme: Theme)
+    
     // Providing
     func provideApp() -> App
     func provideRealm() -> Realm

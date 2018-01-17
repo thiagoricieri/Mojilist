@@ -449,7 +449,7 @@
                                 </cells>
                             </collectionView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" image="fade-top" translatesAutoresizingMaskIntoConstraints="NO" id="teg-Nd-c76">
-                                <rect key="frame" x="0.0" y="104" width="375" height="80"/>
+                                <rect key="frame" x="0.0" y="113" width="375" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="u9B-0b-Zrq"/>
                                 </constraints>
@@ -498,7 +498,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LBb-gX-Q0C">
-                                <rect key="frame" x="0.0" y="113" width="375" height="1"/>
+                                <rect key="frame" x="0.0" y="112" width="375" height="1"/>
                                 <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="6Ux-6x-5nC"/>
@@ -675,14 +675,14 @@
                             <constraint firstItem="LBb-gX-Q0C" firstAttribute="leading" secondItem="2MO-OF-DiD" secondAttribute="leading" id="RUB-Vq-VfH"/>
                             <constraint firstItem="Mx4-rj-E28" firstAttribute="bottom" secondItem="nZA-EP-Yzh" secondAttribute="bottom" id="RWK-cQ-HK3"/>
                             <constraint firstItem="VbS-G6-kOY" firstAttribute="leading" secondItem="nZA-EP-Yzh" secondAttribute="leading" id="SSu-Uj-ZRO"/>
-                            <constraint firstItem="teg-Nd-c76" firstAttribute="top" secondItem="nZA-EP-Yzh" secondAttribute="top" constant="40" id="Sgh-BF-xJD"/>
                             <constraint firstItem="nrD-25-EKc" firstAttribute="top" secondItem="cFd-i0-Fb9" secondAttribute="top" constant="-20" id="ShU-iV-mNP"/>
                             <constraint firstItem="qLz-rp-n5d" firstAttribute="leading" secondItem="nZA-EP-Yzh" secondAttribute="leading" id="Xcg-Gu-4uV"/>
+                            <constraint firstItem="teg-Nd-c76" firstAttribute="top" secondItem="LBb-gX-Q0C" secondAttribute="bottom" id="Zyq-58-yNk"/>
                             <constraint firstItem="nrD-25-EKc" firstAttribute="trailing" secondItem="cFd-i0-Fb9" secondAttribute="trailing" constant="20" id="aq8-bs-d2a"/>
                             <constraint firstItem="TSr-x5-EgF" firstAttribute="trailing" secondItem="nZA-EP-Yzh" secondAttribute="trailing" id="dLw-89-9lO"/>
                             <constraint firstAttribute="trailing" secondItem="teg-Nd-c76" secondAttribute="trailing" id="k8T-OQ-nP4"/>
                             <constraint firstItem="qLz-rp-n5d" firstAttribute="trailing" secondItem="nZA-EP-Yzh" secondAttribute="trailing" id="lZC-gO-St7"/>
-                            <constraint firstItem="LBb-gX-Q0C" firstAttribute="top" secondItem="R1F-cM-6d6" secondAttribute="bottom" id="uOt-Yl-70U"/>
+                            <constraint firstItem="LBb-gX-Q0C" firstAttribute="top" secondItem="R1F-cM-6d6" secondAttribute="bottom" constant="-1" id="uOt-Yl-70U"/>
                             <constraint firstItem="TSr-x5-EgF" firstAttribute="bottom" secondItem="VbS-G6-kOY" secondAttribute="bottom" id="yYK-8C-PqQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nZA-EP-Yzh"/>
@@ -699,11 +699,14 @@
                         <outlet property="badgeCountLabel" destination="aEx-67-AHA" id="J1i-kt-8WY"/>
                         <outlet property="badgeView" destination="nrD-25-EKc" id="Jxo-0W-nRA"/>
                         <outlet property="basketCollection" destination="qLz-rp-n5d" id="1rw-iE-goh"/>
+                        <outlet property="bottomFadeDecoration" destination="TSr-x5-EgF" id="Xq7-p0-MJl"/>
                         <outlet property="clearBarItem" destination="bVe-5C-NRU" id="7El-G2-a0G"/>
                         <outlet property="collection" destination="VbS-G6-kOY" id="wbS-7l-nnV"/>
                         <outlet property="createButton" destination="cFd-i0-Fb9" id="j5A-1C-J9n"/>
                         <outlet property="itemsInListLabel" destination="DJd-rc-jHn" id="oie-y4-tP2"/>
                         <outlet property="selectedPackButton" destination="R1F-cM-6d6" id="EUb-NG-s1M"/>
+                        <outlet property="separator" destination="LBb-gX-Q0C" id="Aiv-wr-fQT"/>
+                        <outlet property="topFadeDecoration" destination="teg-Nd-c76" id="gaD-DH-1BB"/>
                         <segue destination="MSh-aa-5ya" kind="show" identifier="toSelectPack" id="AbC-bb-dSb"/>
                     </connections>
                 </viewController>
@@ -765,6 +768,7 @@
                                         <connections>
                                             <outlet property="emojiText" destination="FLL-LB-nhB" id="DXe-wu-7Tl"/>
                                             <outlet property="packName" destination="Arv-K8-bm9" id="Gc7-g3-p3O"/>
+                                            <outlet property="separator" destination="yRa-9a-Rio" id="mmJ-Er-dML"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImagePackCell" rowHeight="100" id="mqF-LQ-MBb" customClass="ImagePackCell" customModule="Emojilist" customModuleProvider="target">
@@ -861,6 +865,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="separator" destination="At0-bG-iL9" id="mGO-r4-O07"/>
                                             <outletCollection property="emojiImages" destination="DWu-pf-lsj" collectionClass="NSMutableArray" id="fL6-YP-PbI"/>
                                             <outletCollection property="emojiImages" destination="i8Q-SD-lzq" collectionClass="NSMutableArray" id="yYS-jK-5W0"/>
                                             <outletCollection property="emojiImages" destination="wR6-Ux-QLr" collectionClass="NSMutableArray" id="Bco-FM-Pav"/>
@@ -1090,11 +1095,13 @@
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="bottomFadeDecoration" destination="oFu-xy-8QE" id="bBh-Rn-GVE"/>
                         <outlet property="collection" destination="Liq-Hg-SQX" id="lnq-Gx-GkM"/>
                         <outlet property="doneButton" destination="8nd-x0-8wa" id="wkp-Gn-XdL"/>
                         <outlet property="listNameLabel" destination="Sgd-J3-IgY" id="krV-rW-hag"/>
                         <outlet property="settingsButton" destination="QYs-Ug-GsN" id="jJd-mZ-idq"/>
                         <outlet property="shareButton" destination="lAW-X5-lY7" id="MV4-WC-ZdB"/>
+                        <outlet property="topFadeDecoration" destination="yMi-fh-tcj" id="Wzn-ff-rWH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s6N-7I-nO8" userLabel="First Responder" sceneMemberID="firstResponder"/>

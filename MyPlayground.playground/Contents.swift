@@ -2,6 +2,8 @@
 
 import UIKit
 
+let color: Int = 0xFF0000
+
 func itemsToFit(inWidth: Int, inHeight: Int, withMargin: Int, withSize: Int) -> Int {
     let rows = (inHeight - withMargin) / withSize
     let columns = (inWidth - withMargin * 2) / withSize

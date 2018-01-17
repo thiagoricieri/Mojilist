@@ -11,7 +11,7 @@ import UIKit
 import RealmSwift
 import Firebase
 
-public class Launcher {
+class Launcher {
     
     // Vars
     private var launchParams: LaunchParams?
@@ -21,7 +21,7 @@ public class Launcher {
     // Weak references
     private weak var window: UIWindow?
     
-    public func startWith(app usingApp: App) {
+    func startWith(app usingApp: App) {
         app = usingApp
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
@@ -31,33 +31,33 @@ public class Launcher {
     
     // MARK: - UI
     
-    public func setWindow(_ window: UIWindow?) -> Self {
+    func setWindow(_ window: UIWindow?) -> Self {
         self.window = window
         return self
     }
     
-    public func initialViewController(vc: UIViewController) -> Self {
+    func initialViewController(vc: UIViewController) -> Self {
         window?.rootViewController = vc
         return self
     }
     
     // MARK: - Configurable options
     
-    public func shouldProvideCredentials(_ requirement: Bool) -> Self {
+    func shouldProvideCredentials(_ requirement: Bool) -> Self {
         provideCredentials = requirement
         return self
     }
     
     // MARK: - Deeplink
     
-    public func setLaunchOptions(_ launchOptions: LaunchParams?) -> Self {
+    func setLaunchOptions(_ launchOptions: LaunchParams?) -> Self {
         self.launchParams = launchOptions
         return self
     }
     
     // MARK: - Migrate Realm
     
-    public func migrateRealm() -> Self {
+    func migrateRealm() -> Self {
         
         var config = Realm.Configuration(
             // Set the new schema version. This must be greater than the previously used
@@ -84,7 +84,7 @@ public class Launcher {
         return self
     }
     
-    public func includeStandardPack() -> Self {
+    func includeStandardPack() -> Self {
         let realm = try! Realm()
         let query = realm.objects(REmojiPack.self).filter("ascii = true")
         
@@ -117,22 +117,22 @@ public class Launcher {
     
     // MARK: - Third-Party Integrations
     
-    public func setFirebase() -> Self {
+    func setFirebase() -> Self {
         FirebaseApp.configure()
         return self
     }
     
-    public func setFacebook() -> Self {
+    func setFacebook() -> Self {
         // TODO: Add credentials
         return self
     }
     
-    public func setFabric() -> Self {
+    func setFabric() -> Self {
         // TODO: Add credentials
         return self
     }
     
-    public func setTwitter() -> Self {
+    func setTwitter() -> Self {
         // TODO: Add credentials
         return self
     }
