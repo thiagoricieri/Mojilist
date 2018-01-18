@@ -36,6 +36,7 @@ class SelectEmojisViewController: BaseCollectionViewController,
     @IBOutlet weak var separator: UIView!
     @IBOutlet weak var topFadeDecoration: UIImageView!
     @IBOutlet weak var bottomFadeDecoration: UIImageView!
+    @IBOutlet weak var indicatorDecoration: UIImageView!
     
     // Extra collection
     @IBOutlet weak var basketCollection: UICollectionView!
@@ -54,8 +55,10 @@ class SelectEmojisViewController: BaseCollectionViewController,
         theme.background(basketCollection)
         theme.actionButton(createButton)
         theme.badge(badgeView)
+        
         topFadeDecoration.image = UIImage(named: theme.topDecoration())
         bottomFadeDecoration.image = UIImage(named: theme.bottomDecoration())
+        indicatorDecoration.image = UIImage(named: theme.indicatorDecoration())
     }
     
     override func setViewStyle() {

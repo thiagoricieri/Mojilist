@@ -21,7 +21,7 @@
 "Pack.AllEmojis" = "Todos os Emojis!";
 
 // Lists
-"Lists.Title" = "Suas listas";
+"Lists.Title" = "Mojilist";
 "Lists.New" = "Nova";
 "Lists.Settings" = "Ajustes";
 "Lists.Empty" = "Nenhuma lista!";
@@ -52,7 +52,7 @@
 "SelectEmojis.Create" = "Criar";
 "SelectEmojis.Clear" = "Esvaziar";
 "SelectEmojis.SelectPack" = "Pacote selecionado:";
-"SelectEmojis.ItemsInList" = "Itens na lista:";
+"SelectEmojis.ItemsInList" = "Itens na lista. Se precisar, toque uma vez para remover.";
 
 // Select Pack
 "SelectPack.Title" = "Pacotes";
