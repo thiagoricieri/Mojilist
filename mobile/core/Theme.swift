@@ -15,7 +15,8 @@ class Theme {
         BasicVisual(), DarkVisual()
     ]
     
-    let visuals: Visuals
+    var visuals: Visuals
+    
     init(visuals: Visuals) {
         self.visuals = visuals
     }
@@ -52,6 +53,18 @@ class Theme {
     
     func tintAccent(_ view: UIView) {
         view.tintColor = color(visuals.accentColor)
+    }
+    
+    func background(_ view: UITableViewCell) {
+        view.backgroundView?.backgroundColor = color(visuals.backgroundColor)
+        view.backgroundColor = color(visuals.backgroundColor)
+        view.contentView.backgroundColor = color(visuals.backgroundColor)
+    }
+    
+    func darkBackground(_ view: UITableViewCell) {
+        view.backgroundView?.backgroundColor = color(visuals.backgroundColorDark)
+        view.backgroundColor = color(visuals.backgroundColorDark)
+        view.contentView.backgroundColor = color(visuals.backgroundColorDark)
     }
 
     // MARK: - Texts
@@ -96,6 +109,14 @@ class Theme {
     
     func cellBackground(_ view: UIView) {
         if let c = visuals.cellBackground { view.backgroundColor = color(c) }
+    }
+    
+    func cellBackground(_ view: UITableViewCell) {
+        if let c = visuals.cellBackground {
+            view.backgroundColor = color(c)
+            view.backgroundView?.backgroundColor = color(c)
+            view.contentView.backgroundColor = color(c)
+        }
     }
     
     func separator(_ view: UIView) {
@@ -213,8 +234,8 @@ struct BasicVisual: Visuals {
     var isTranslucent = true
     
     var badgeColor = UInt(0xFF0000)
-    var separatorColor: UInt?
-    var cellBackground: UInt?
+    var separatorColor: UInt? = UInt(0xCCCCCC)
+    var cellBackground: UInt? = UInt(0xFDFDFD)
     var topFadeDecorationName = "fade-top"
     var bottomFadeDecorationName = "fade-bottom"
     var downArrowDecorationName = "down"

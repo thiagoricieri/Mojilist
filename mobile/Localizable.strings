@@ -24,7 +24,7 @@
 "Pack.AllEmojis" = "Todos os Emojis!";
 
 // Lists
-"Lists.Title" = "Mojilist";
+"Lists.Title" = "MOJILIST";
 "Lists.New" = "Nova";
 "Lists.Settings" = "Ajustes";
 "Lists.Empty" = "Nenhuma lista!";
@@ -79,6 +79,9 @@
 "About.About.Contact" = "E-mail para o desenvolvedor";
 "About.About.Feature" = "Opine sobre o app";
 "About.About.Version" = "Versão do app";
+
+// Change Theme
+"ChangeTheme.Title" = "Temas";
 
 // Themes
 "Theme.Basic" = "Tema Claro";

@@ -18,6 +18,8 @@
 		B035106B2010CAFA0027EFC7 /* AboutStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035106A2010CAFA0027EFC7 /* AboutStoryboard.swift */; };
 		B035106D2010CB4A0027EFC7 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035106C2010CB4A0027EFC7 /* AboutPresenter.swift */; };
 		B035106F2010E0820027EFC7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035106E2010E0820027EFC7 /* WebViewController.swift */; };
+		B03510712010E57B0027EFC7 /* ChangeThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03510702010E57B0027EFC7 /* ChangeThemeViewController.swift */; };
+		B03510732010E5B00027EFC7 /* ChangeThemePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03510722010E5B00027EFC7 /* ChangeThemePresenter.swift */; };
 		B035FDF21FFE5C73003A332B /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = B035FDF11FFE5C73003A332B /* fastlane */; };
 		B035FDFC1FFE5E1F003A332B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B035FDFA1FFE5E1F003A332B /* LaunchScreen.storyboard */; };
 		B035FDFD1FFE5E1F003A332B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B035FDFB1FFE5E1F003A332B /* Main.storyboard */; };
@@ -112,6 +114,8 @@
 		B035106A2010CAFA0027EFC7 /* AboutStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutStoryboard.swift; sourceTree = "<group>"; };
 		B035106C2010CB4A0027EFC7 /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
 		B035106E2010E0820027EFC7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		B03510702010E57B0027EFC7 /* ChangeThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeViewController.swift; sourceTree = "<group>"; };
+		B03510722010E5B00027EFC7 /* ChangeThemePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemePresenter.swift; sourceTree = "<group>"; };
 		B035FDF11FFE5C73003A332B /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 		B035FDFA1FFE5E1F003A332B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B035FDFB1FFE5E1F003A332B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -423,6 +427,8 @@
 				B0D11968200508C1005B2CBB /* AboutViewController.swift */,
 				B035106C2010CB4A0027EFC7 /* AboutPresenter.swift */,
 				B035106E2010E0820027EFC7 /* WebViewController.swift */,
+				B03510702010E57B0027EFC7 /* ChangeThemeViewController.swift */,
+				B03510722010E5B00027EFC7 /* ChangeThemePresenter.swift */,
 			);
 			path = about;
 			sourceTree = "<group>";
@@ -795,6 +801,8 @@
 				B035FE0D1FFE5FE6003A332B /* Router.swift in Sources */,
 				B08CB106200CEDE900A6A605 /* Sharing.swift in Sources */,
 				B089DEA720079F88002D3879 /* BaseEmojiCell.swift in Sources */,
+				B03510712010E57B0027EFC7 /* ChangeThemeViewController.swift in Sources */,
+				B03510732010E5B00027EFC7 /* ChangeThemePresenter.swift in Sources */,
 				B035FE0F1FFE5FE6003A332B /* Operators.swift in Sources */,
 				B035FE061FFE5E8F003A332B /* Constants.swift in Sources */,
 				B07A09622008D561005957C1 /* SelectPackPresenter.swift in Sources */,
