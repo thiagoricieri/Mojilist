@@ -35,19 +35,23 @@ class BaseViewController : UIViewController, BaseView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        checkTheme()
         instantiateDependencies()
-        let appTheme = provideApp().theme.identifier()
-        if currentTheme == nil || currentTheme != appTheme {
-            currentTheme = appTheme
-            applyTheme(provideApp().theme)
-        }
         setViewStyle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        checkTheme()
         prepareViewForUser()
+    }
+    
+    func checkTheme() {
+        let appTheme = provideApp().theme.identifier()
+        if currentTheme == nil || currentTheme != appTheme {
+            currentTheme = appTheme
+            applyTheme(provideApp().theme)
+        }
     }
     
     func instantiateDependencies() {

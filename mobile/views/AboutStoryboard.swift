@@ -12,5 +12,6 @@ class AboutStoryboard: StoryboardContext {
     
     struct Segue {
         static let toWebView = "toWebView"
+        static let toChangeTheme = "toChangeTheme"
     }
 }

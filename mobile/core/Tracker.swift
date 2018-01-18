@@ -70,6 +70,14 @@ class Tracker {
         Analytics.logEvent("follow_twitter", parameters: nil)
     }
     
+    static func followFacebook() {
+        Analytics.logEvent("follow_facebook", parameters: nil)
+    }
+    
+    static func followBlog() {
+        Analytics.logEvent("follow_blog", parameters: nil)
+    }
+    
     static func signupNewsletter() {
         Analytics.logEvent("signup_newsletter", parameters: nil)
     }

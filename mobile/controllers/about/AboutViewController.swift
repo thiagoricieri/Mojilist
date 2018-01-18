@@ -25,6 +25,9 @@ class AboutViewController: BaseTableViewController,
     
     override func applyTheme(_ theme: Theme) {
         super.applyTheme(theme)
+        if let color = theme.visuals.separatorColor {
+            table.separatorColor = theme.color(color)
+        }
     }
     
     override func setViewStyle() {
@@ -40,12 +43,22 @@ class AboutViewController: BaseTableViewController,
         let cell = tableView.dequeueReusableCell(
             withIdentifier: item.cellIdentifier.rawValue) as! SettingsCell
         
+        let theme = provideApp().theme
+        theme.cellBackground(cell)
+        theme.primaryText(cell.textLabel!)
+        
+        if let dt = cell.detailTextLabel { theme.secondaryText(dt) }
+        
         cell.option = item
         cell.textLabel?.text = item.name
         
         if let i = item.icon {
-            cell.imageView?.image = UIImage(named: i)
-        } else {
+            cell.imageView?.image = UIImage(named: i)?.withRenderingMode(.alwaysTemplate)
+            if let im = cell.imageView {
+                theme.accent(im)
+            }
+        }
+        else {
             cell.imageView?.image = nil
         }
         
@@ -79,20 +92,40 @@ class AboutViewController: BaseTableViewController,
             
         }
         else if item.name.contains("About.Settings.Theme".localized) {
-            
+            performSegue(withIdentifier: AboutStoryboard.Segue.toChangeTheme, sender: nil)
         }
         else if item.name.contains("About.Promo.Share".localized) {
-            
+            Tracker.shareApp()
         }
         else if item.name.contains("About.Promo.Rate".localized) {
-            
+            // TODO
         }
-        else if item.name.contains("About.Promo.Signup".localized) ||
-            item.name.contains("About.Follow.Instagram".localized) ||
-            item.name.contains("About.Follow.Facebook".localized) ||
-            item.name.contains("About.Follow.Twitter".localized) ||
-            item.name.contains("About.Follow.Blog".localized) {
-            
+        else if item.name.contains("About.Promo.Signup".localized) {
+            Tracker.signupNewsletter()
+            performSegue(
+                withIdentifier: AboutStoryboard.Segue.toWebView,
+                sender: item.metadata!["url"])
+        }
+        else if item.name.contains("About.Follow.Instagram".localized) {
+            Tracker.followInstagram()
+            performSegue(
+                withIdentifier: AboutStoryboard.Segue.toWebView,
+                sender: item.metadata!["url"])
+        }
+        else if item.name.contains("About.Follow.Facebook".localized) {
+            Tracker.followFacebook()
+            performSegue(
+                withIdentifier: AboutStoryboard.Segue.toWebView,
+                sender: item.metadata!["url"])
+        }
+        else if item.name.contains("About.Follow.Twitter".localized) {
+            Tracker.followTwitter()
+            performSegue(
+                withIdentifier: AboutStoryboard.Segue.toWebView,
+                sender: item.metadata!["url"])
+        }
+        else if item.name.contains("About.Follow.Blog".localized) {
+            Tracker.followBlog()
             performSegue(
                 withIdentifier: AboutStoryboard.Segue.toWebView,
                 sender: item.metadata!["url"])
@@ -100,6 +133,7 @@ class AboutViewController: BaseTableViewController,
         else if item.name.contains("About.About.Contact".localized) ||
             item.name.contains("About.About.Feature".localized) {
             
+            Tracker.contactDeveloper()
             sendEmail(subject: item.metadata!["subject"] as! String)
         }
     }

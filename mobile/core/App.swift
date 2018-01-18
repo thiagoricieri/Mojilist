@@ -29,6 +29,7 @@ protocol App {
     func dateToHuman(fromSql: String) -> String
     func dateToHuman(from: String, toFormat: String) -> String
     func dateToHuman(fromSimpleSql: String) -> String
+    func changeVisuals(_ visuals: Visuals)
 }
 
 // MARK: - Production App
@@ -131,6 +132,12 @@ class ProductionAppImpl: App {
     
     public func convertToDate(fromSimpleSql: String) -> Date? {
         return simpleSqlFormatter.date(from: fromSimpleSql)
+    }
+    
+    public func changeVisuals(_ visuals: Visuals) {
+        theme.visuals = visuals
+        let defaults = UserDefaults.standard
+        defaults.set(visuals.identifier, forKey: Env.App.theming)
     }
 }
 
