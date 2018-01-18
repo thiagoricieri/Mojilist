@@ -213,6 +213,51 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NhG-QC-V7o">
+                                <rect key="frame" x="48" y="355" width="279" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{empty}" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Qe-VS-LKe">
+                                        <rect key="frame" x="0.0" y="117" width="279" height="28"/>
+                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{hint}" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wyb-AM-1pc">
+                                        <rect key="frame" x="0.0" y="153" width="279" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="YaQ-hS-af0">
+                                        <rect key="frame" x="113" y="0.0" width="54" height="54"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="54" id="Wiy-46-CnB"/>
+                                            <constraint firstAttribute="height" constant="54" id="mZA-9x-QP2"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down" translatesAutoresizingMaskIntoConstraints="NO" id="xfH-EB-1Wo">
+                                        <rect key="frame" x="129" y="179" width="21" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="21" id="AgG-dk-0e8"/>
+                                            <constraint firstAttribute="height" constant="21" id="Y45-XR-fgq"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="xfH-EB-1Wo" secondAttribute="bottom" id="Azh-AY-7Wh"/>
+                                    <constraint firstAttribute="trailing" secondItem="9Qe-VS-LKe" secondAttribute="trailing" id="BbH-K9-PCT"/>
+                                    <constraint firstItem="YaQ-hS-af0" firstAttribute="top" secondItem="NhG-QC-V7o" secondAttribute="top" id="Oed-2E-krI"/>
+                                    <constraint firstItem="xfH-EB-1Wo" firstAttribute="centerX" secondItem="NhG-QC-V7o" secondAttribute="centerX" id="SXO-XF-mLX"/>
+                                    <constraint firstItem="YaQ-hS-af0" firstAttribute="centerX" secondItem="NhG-QC-V7o" secondAttribute="centerX" id="Shs-u8-30m"/>
+                                    <constraint firstItem="Wyb-AM-1pc" firstAttribute="top" secondItem="9Qe-VS-LKe" secondAttribute="bottom" constant="8" id="cNN-57-Igl"/>
+                                    <constraint firstItem="9Qe-VS-LKe" firstAttribute="leading" secondItem="NhG-QC-V7o" secondAttribute="leading" id="dVF-cw-amM"/>
+                                    <constraint firstItem="xfH-EB-1Wo" firstAttribute="top" secondItem="Wyb-AM-1pc" secondAttribute="bottom" constant="8" id="gju-G9-NKb"/>
+                                    <constraint firstAttribute="height" constant="200" id="jqy-Tx-QDs"/>
+                                    <constraint firstItem="Wyb-AM-1pc" firstAttribute="leading" secondItem="NhG-QC-V7o" secondAttribute="leading" id="o3l-UA-Zc2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Wyb-AM-1pc" secondAttribute="trailing" id="vUj-tk-3Qz"/>
+                                </constraints>
+                            </view>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nwg-qn-USE" customClass="PrimaryFloatingButton" customModule="Emojilist" customModuleProvider="target">
                                 <rect key="frame" x="264.5" y="578" width="48" height="48"/>
                                 <color key="backgroundColor" red="0.37844690679999998" green="0.84825617070000003" blue="0.21206393840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -248,9 +293,12 @@
                             <constraint firstItem="aSx-a0-ZWl" firstAttribute="leading" secondItem="BlE-JE-Q25" secondAttribute="leading" id="9Ux-4t-AwG"/>
                             <constraint firstItem="aSx-a0-ZWl" firstAttribute="trailing" secondItem="BlE-JE-Q25" secondAttribute="trailing" id="9rS-Nm-1el"/>
                             <constraint firstItem="BlE-JE-Q25" firstAttribute="bottom" secondItem="RDV-ki-WX4" secondAttribute="bottom" constant="36" id="BkN-wV-GTi"/>
+                            <constraint firstItem="RDV-ki-WX4" firstAttribute="top" secondItem="NhG-QC-V7o" secondAttribute="bottom" constant="16" id="CVh-CI-9i8"/>
                             <constraint firstItem="RDV-ki-WX4" firstAttribute="centerX" secondItem="BlE-JE-Q25" secondAttribute="centerX" id="FLA-Gb-Xwd"/>
                             <constraint firstItem="aSx-a0-ZWl" firstAttribute="bottom" secondItem="BlE-JE-Q25" secondAttribute="bottom" id="QmU-7p-om4"/>
                             <constraint firstItem="nwg-qn-USE" firstAttribute="leading" secondItem="RDV-ki-WX4" secondAttribute="trailing" constant="32" id="RFP-l1-pdF"/>
+                            <constraint firstItem="BlE-JE-Q25" firstAttribute="trailing" secondItem="NhG-QC-V7o" secondAttribute="trailing" constant="48" id="Tas-x4-8qn"/>
+                            <constraint firstItem="NhG-QC-V7o" firstAttribute="leading" secondItem="BlE-JE-Q25" secondAttribute="leading" constant="48" id="oVW-GU-Pa0"/>
                             <constraint firstItem="BlE-JE-Q25" firstAttribute="bottom" secondItem="nwg-qn-USE" secondAttribute="bottom" constant="41" id="uJK-6e-gM4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BlE-JE-Q25"/>
@@ -260,6 +308,11 @@
                         <barButtonItem key="rightBarButtonItem" image="settings" id="l3f-3d-gQE"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="downDecoration" destination="xfH-EB-1Wo" id="VQK-Nv-vl6"/>
+                        <outlet property="emptyDecoration" destination="YaQ-hS-af0" id="Pod-Lt-1b5"/>
+                        <outlet property="emptyMsg" destination="Wyb-AM-1pc" id="zEQ-4X-L55"/>
+                        <outlet property="emptyTitle" destination="9Qe-VS-LKe" id="uBo-Tg-pRz"/>
+                        <outlet property="emptyView" destination="NhG-QC-V7o" id="p3A-kX-mQO"/>
                         <outlet property="newListButton" destination="RDV-ki-WX4" id="3qY-nr-4gd"/>
                         <outlet property="settingsBarItem" destination="l3f-3d-gQE" id="y4N-5S-Lfi"/>
                         <outlet property="storeButton" destination="nwg-qn-USE" id="AqM-Rs-3iT"/>
@@ -299,7 +352,7 @@
                                 <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajr-XX-SNI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ajr-XX-SNI">
                                 <rect key="frame" x="26" y="237" width="323" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.64340924259999999" green="0.64977963110000003" blue="0.64977963110000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1110,6 +1163,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="down" width="21" height="21"/>
+        <image name="empty" width="53" height="53"/>
         <image name="fade-bottom" width="375" height="80"/>
         <image name="fade-top" width="375" height="80"/>
         <image name="indicator" width="16" height="16"/>

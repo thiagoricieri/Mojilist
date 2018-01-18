@@ -60,7 +60,7 @@ class ProductionAppImpl: App {
         if let theme = defaults.string(forKey: Env.App.theming) {
             return Theme(visualString: theme)
         }
-        return Theme(visuals: DarkVisual())
+        return Theme(visuals: BasicVisual())
     }
 	
 	// Init formatters

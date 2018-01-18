@@ -11,6 +11,10 @@ import UIKit
 
 class Theme {
     
+    static let available: [Visuals] = [
+        BasicVisual(), DarkVisual()
+    ]
+    
     let visuals: Visuals
     init(visuals: Visuals) {
         self.visuals = visuals
@@ -127,6 +131,14 @@ class Theme {
         return visuals.bottomFadeDecorationName
     }
     
+    func downArrowDecoration() -> String {
+        return visuals.downArrowDecorationName
+    }
+    
+    func emptyBoxDecoration() -> String {
+        return visuals.emptyBoxDecorationName
+    }
+    
     // MARK: - UINavigation Bar
     
     func styleNavigationBar(_ bar: UINavigationBar) {
@@ -173,6 +185,8 @@ protocol Visuals {
     var cellBackground: UInt? { get }
     var topFadeDecorationName: String { get }
     var bottomFadeDecorationName: String { get }
+    var downArrowDecorationName: String { get }
+    var emptyBoxDecorationName: String { get }
 }
 
 // MARK: - Basic
@@ -198,6 +212,8 @@ struct BasicVisual: Visuals {
     var cellBackground: UInt?
     var topFadeDecorationName = "fade-top"
     var bottomFadeDecorationName = "fade-bottom"
+    var downArrowDecorationName = "down"
+    var emptyBoxDecorationName = "empty"
 }
 
 // MARK: - Dark
@@ -223,4 +239,6 @@ struct DarkVisual: Visuals {
     var cellBackground: UInt? = UInt(0x111111)
     var topFadeDecorationName = "dark-fade-top"
     var bottomFadeDecorationName = "dark-fade-bottom"
+    var downArrowDecorationName = "down-dark"
+    var emptyBoxDecorationName = "empty-dark"
 }
