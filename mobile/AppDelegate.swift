@@ -28,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         launcher
             .setWindow(window)
             .shouldProvideCredentials(false)
+            .setDefaultPack()
             .migrateRealm()
             .includeStandardPack()
             .setFabric()

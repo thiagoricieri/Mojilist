@@ -45,8 +45,17 @@ class SelectEmojisViewController: BaseCollectionViewController,
         basePresenter = SelectEmojisPresenterImpl(view: self)
         presenter = basePresenter as! SelectEmojisPresenter
         
-        // Start using default pack:
-        presenter.pack = appDelegate.standardEmojiPack()
+        let defaults = UserDefaults.standard
+        let realm = provideRealm()
+        if let pack = defaults.string(forKey: Env.App.defaultPack) {
+            let predicate = NSPredicate(format: "slug = %@", pack)
+            let packs = realm.objects(REmojiPack.self).filter(predicate)
+            if packs.count > 0 {
+                presenter.pack = packs.first!
+            }
+        } else {
+            presenter.pack = appDelegate.standardEmojiPack()
+        }
     }
     
     override func applyTheme(_ theme: Theme) {

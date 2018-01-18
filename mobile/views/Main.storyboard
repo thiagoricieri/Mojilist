@@ -305,7 +305,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="33g-iF-w74">
                         <barButtonItem key="backBarButtonItem" title=" " id="dLF-au-L4P"/>
-                        <barButtonItem key="rightBarButtonItem" image="settings" id="l3f-3d-gQE"/>
+                        <barButtonItem key="rightBarButtonItem" image="settings" id="l3f-3d-gQE">
+                            <connections>
+                                <action selector="actionSettings:" destination="smI-Aa-Uwf" id="uEb-ir-cnb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="downDecoration" destination="xfH-EB-1Wo" id="VQK-Nv-vl6"/>
@@ -319,11 +323,20 @@
                         <outlet property="table" destination="aSx-a0-ZWl" id="Sa9-Jz-ooI"/>
                         <segue destination="NLF-xp-QLX" kind="show" identifier="toCreate" id="6GM-Ch-WXS"/>
                         <segue destination="olF-hI-A1H" kind="presentation" identifier="toUsingList" id="2zr-VH-V0c"/>
+                        <segue destination="s7g-Ay-92e" kind="presentation" identifier="toSettings" id="hBu-9r-Ify"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9A8-3L-59s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="325.60000000000002" y="98.50074962518741"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="nI2-9y-feZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="About" id="s7g-Ay-92e" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66j-LL-YCM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="326" y="666"/>
         </scene>
         <!--Create List View Controller-->
         <scene sceneID="gks-Af-BzI">

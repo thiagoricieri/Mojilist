@@ -15,6 +15,8 @@
 		B01C29341FEAA46300C1AF22 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01C29331FEAA46300C1AF22 /* assets.xcassets */; };
 		B01C29421FEAA46300C1AF22 /* EmojilistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C29411FEAA46300C1AF22 /* EmojilistTests.swift */; };
 		B01C294D1FEAA46300C1AF22 /* EmojilistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C294C1FEAA46300C1AF22 /* EmojilistUITests.swift */; };
+		B035106B2010CAFA0027EFC7 /* AboutStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035106A2010CAFA0027EFC7 /* AboutStoryboard.swift */; };
+		B035106D2010CB4A0027EFC7 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035106C2010CB4A0027EFC7 /* AboutPresenter.swift */; };
 		B035FDF21FFE5C73003A332B /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = B035FDF11FFE5C73003A332B /* fastlane */; };
 		B035FDFC1FFE5E1F003A332B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B035FDFA1FFE5E1F003A332B /* LaunchScreen.storyboard */; };
 		B035FDFD1FFE5E1F003A332B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B035FDFB1FFE5E1F003A332B /* Main.storyboard */; };
@@ -106,6 +108,8 @@
 		B01C29481FEAA46300C1AF22 /* EmojilistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmojilistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01C294C1FEAA46300C1AF22 /* EmojilistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojilistUITests.swift; sourceTree = "<group>"; };
 		B01C294E1FEAA46300C1AF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B035106A2010CAFA0027EFC7 /* AboutStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutStoryboard.swift; sourceTree = "<group>"; };
+		B035106C2010CB4A0027EFC7 /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
 		B035FDF11FFE5C73003A332B /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 		B035FDFA1FFE5E1F003A332B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B035FDFB1FFE5E1F003A332B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 			isa = PBXGroup;
 			children = (
 				B089DE9C200793AE002D3879 /* MainStoryboard.swift */,
+				B035106A2010CAFA0027EFC7 /* AboutStoryboard.swift */,
 				B0DCF9B9200BA1CB00558CEF /* Xibs.swift */,
 				B035FDFB1FFE5E1F003A332B /* Main.storyboard */,
 				B0D1195D20050711005B2CBB /* About.storyboard */,
@@ -414,6 +419,7 @@
 			isa = PBXGroup;
 			children = (
 				B0D11968200508C1005B2CBB /* AboutViewController.swift */,
+				B035106C2010CB4A0027EFC7 /* AboutPresenter.swift */,
 			);
 			path = about;
 			sourceTree = "<group>";
@@ -799,6 +805,7 @@
 				B089DEA120079BF1002D3879 /* SelectEmojisViewController.swift in Sources */,
 				B0B8A272200A5861003BA3FB /* EmojiDropView.swift in Sources */,
 				B07A096A2008F3AD005957C1 /* UsingListPresenter.swift in Sources */,
+				B035106B2010CAFA0027EFC7 /* AboutStoryboard.swift in Sources */,
 				B064A1C52006440E001ADB0E /* REmoji.swift in Sources */,
 				B0DCF9BA200BA1CB00558CEF /* Xibs.swift in Sources */,
 				B01C292F1FEAA46300C1AF22 /* ListsViewController.swift in Sources */,
@@ -807,6 +814,7 @@
 				B064A1C320064353001ADB0E /* REmojiList.swift in Sources */,
 				B07A09612008D561005957C1 /* SelectPackViewController.swift in Sources */,
 				B035FE071FFE5E8F003A332B /* Funcs.swift in Sources */,
+				B035106D2010CB4A0027EFC7 /* AboutPresenter.swift in Sources */,
 				B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */,
 				B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */,
 				B07A09682008F3A6005957C1 /* UsingListViewController.swift in Sources */,

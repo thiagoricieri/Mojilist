@@ -56,3 +56,27 @@
 
 // Select Pack
 "SelectPack.Title" = "Pacotes";
+
+// About
+"About.Title" = "Ajustes";
+"About.Settings" = "Personalize seu App!";
+"About.About" = "Sobre";
+"About.Promo" = "Compartilhe";
+"About.Follow" = "Siga nas redes sociais";
+"About.MoreApps" = "Mais apps!";
+"About.Settings.DefaultPack" = "Pacote padrão: ";
+"About.Settings.Theme" = "Tema usado: ";
+"About.Promo.Signup" = "Inscreva-se na Newsletter!";
+"About.Promo.Share" = "Compartilhe este app";
+"About.Promo.Rate" = "Avalie este app ❤️";
+"About.Follow.Instagram" = "Instagram";
+"About.Follow.Facebook" = "Facebook";
+"About.Follow.Twitter" = "Twitter";
+"About.Follow.Blog" = "Visite o Blog";
+"About.About.Contact" = "E-mail para o desenvolvedor";
+"About.About.Feature" = "Opine sobre o app";
+"About.About.Version" = "Versão do app";
+
+// Themes
+"Theme.Basic" = "Tema Claro";
+"Theme.Dark" = "Tema Escuro";
