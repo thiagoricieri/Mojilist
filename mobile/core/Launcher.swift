@@ -48,6 +48,14 @@ class Launcher {
         return self
     }
     
+    func setDefaultPack() -> Self {
+        let defaults = UserDefaults.standard
+        if defaults.string(forKey: Env.App.defaultPack) == nil {
+            defaults.set("things", forKey: Env.App.defaultPack)
+        }
+        return self
+    }
+    
     // MARK: - Deeplink
     
     func setLaunchOptions(_ launchOptions: LaunchParams?) -> Self {
@@ -94,11 +102,21 @@ class Launcher {
         }
         
         try! realm.write {
-            [(name: "Pack.EmojiThings".localized, emojis: thingsEmoji()),
-             (name: "Pack.AllEmojis".localized, emojis: allEmojis())].forEach { emojiPack in
+            [
+                (
+                    name: "Pack.EmojiThings".localized,
+                    emojis: thingsEmoji(),
+                    slug: "things"
+                ), (
+                    name: "Pack.AllEmojis".localized,
+                    emojis: allEmojis(),
+                    slug: "all"
+                )
+            ].forEach { emojiPack in
                 let pack = REmojiPack()
                 pack.name = emojiPack.name
                 pack.ascii = true
+                pack.slug = emojiPack.slug
                 pack.url = ""
                 
                 for ec in emojiPack.emojis {

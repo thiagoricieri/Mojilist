@@ -53,8 +53,11 @@ class ListsViewController: BaseTableViewController, ListsView {
     
     // MARK: - Table View
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AsciiListCell.identifier) as! AsciiListCell
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: AsciiListCell.identifier) as! AsciiListCell
         
         let item = presenter.item(at: indexPath.row) as! REmojiList
         cell.configure(with: item)
@@ -87,5 +90,9 @@ class ListsViewController: BaseTableViewController, ListsView {
     
     @IBAction func actionStore(_ sender: UIView) {
         successAlert(message: "Open Store!")
+    }
+    
+    @IBAction func actionSettings(_ sender: Any) {
+        performSegue(withIdentifier: MainStoryboard.Segue.toSettings, sender: nil)
     }
 }

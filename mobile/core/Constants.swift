@@ -24,6 +24,7 @@ public struct Env {
     public struct App {
         static let shareUrl = "https://ghostship.co/mojilist"
         static let theming = "app-theming"
+        static let defaultPack = "default-pack"
     }
 }
 

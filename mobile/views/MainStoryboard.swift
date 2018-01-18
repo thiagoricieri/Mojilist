@@ -16,6 +16,7 @@ class MainStoryboard: StoryboardContext {
         static let toSelectPack = "toSelectPack"
         static let toUsingList = "toUsingList"
         static let toShare = "toShare"
+        static let toSettings = "toSettings"
     }
     
     func createListViewController() -> CreateListViewController {

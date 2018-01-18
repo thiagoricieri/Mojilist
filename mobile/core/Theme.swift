@@ -197,7 +197,7 @@ protocol Visuals {
 // MARK: - Basic
 struct BasicVisual: Visuals {
     
-    var identifier = "basic"
+    var identifier = "Theme.Basic"
     
     var primaryColor = UInt(0xFFFFFF)
     var primaryColorDark = UInt(0xCCCCCC)
@@ -225,7 +225,7 @@ struct BasicVisual: Visuals {
 // MARK: - Dark
 struct DarkVisual: Visuals {
     
-    var identifier = "dark"
+    var identifier = "Theme.Dark"
     
     var primaryColor = UInt(0x333333)
     var primaryColorDark = UInt(0x000000)
