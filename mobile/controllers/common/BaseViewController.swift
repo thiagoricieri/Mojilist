@@ -75,8 +75,10 @@ class BaseViewController : UIViewController, BaseView {
     }
     
     deinit {
-        basePresenter.unload()
-        basePresenter = nil
+        if basePresenter != nil {
+            basePresenter.unload()
+            basePresenter = nil
+        }
     }
 }
 

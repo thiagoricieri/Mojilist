@@ -21,8 +21,12 @@ public struct Env {
         static let userAgent = "User-Agent"
     }
     
-    public struct App {
+    public struct Promo {
         static let shareUrl = "https://ghostship.co/mojilist"
+        static let email = "buh@ghostship.co"
+    }
+    
+    public struct App {
         static let theming = "app-theming"
         static let defaultPack = "default-pack"
     }

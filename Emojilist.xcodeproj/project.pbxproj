@@ -17,6 +17,7 @@
 		B01C294D1FEAA46300C1AF22 /* EmojilistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C294C1FEAA46300C1AF22 /* EmojilistUITests.swift */; };
 		B035106B2010CAFA0027EFC7 /* AboutStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035106A2010CAFA0027EFC7 /* AboutStoryboard.swift */; };
 		B035106D2010CB4A0027EFC7 /* AboutPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035106C2010CB4A0027EFC7 /* AboutPresenter.swift */; };
+		B035106F2010E0820027EFC7 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B035106E2010E0820027EFC7 /* WebViewController.swift */; };
 		B035FDF21FFE5C73003A332B /* fastlane in Resources */ = {isa = PBXBuildFile; fileRef = B035FDF11FFE5C73003A332B /* fastlane */; };
 		B035FDFC1FFE5E1F003A332B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B035FDFA1FFE5E1F003A332B /* LaunchScreen.storyboard */; };
 		B035FDFD1FFE5E1F003A332B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B035FDFB1FFE5E1F003A332B /* Main.storyboard */; };
@@ -110,6 +111,7 @@
 		B01C294E1FEAA46300C1AF22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B035106A2010CAFA0027EFC7 /* AboutStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutStoryboard.swift; sourceTree = "<group>"; };
 		B035106C2010CB4A0027EFC7 /* AboutPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPresenter.swift; sourceTree = "<group>"; };
+		B035106E2010E0820027EFC7 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		B035FDF11FFE5C73003A332B /* fastlane */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fastlane; sourceTree = "<group>"; };
 		B035FDFA1FFE5E1F003A332B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B035FDFB1FFE5E1F003A332B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -420,6 +422,7 @@
 			children = (
 				B0D11968200508C1005B2CBB /* AboutViewController.swift */,
 				B035106C2010CB4A0027EFC7 /* AboutPresenter.swift */,
+				B035106E2010E0820027EFC7 /* WebViewController.swift */,
 			);
 			path = about;
 			sourceTree = "<group>";
@@ -832,6 +835,7 @@
 				B01C292D1FEAA46300C1AF22 /* AppDelegate.swift in Sources */,
 				B064A1D920064ED4001ADB0E /* BaseTableViewCell.swift in Sources */,
 				B064A1DB20064F21001ADB0E /* ListCells.swift in Sources */,
+				B035106F2010E0820027EFC7 /* WebViewController.swift in Sources */,
 				B089DE9D200793AE002D3879 /* MainStoryboard.swift in Sources */,
 				B035FE0E1FFE5FE6003A332B /* Extensions.swift in Sources */,
 				B09B3AC3200B84280064A126 /* Emojis.swift in Sources */,

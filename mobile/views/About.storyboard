@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="321" y="177"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="y9v-I0-fqw">
             <objects>
-                <viewController id="aEu-Ni-mtC" sceneMemberID="viewController">
+                <viewController id="aEu-Ni-mtC" customClass="WebViewController" customModule="Emojilist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SMi-pO-D2G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,8 +156,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="TwJ-iD-akH">
                         <barButtonItem key="backBarButtonItem" title=" " id="4t5-O1-rev"/>
-                        <barButtonItem key="rightBarButtonItem" image="safari" id="3O4-ZD-KBG"/>
+                        <barButtonItem key="rightBarButtonItem" image="safari" id="3O4-ZD-KBG">
+                            <connections>
+                                <action selector="actionSafariWithSender:" destination="aEu-Ni-mtC" id="NVv-Ew-vEe"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="webView" destination="FbY-7u-BBY" id="qnT-zt-XHS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o3Q-3O-Yz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

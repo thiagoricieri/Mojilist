@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import MessageUI
 
 protocol AboutView: BaseView {
 }
 
-class AboutViewController: BaseTableViewController, AboutView {
+class AboutViewController: BaseTableViewController,
+        AboutView,
+        MFMailComposeViewControllerDelegate {
     
     var presenter: AboutPresenter!
     
@@ -78,32 +81,26 @@ class AboutViewController: BaseTableViewController, AboutView {
         else if item.name.contains("About.Settings.Theme".localized) {
             
         }
-        else if item.name.contains("About.Promo.Signup".localized) {
-            
-        }
         else if item.name.contains("About.Promo.Share".localized) {
             
         }
         else if item.name.contains("About.Promo.Rate".localized) {
             
         }
-        else if item.name.contains("About.Follow.Instagram".localized) {
+        else if item.name.contains("About.Promo.Signup".localized) ||
+            item.name.contains("About.Follow.Instagram".localized) ||
+            item.name.contains("About.Follow.Facebook".localized) ||
+            item.name.contains("About.Follow.Twitter".localized) ||
+            item.name.contains("About.Follow.Blog".localized) {
             
+            performSegue(
+                withIdentifier: AboutStoryboard.Segue.toWebView,
+                sender: item.metadata!["url"])
         }
-        else if item.name.contains("About.Follow.Facebook".localized) {
+        else if item.name.contains("About.About.Contact".localized) ||
+            item.name.contains("About.About.Feature".localized) {
             
-        }
-        else if item.name.contains("About.Follow.Twitter".localized) {
-            
-        }
-        else if item.name.contains("About.Follow.Blog".localized) {
-            
-        }
-        else if item.name.contains("About.About.Contact".localized) {
-            
-        }
-        else if item.name.contains("About.About.Feature".localized) {
-            
+            sendEmail(subject: item.metadata!["subject"] as! String)
         }
     }
     
@@ -121,6 +118,37 @@ class AboutViewController: BaseTableViewController, AboutView {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60.0
+    }
+    
+    // MARK: - Mail Delegate
+    
+    func sendEmail(subject: String) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([Env.Promo.email])
+            mail.setSubject(subject)
+            present(mail, animated: true)
+        }
+        else {
+            errorAlert(message: "Email.Error".localized)
+        }
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController,
+                               didFinishWith result: MFMailComposeResult,
+                               error: Error?) {
+        
+        controller.dismiss(animated: true, completion: nil)
+    }
+    
+    // MARK: - Actions
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == AboutStoryboard.Segue.toWebView {
+            let dest = segue.destination as! WebViewController
+            dest.url = sender as! String
+        }
     }
     
     @IBAction func actionClose(_ sender: Any) {
