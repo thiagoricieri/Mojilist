@@ -139,6 +139,10 @@ class Theme {
         return visuals.emptyBoxDecorationName
     }
     
+    func indicatorDecoration() -> String {
+        return visuals.indicatorDecorationName
+    }
+    
     // MARK: - UINavigation Bar
     
     func styleNavigationBar(_ bar: UINavigationBar) {
@@ -187,6 +191,7 @@ protocol Visuals {
     var bottomFadeDecorationName: String { get }
     var downArrowDecorationName: String { get }
     var emptyBoxDecorationName: String { get }
+    var indicatorDecorationName: String { get }
 }
 
 // MARK: - Basic
@@ -214,6 +219,7 @@ struct BasicVisual: Visuals {
     var bottomFadeDecorationName = "fade-bottom"
     var downArrowDecorationName = "down"
     var emptyBoxDecorationName = "empty"
+    var indicatorDecorationName = "indicator"
 }
 
 // MARK: - Dark
@@ -241,4 +247,5 @@ struct DarkVisual: Visuals {
     var bottomFadeDecorationName = "dark-fade-bottom"
     var downArrowDecorationName = "down-dark"
     var emptyBoxDecorationName = "empty-dark"
+    var indicatorDecorationName = "indicator-dark"
 }

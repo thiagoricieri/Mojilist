@@ -516,11 +516,8 @@
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mx4-rj-E28">
                                 <rect key="frame" x="0.0" y="477" width="375" height="190"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJd-rc-jHn">
-                                        <rect key="frame" x="15" y="85" width="119" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="mtB-Jx-dbH"/>
-                                        </constraints>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJd-rc-jHn">
+                                        <rect key="frame" x="15" y="106" width="119" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.64340924259999999" green="0.64977963110000003" blue="0.64977963110000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -756,6 +753,7 @@
                         <outlet property="clearBarItem" destination="bVe-5C-NRU" id="7El-G2-a0G"/>
                         <outlet property="collection" destination="VbS-G6-kOY" id="wbS-7l-nnV"/>
                         <outlet property="createButton" destination="cFd-i0-Fb9" id="j5A-1C-J9n"/>
+                        <outlet property="indicatorDecoration" destination="JTY-vJ-kQC" id="mua-iJ-jU4"/>
                         <outlet property="itemsInListLabel" destination="DJd-rc-jHn" id="oie-y4-tP2"/>
                         <outlet property="selectedPackButton" destination="R1F-cM-6d6" id="EUb-NG-s1M"/>
                         <outlet property="separator" destination="LBb-gX-Q0C" id="Aiv-wr-fQT"/>
