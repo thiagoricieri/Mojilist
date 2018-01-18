@@ -11,5 +11,6 @@ import Foundation
 class AboutStoryboard: StoryboardContext {
     
     struct Segue {
+        static let toWebView = "toWebView"
     }
 }

@@ -65,6 +65,9 @@ class AboutPresenterImpl: AboutPresenter {
         var signup = SettingsOption()
         signup.name = "About.Promo.Signup".localized
         signup.icon = "inbox"
+        signup.metadata = [
+            "url": "https://ghostship.us17.list-manage.com/subscribe?u=c95fc7c29b150bc1b79053748&id=ddd4ee4e1f" as AnyObject
+        ]
         
         var share = SettingsOption()
         share.name = "About.Promo.Share".localized
@@ -83,18 +86,30 @@ class AboutPresenterImpl: AboutPresenter {
         var instagram = SettingsOption()
         instagram.name = "About.Follow.Instagram".localized
         instagram.icon = "instagram"
+        instagram.metadata = [
+            "url": "https://instagram.com/_ghostship_" as AnyObject
+        ]
         
         var twitter = SettingsOption()
         twitter.name = "About.Follow.Twitter".localized
         twitter.icon = "twitter"
+        twitter.metadata = [
+            "url": "https://twitter.com/ghostship__" as AnyObject
+        ]
         
         var facebook = SettingsOption()
         facebook.name = "About.Follow.Facebook".localized
         facebook.icon = "facebook"
+        facebook.metadata = [
+            "url": "https://facebook.com/ghostshiptech" as AnyObject
+        ]
         
         var blog = SettingsOption()
         blog.name = "About.Follow.Blog".localized
         blog.icon = "safari"
+        blog.metadata = [
+            "url": "https://ghostship.co" as AnyObject
+        ]
         
         follow.items = [instagram, twitter, facebook, blog]
         
@@ -105,15 +120,19 @@ class AboutPresenterImpl: AboutPresenter {
         var feature = SettingsOption()
         feature.name = "About.About.Feature".localized
         feature.icon = "mail"
+        feature.metadata = ["subject": "" as AnyObject]
         
         var contact = SettingsOption()
         contact.name = "About.About.Contact".localized
         contact.icon = "contact"
+        contact.metadata = ["subject": "" as AnyObject]
         
         var version = SettingsOption()
         version.name = "About.About.Version".localized
         version.cellIdentifier = .simple
-        version.metadata = ["version": "1.0.0" as AnyObject]
+        let nsObject = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
+        let appVersion = nsObject as! String
+        version.metadata = ["version": appVersion as AnyObject]
         
         //var moreApps = SettingsOption()
         //moreApps.name = "About.MoreApps".localized

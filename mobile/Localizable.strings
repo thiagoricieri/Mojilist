@@ -16,6 +16,9 @@
 "Cancel" = "Cancelar";
 "Shared" = "Compartilhamento pronto!";
 
+// Errors
+"Email.Error" = "Aparentemente seu aparelho não suporta envio de e-mail. Por favor, envie um e-mail para buh@ghostship.co para entrar em contato.";
+
 // Pack
 "Pack.EmojiThings" = "Emojis de Coisas!";
 "Pack.AllEmojis" = "Todos os Emojis!";
