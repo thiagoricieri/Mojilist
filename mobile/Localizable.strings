@@ -24,6 +24,8 @@
 "Lists.Title" = "Suas listas";
 "Lists.New" = "Nova";
 "Lists.Settings" = "Ajustes";
+"Lists.Empty" = "Nenhuma lista!";
+"Lists.Empty.Msg" = "Você economiza muito mais tempo criando listas visuais. Use suas listas para compras da semana, material escolar, afazeres e mais!";
 
 // Using List
 "UsingList.Done" = "Pronto!";
@@ -41,8 +43,8 @@
 // Create List
 "CreateList.Title" = "Nova Lista";
 "CreateList.Text.Placeholder" = "Compras da semana";
-"CreateList.Label" = "Dê um nome à sua lista";
-"CreateList.Hint" = "Você selecionará os items da lista na próxima etapa.";
+"CreateList.Label" = "Como vai se chamar a nova lista?";
+"CreateList.Hint" = "Dica: listas de afazeres, supermercado ou material escolar podem ser criadas rapidamente visualmente. Selecione emojis na próxima etapa e divirta-se!";
 "CreateList.Next" = "Seguinte";
 
 // Select emojis

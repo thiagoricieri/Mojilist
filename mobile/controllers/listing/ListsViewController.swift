@@ -16,6 +16,11 @@ class ListsViewController: BaseTableViewController, ListsView {
     @IBOutlet weak var newListButton: PrimaryFloatingButton!
     @IBOutlet weak var storeButton: PrimaryFloatingButton!
     @IBOutlet weak var settingsBarItem: UIBarButtonItem!
+    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var emptyTitle: UILabel!
+    @IBOutlet weak var emptyMsg: UILabel!
+    @IBOutlet weak var downDecoration: UIImageView!
+    @IBOutlet weak var emptyDecoration: UIImageView!
     
     var presenter: ListsPresenter!
     
@@ -27,11 +32,23 @@ class ListsViewController: BaseTableViewController, ListsView {
     override func setViewStyle() {
         title = "Lists.Title".localized
         newListButton.setTitle("Lists.New".localized, for: .normal)
+        emptyTitle.text = "Lists.Empty".localized
+        emptyMsg.text = "Lists.Empty.Msg".localized
     }
     
     override func applyTheme(_ theme: Theme) {
         super.applyTheme(theme)
         theme.actionButton(newListButton)
+        theme.primaryText(emptyTitle)
+        theme.secondaryText(emptyMsg)
+        
+        downDecoration.image = UIImage(named: theme.downArrowDecoration())
+        emptyDecoration.image = UIImage(named: theme.emptyBoxDecoration())
+    }
+    
+    override func reload() {
+        super.reload()
+        emptyView.isHidden = presenter.sourceCount() > 0
     }
     
     // MARK: - Table View

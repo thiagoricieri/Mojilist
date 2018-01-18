@@ -41,7 +41,7 @@ precedencegroup ComparingRegexPrecedenceGroup {
 }
 infix operator =~ : ComparingRegexPrecedenceGroup
 func =~ (left: String, right: Regex) -> Bool {
-	let range: NSRange = NSMakeRange(0, left.characters.count)
+	let range: NSRange = NSMakeRange(0, left.count)
 	if (right.regex != nil) {
 		let matches:[AnyObject] = right.regex!.matches(in: left, options: right.matchingOptions, range: range)
 		return matches.count > 0
@@ -60,7 +60,7 @@ precedencegroup ReplacingRegexPrecedenceGroup {
 infix operator >< : ReplacingRegexPrecedenceGroup
 func >< (left:String, right: (regex:Regex,template:String) ) -> String{
 	if left =~ right.regex {
-		let range: NSRange = NSMakeRange(0, left.characters.count)
+		let range: NSRange = NSMakeRange(0, left.count)
 		if (right.regex.regex != nil) {
 			return right.regex.regex!.stringByReplacingMatches(in: left, options: right.regex.matchingOptions, range: range, withTemplate: right.template)
 		}
