@@ -46,66 +46,66 @@ class AboutPresenterImpl: AboutPresenter {
         
         // Settings
         var settings = SettingsGroup()
-        settings.title = "About.Settings".localized
+        settings.title = "About.Settings"
         
         var theme = SettingsOption()
-        theme.name = "About.Settings.Theme".localized
+        theme.name = "About.Settings.Theme"
         theme.icon = "theme"
         
         var defaultPack = SettingsOption()
-        defaultPack.name = "About.Settings.DefaultPack".localized
+        defaultPack.name = "About.Settings.DefaultPack"
         defaultPack.icon = "pack"
         
         settings.items = [theme, defaultPack]
         
         // Promotion
         var promo = SettingsGroup()
-        promo.title = "About.Promo".localized
+        promo.title = "About.Promo"
         
         var signup = SettingsOption()
-        signup.name = "About.Promo.Signup".localized
+        signup.name = "About.Promo.Signup"
         signup.icon = "inbox"
         signup.metadata = [
             "url": "https://ghostship.us17.list-manage.com/subscribe?u=c95fc7c29b150bc1b79053748&id=ddd4ee4e1f" as AnyObject
         ]
         
         var share = SettingsOption()
-        share.name = "About.Promo.Share".localized
+        share.name = "About.Promo.Share"
         share.icon = "like"
         
         var rate = SettingsOption()
-        rate.name = "About.Promo.Rate".localized
+        rate.name = "About.Promo.Rate"
         rate.icon = "rate"
         
         promo.items = [signup, share, rate]
         
         // Follow
         var follow = SettingsGroup()
-        follow.title = "About.Follow".localized
+        follow.title = "About.Follow"
         
         var instagram = SettingsOption()
-        instagram.name = "About.Follow.Instagram".localized
+        instagram.name = "About.Follow.Instagram"
         instagram.icon = "instagram"
         instagram.metadata = [
             "url": "https://instagram.com/_ghostship_" as AnyObject
         ]
         
         var twitter = SettingsOption()
-        twitter.name = "About.Follow.Twitter".localized
+        twitter.name = "About.Follow.Twitter"
         twitter.icon = "twitter"
         twitter.metadata = [
             "url": "https://twitter.com/ghostship__" as AnyObject
         ]
         
         var facebook = SettingsOption()
-        facebook.name = "About.Follow.Facebook".localized
+        facebook.name = "About.Follow.Facebook"
         facebook.icon = "facebook"
         facebook.metadata = [
             "url": "https://facebook.com/ghostshiptech" as AnyObject
         ]
         
         var blog = SettingsOption()
-        blog.name = "About.Follow.Blog".localized
+        blog.name = "About.Follow.Blog"
         blog.icon = "safari"
         blog.metadata = [
             "url": "https://ghostship.co" as AnyObject
@@ -115,20 +115,20 @@ class AboutPresenterImpl: AboutPresenter {
         
         // About
         var about = SettingsGroup()
-        about.title = "About.About".localized
+        about.title = "About.About"
         
         var feature = SettingsOption()
-        feature.name = "About.About.Feature".localized
+        feature.name = "About.About.Feature"
         feature.icon = "mail"
         feature.metadata = ["subject": "" as AnyObject]
         
         var contact = SettingsOption()
-        contact.name = "About.About.Contact".localized
+        contact.name = "About.About.Contact"
         contact.icon = "contact"
         contact.metadata = ["subject": "" as AnyObject]
         
         var version = SettingsOption()
-        version.name = "About.About.Version".localized
+        version.name = "About.About.Version"
         version.cellIdentifier = .simple
         let nsObject = Bundle.main.infoDictionary?["CFBundleShortVersionString"]
         let appVersion = nsObject as! String

@@ -8,6 +8,7 @@
 
 import UIKit
 import MessageUI
+import StoreKit
 
 protocol AboutView: BaseView {
 }
@@ -50,20 +51,17 @@ class AboutViewController: BaseTableViewController,
         if let dt = cell.detailTextLabel { theme.secondaryText(dt) }
         
         cell.option = item
-        cell.textLabel?.text = item.name
+        cell.textLabel?.text = item.name.localized
         
-        if let i = item.icon {
-            cell.imageView?.image = UIImage(named: i)?.withRenderingMode(.alwaysTemplate)
-            if let im = cell.imageView {
-                theme.accent(im)
-            }
-        }
-        else {
+        if let i = item.icon, let im = cell.imageView {
+            im.image = UIImage(named: i)?.withRenderingMode(.alwaysTemplate)
+            theme.accent(im)
+        } else {
             cell.imageView?.image = nil
         }
         
         // Specific to some:
-        if  item.name == "About.About.Version".localized,
+        if  item.name == "About.About.Version",
             let v = item.metadata!["version"] as? String {
             cell.detailTextLabel?.text = v
         } else {
@@ -71,11 +69,11 @@ class AboutViewController: BaseTableViewController,
         }
         
         // Settings
-        if item.name.contains("About.Settings.DefaultPack".localized) {
-            cell.textLabel?.text = "\(item.name) \(presenter.defaultPackName())"
+        if item.name.contains("About.Settings.DefaultPack") {
+            cell.textLabel?.text = "\(item.name.localized) \(presenter.defaultPackName())"
         }
-        else if item.name.contains("About.Settings.Theme".localized) {
-            cell.textLabel?.text = "\(item.name) \(provideApp().theme.identifier().localized)"
+        else if item.name.contains("About.Settings.Theme") {
+            cell.textLabel?.text = "\(item.name.localized) \(provideApp().theme.identifier().localized)"
         }
         
         return cell
@@ -85,53 +83,57 @@ class AboutViewController: BaseTableViewController,
         tableView.deselectRow(at: indexPath, animated: true)
         let item = presenter.item(at: indexPath.row, section: indexPath.section)
         
-        if item.name == "About.MoreApps".localized {
+        if item.name == "About.MoreApps" {
             // None
         }
-        else if item.name.contains("About.Settings.DefaultPack".localized) {
+        else if item.name.contains("About.Settings.DefaultPack") {
             
         }
-        else if item.name.contains("About.Settings.Theme".localized) {
+        else if item.name.contains("About.Settings.Theme") {
             performSegue(withIdentifier: AboutStoryboard.Segue.toChangeTheme, sender: nil)
         }
-        else if item.name.contains("About.Promo.Share".localized) {
+        else if item.name.contains("About.Promo.Share") {
             Tracker.shareApp()
+            Marketing.shareApp { controller in
+                self.present(controller, animated: true)
+            }
         }
-        else if item.name.contains("About.Promo.Rate".localized) {
-            // TODO
+        else if item.name.contains("About.Promo.Rate") {
+            Tracker.rateApp()
+            SKStoreReviewController.requestReview()
         }
-        else if item.name.contains("About.Promo.Signup".localized) {
+        else if item.name.contains("About.Promo.Signup") {
             Tracker.signupNewsletter()
             performSegue(
                 withIdentifier: AboutStoryboard.Segue.toWebView,
                 sender: item.metadata!["url"])
         }
-        else if item.name.contains("About.Follow.Instagram".localized) {
+        else if item.name.contains("About.Follow.Instagram") {
             Tracker.followInstagram()
             performSegue(
                 withIdentifier: AboutStoryboard.Segue.toWebView,
                 sender: item.metadata!["url"])
         }
-        else if item.name.contains("About.Follow.Facebook".localized) {
+        else if item.name.contains("About.Follow.Facebook") {
             Tracker.followFacebook()
             performSegue(
                 withIdentifier: AboutStoryboard.Segue.toWebView,
                 sender: item.metadata!["url"])
         }
-        else if item.name.contains("About.Follow.Twitter".localized) {
+        else if item.name.contains("About.Follow.Twitter") {
             Tracker.followTwitter()
             performSegue(
                 withIdentifier: AboutStoryboard.Segue.toWebView,
                 sender: item.metadata!["url"])
         }
-        else if item.name.contains("About.Follow.Blog".localized) {
+        else if item.name.contains("About.Follow.Blog") {
             Tracker.followBlog()
             performSegue(
                 withIdentifier: AboutStoryboard.Segue.toWebView,
                 sender: item.metadata!["url"])
         }
-        else if item.name.contains("About.About.Contact".localized) ||
-            item.name.contains("About.About.Feature".localized) {
+        else if item.name.contains("About.About.Contact") ||
+            item.name.contains("About.About.Feature") {
             
             Tracker.contactDeveloper()
             sendEmail(subject: item.metadata!["subject"] as! String)

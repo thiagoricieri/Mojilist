@@ -147,7 +147,7 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     }
     
     func shareList() {
-        Marketing.share(object: emojiList) { activityController in
+        Marketing.shareActivity(object: emojiList) { activityController in
             self.present(activityController, animated: true) { }
         }
     }

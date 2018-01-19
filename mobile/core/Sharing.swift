@@ -11,7 +11,16 @@ import UIKit
 
 class Marketing {
     
-    static func share(object: REmojiList, controllerReady: (UIActivityViewController) -> Void) {
+    static func shareApp(_ controllerReady: (UIActivityViewController) -> Void) {
+        let copyToShare = "About.Share.Copy".localized + " " + Env.Promo.shareUrl
+        let urlToShare = URL(string: Env.Promo.shareUrl)!
+        let activityViewController = UIActivityViewController(
+            activityItems: [copyToShare, urlToShare],
+            applicationActivities: nil)
+        controllerReady(activityViewController)
+    }
+    
+    static func shareActivity(object: REmojiList, controllerReady: (UIActivityViewController) -> Void) {
         let firstActivityItem = "\(object.name) #mojilist"
         let secondActivityItem = URL(string: Env.Promo.shareUrl)!
         let shareView = Bundle.loadView(fromNib: Xibs.resources, withType: ShareSnippetView.self)
