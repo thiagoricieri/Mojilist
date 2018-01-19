@@ -41,9 +41,9 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         bottomFadeDecoration.image = UIImage(named: theme.bottomDecoration())
         theme.actionButton(doneButton)
         theme.background(self.view)
-        theme.primaryText(listNameLabel)
         theme.secondaryButton(shareButton)
         theme.secondaryButton(settingsButton)
+        theme.primaryText(listNameLabel)
     }
     
     override func setViewStyle() {

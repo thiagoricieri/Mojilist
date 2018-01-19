@@ -12,7 +12,9 @@ import UIKit
 class Theme {
     
     static let available: [Visuals] = [
-        BasicVisual(), DarkVisual()
+        BasicVisual(), DarkVisual(), GreenyVisual(),
+        BlueVisual(), DragVisual(), DraculaVisual(),
+        CandyVisual()
     ]
     
     var visuals: Visuals
@@ -22,10 +24,11 @@ class Theme {
     }
     
     convenience init(visualString: String) {
-        let visual: Visuals!
-        switch visualString {
-            case DarkVisual().identifier: visual = DarkVisual()
-            default: visual = BasicVisual()
+        var visual: Visuals = BasicVisual()
+        for v in Theme.available {
+            if v.identifier == visualString {
+                visual = v
+            }
         }
         self.init(visuals: visual)
     }
@@ -105,6 +108,30 @@ class Theme {
         view.textColor = color(visuals.secondaryTextColor)
     }
     
+    func primaryColor(_ view: UITextField) {
+        view.textColor = color(visuals.primaryColor)
+    }
+    
+    func primaryColor(_ view: UITextView) {
+        view.textColor = color(visuals.primaryColor)
+    }
+    
+    func primaryColor(_ view: UILabel) {
+        view.textColor = color(visuals.primaryColor)
+    }
+    
+    func contrastColor(_ view: UITextField) {
+        view.textColor = color(visuals.contrastColor)
+    }
+    
+    func contrastColor(_ view: UITextView) {
+        view.textColor = color(visuals.contrastColor)
+    }
+    
+    func contrastColor(_ view: UILabel) {
+        view.textColor = color(visuals.contrastColor)
+    }
+    
     // MARK: - Specific
     
     func cellBackground(_ view: UIView) {
@@ -124,7 +151,7 @@ class Theme {
     }
     
     func badge(_ view: UIView) {
-        view.backgroundColor = color(visuals.badgeColor)
+        view.backgroundColor = color(visuals.contrastColor)
     }
     
     // MARK: - Buttons
@@ -168,11 +195,13 @@ class Theme {
     
     func styleNavigationBar(_ bar: UINavigationBar) {
         bar.barStyle = visuals.barStyle
+        bar.barTintColor = color(visuals.backgroundColorDark)
         bar.tintColor = color(visuals.accentColor)
+        bar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        bar.isTranslucent = visuals.isTranslucent
         bar.backgroundColor = color(visuals.backgroundColorDark)
-        bar.isOpaque = !visuals.isTranslucent
         bar.titleTextAttributes = [
-            NSAttributedStringKey.foregroundColor: color(visuals.secondaryTextColor)
+            NSAttributedStringKey.foregroundColor: color(visuals.primaryTextColor)
         ]
     }
     
@@ -205,7 +234,7 @@ protocol Visuals {
     var isTranslucent: Bool { get }
     
     // Specific from app layout
-    var badgeColor: UInt { get }
+    var contrastColor: UInt { get }
     var separatorColor: UInt? { get }
     var cellBackground: UInt? { get }
     var topFadeDecorationName: String { get }
@@ -221,8 +250,8 @@ struct BasicVisual: Visuals {
     var identifier = "Theme.Basic"
     
     var primaryColor = UInt(0xFFFFFF)
-    var primaryColorDark = UInt(0xCCCCCC)
-    var accentColor = UInt(0xFF0000)
+    var primaryColorDark = UInt(0xDDDDDD)
+    var accentColor = UInt(0xED4962)
     
     var backgroundColor = UInt(0xFFFFFF)
     var backgroundColorDark = UInt(0xF1F1F1)
@@ -231,10 +260,10 @@ struct BasicVisual: Visuals {
     
     var barStyle = UIBarStyle.default
     var statusBar = UIStatusBarStyle.default
-    var isTranslucent = true
+    var isTranslucent = false
     
-    var badgeColor = UInt(0xFF0000)
-    var separatorColor: UInt? = UInt(0xCCCCCC)
+    var contrastColor = UInt(0x5ACDE3)
+    var separatorColor: UInt? = UInt(0xDDDDDD)
     var cellBackground: UInt? = UInt(0xFDFDFD)
     var topFadeDecorationName = "fade-top"
     var bottomFadeDecorationName = "fade-bottom"
@@ -261,7 +290,7 @@ struct DarkVisual: Visuals {
     var statusBar = UIStatusBarStyle.lightContent
     var isTranslucent = false
     
-    var badgeColor = UInt(0xFF0000)
+    var contrastColor = UInt(0xFF0000)
     var separatorColor: UInt? = UInt(0x333333)
     var cellBackground: UInt? = UInt(0x111111)
     var topFadeDecorationName = "dark-fade-top"
@@ -269,4 +298,159 @@ struct DarkVisual: Visuals {
     var downArrowDecorationName = "down-dark"
     var emptyBoxDecorationName = "empty-dark"
     var indicatorDecorationName = "indicator-dark"
+}
+
+// MARK: - Dark
+struct GreenyVisual: Visuals {
+    
+    var identifier = "Theme.Greeny"
+    
+    var accentColor = UInt(0x00b3aa)
+    var contrastColor = UInt(0xff7a03)
+    
+    var primaryColor = UInt(0xb3efec)
+    var primaryColorDark = UInt(0xa7e5e2)
+    
+    var backgroundColor = UInt(0xb3efec)
+    var backgroundColorDark = UInt(0x9ae7e3)
+    
+    var primaryTextColor = UInt(0x2a7975)
+    var secondaryTextColor = UInt(0x50b4af)
+    
+    var separatorColor: UInt? = UInt(0x94dcd8)
+    var cellBackground: UInt? = UInt(0xaaeae7)
+    
+    var barStyle = UIBarStyle.default
+    var statusBar = UIStatusBarStyle.default
+    var isTranslucent = false
+    
+    var topFadeDecorationName = "fade-top-green"
+    var bottomFadeDecorationName = "fade-bottom-green"
+    var downArrowDecorationName = "down"
+    var emptyBoxDecorationName = "empty"
+    var indicatorDecorationName = "indicator"
+}
+
+// MARK: - Dark
+struct BlueVisual: Visuals {
+    
+    var identifier = "Theme.Blue"
+    
+    var accentColor = UInt(0xefe822)
+    var contrastColor = UInt(0xef2266)
+    
+    var primaryColor = UInt(0x58c5e4)
+    var primaryColorDark = UInt(0x6bcde9)
+    
+    var backgroundColor = UInt(0x58c5e4)
+    var backgroundColorDark = UInt(0x6bcde9)
+    
+    var primaryTextColor = UInt(0x22748b)
+    var secondaryTextColor = UInt(0x3d9db8)
+    
+    var separatorColor: UInt? = UInt(0x51bddc)
+    var cellBackground: UInt? = UInt(0x6bcde9)
+    
+    var barStyle = UIBarStyle.default
+    var statusBar = UIStatusBarStyle.default
+    var isTranslucent = false
+    
+    var topFadeDecorationName = "fade-top-blue"
+    var bottomFadeDecorationName = "fade-bottom-blue"
+    var downArrowDecorationName = "down"
+    var emptyBoxDecorationName = "empty"
+    var indicatorDecorationName = "indicator"
+}
+
+// MARK: - Dark
+struct DragVisual: Visuals {
+    
+    var identifier = "Theme.Drag"
+    
+    var accentColor = UInt(0xef2266)
+    var contrastColor = UInt(0xefe822)
+    
+    var primaryColor = UInt(0xf86a99)
+    var primaryColorDark = UInt(0x0e4ff2)
+    
+    var backgroundColor = UInt(0xf86a99)
+    var backgroundColorDark = UInt(0xffc8da)
+    
+    var primaryTextColor = UInt(0x9f0c3d)
+    var secondaryTextColor = UInt(0xffffff)
+    
+    var separatorColor: UInt? = UInt(0xe55a88)
+    var cellBackground: UInt? = UInt(0xf897b7)
+    
+    var barStyle = UIBarStyle.default
+    var statusBar = UIStatusBarStyle.lightContent
+    var isTranslucent = false
+    
+    var topFadeDecorationName = "fade-top-drag"
+    var bottomFadeDecorationName = "fade-bottom-drag"
+    var downArrowDecorationName = "down-dark"
+    var emptyBoxDecorationName = "empty-dark"
+    var indicatorDecorationName = "indicator-dark"
+}
+
+// MARK: - Dark
+struct DraculaVisual: Visuals {
+    
+    var identifier = "Theme.Dracula"
+    
+    var accentColor = UInt(0x11dc16)
+    var contrastColor = UInt(0xce0404)
+    
+    var primaryColor = UInt(0x1e142a)
+    var primaryColorDark = UInt(0x331e4c)
+    
+    var backgroundColor = UInt(0x1e142a)
+    var backgroundColorDark = UInt(0x331e4c)
+    
+    var primaryTextColor = UInt(0xffffff)
+    var secondaryTextColor = UInt(0x8147c6)
+    
+    var separatorColor: UInt? = UInt(0x180d26)
+    var cellBackground: UInt? = UInt(0x241833)
+    
+    var barStyle = UIBarStyle.black
+    var statusBar = UIStatusBarStyle.default
+    var isTranslucent = false
+    
+    var topFadeDecorationName = "fade-top-dracula"
+    var bottomFadeDecorationName = "fade-bottom-dracula"
+    var downArrowDecorationName = "down-dark"
+    var emptyBoxDecorationName = "empty-dark"
+    var indicatorDecorationName = "indicator-dark"
+}
+
+// MARK: - Dark
+struct CandyVisual: Visuals {
+    
+    var identifier = "Theme.Candy"
+    
+    var accentColor = UInt(0x1de3fb)
+    var contrastColor = UInt(0xfb1dcf)
+    
+    var primaryColor = UInt(0xfffee8)
+    var primaryColorDark = UInt(0xffe5fc)
+    
+    var backgroundColor = UInt(0xfffee8)
+    var backgroundColorDark = UInt(0xffe5fc)
+    
+    var primaryTextColor = UInt(0x8c5185)
+    var secondaryTextColor = UInt(0xa7a584)
+    
+    var separatorColor: UInt? = UInt(0xf6f4c2)
+    var cellBackground: UInt? = UInt(0xe9feff)
+    
+    var barStyle = UIBarStyle.default
+    var statusBar = UIStatusBarStyle.default
+    var isTranslucent = false
+    
+    var topFadeDecorationName = "fade-top-candy"
+    var bottomFadeDecorationName = "fade-bottom-candy"
+    var downArrowDecorationName = "down"
+    var emptyBoxDecorationName = "empty"
+    var indicatorDecorationName = "indicator"
 }
