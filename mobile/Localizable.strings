@@ -85,5 +85,10 @@
 "ChangeTheme.Title" = "Temas";
 
 // Themes
-"Theme.Basic" = "Tema Claro";
-"Theme.Dark" = "Tema Escuro";
+"Theme.Basic" = "🌞 Mojilist Diurno";
+"Theme.Dark" = "🌚 Mojilist Noturno";
+"Theme.Greeny" = "🍁 Maresia";
+"Theme.Blue" = "🌊 Deu Onda";
+"Theme.Drag" = "💄 Que Tiro Foi Esse?";
+"Theme.Dracula" = "💥 Sweet Dreams";
+"Theme.Candy" = "🍭 Agora Eu Fiquei Doce";

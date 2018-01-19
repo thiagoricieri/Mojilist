@@ -64,6 +64,7 @@ class SelectEmojisViewController: BaseCollectionViewController,
         theme.background(basketCollection)
         theme.actionButton(createButton)
         theme.badge(badgeView)
+        theme.secondaryText(itemsInListLabel)
         
         topFadeDecoration.image = UIImage(named: theme.topDecoration())
         bottomFadeDecoration.image = UIImage(named: theme.bottomDecoration())
