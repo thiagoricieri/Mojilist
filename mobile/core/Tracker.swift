@@ -56,10 +56,8 @@ class Tracker {
         Analytics.logEvent("share_app", parameters: nil)
     }
     
-    static func rateApp(rating: Int) {
-        Analytics.logEvent("rate_app", parameters: [
-            "rating": rating as NSObject
-        ])
+    static func rateApp() {
+        Analytics.logEvent("rate_app", parameters: nil)
     }
     
     static func followInstagram() {

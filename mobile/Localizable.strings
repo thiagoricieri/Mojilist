@@ -79,6 +79,7 @@
 "About.About.Contact" = "E-mail para o desenvolvedor";
 "About.About.Feature" = "Opine sobre o app";
 "About.About.Version" = "Versão do app";
+"About.Share.Copy" = "Baixe o Mojilist, uma alternativa visual para suas listas do dia-a-dia!";
 
 // Change Theme
 "ChangeTheme.Title" = "Temas";
