@@ -38,6 +38,7 @@
 "UsingList.Settings.DeleteList" = "Deletar esta lista";
 "UsingList.Delete.Msg" = "Só para assegurar-se que você não tocou no botão de deletar sem querer, confirme a remoção da lista a seguir:";
 "UsingList.Settings.DeleteListConfirmation" = "Deletar a lista";
+"UsingList.Settings.Edit" = "Editar a lista";
 
 // Share
 "Share.Credits1" = "Criado com Mojilist";
@@ -53,6 +54,7 @@
 // Select emojis
 "SelectEmojis.Title" = "O que vai na lista?";
 "SelectEmojis.Create" = "Criar";
+"SelectEmojis.Update" = "Atualizar";
 "SelectEmojis.Clear" = "Esvaziar";
 "SelectEmojis.SelectPack" = "Pacote selecionado:";
 "SelectEmojis.ItemsInList" = "Itens na lista. Se precisar, toque uma vez para remover.";

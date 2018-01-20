@@ -36,4 +36,11 @@ class EmojiPackItemViewModel: BaseViewModel {
     init(with model: REmojiPackItem) {
         self.model = model
     }
+    
+    init(with viewModel: EmojiViewModel) {
+        self.model = REmojiPackItem()
+        self.model.name = viewModel.name
+        self.model.imageUrl = viewModel.hasImage ? model.imageUrl : ""
+        self.model.pack = viewModel.pack
+    }
 }

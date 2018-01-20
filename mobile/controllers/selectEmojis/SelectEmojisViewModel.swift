@@ -19,7 +19,7 @@ class SelectEmojisViewModel: BaseDataViewModel {
         return source.items.count
     }
     var listName: String! {
-        return listViewModel.name
+        return listViewModel.pendingName ?? listViewModel.name
     }
     var selectedCount: Int! {
         return selectedItems.count
@@ -29,6 +29,12 @@ class SelectEmojisViewModel: BaseDataViewModel {
     }
     var localizedPackName: String! {
         return "SelectEmojis.SelectPack".localized + " \(source.name!)"
+    }
+    var shouldUpdateList: Bool! {
+        return listViewModel.pendingName != nil
+    }
+    var createButtonLabel: String! {
+        return listViewModel.pendingName == nil ? "SelectEmojis.Create" : "SelectEmojis.Update"
     }
     
     init(listViewModel: EmojiListViewModel) {
@@ -45,6 +51,13 @@ class SelectEmojisViewModel: BaseDataViewModel {
         } else {
             source = app.standardEmojiPack()
         }
+        
+        if listViewModel.items.count > 0 {
+            selectedItems = listViewModel
+                .items.map { viewModel -> EmojiPackItemViewModel in
+                    EmojiPackItemViewModel(with: viewModel)
+                }
+        }
     }
     
     func item(at indexPath: IndexPath) -> EmojiPackItemViewModel {
@@ -60,6 +73,11 @@ class SelectEmojisViewModel: BaseDataViewModel {
     func select(emojiAt indexPath: IndexPath) {
         let emoji = item(at: indexPath)
         selectedItems.insert(emoji, at: 0)
+    }
+    
+    func updateList() {
+        listViewModel.update(withPackItems: selectedItems)
+        Tracker.newList(itemsCount: selectedItems.count)
     }
     
     func createList() {

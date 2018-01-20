@@ -22,6 +22,8 @@ class EmojiListViewModel: BaseViewModel {
     
     private var model: REmojiList!
     
+    var pendingName: String?
+    
     var name: String! {
         return model.name
     }
@@ -69,19 +71,33 @@ class EmojiListViewModel: BaseViewModel {
         }
     }
     
+    func update(withPackItems itemModels: [EmojiPackItemViewModel]) {
+        try! realm.write {
+            model.name = pendingName!
+            realm.delete(model.emojis)
+            model.emojis.append(objectsIn: itemModels.map { item -> REmoji in
+                return self.emojiModel(from: item)
+            })
+        }
+    }
+    
     func create(withPackItems itemModels: [EmojiPackItemViewModel]) {
         try! realm.write {
             model.timesUsed = 0
             model.dateCreated = Date()
             model.emojis.append(objectsIn: itemModels.map { item -> REmoji in
-                let emoji = REmoji()
-                emoji.name = item.name
-                emoji.checked = false
-                emoji.imageUrl = item.hasImage ? item.imageUrl.absoluteString : ""
-                emoji.pack = item.pack
-                return emoji
+                return self.emojiModel(from: item)
             })
             realm.add(model)
         }
+    }
+    
+    func emojiModel(from viewModel: EmojiPackItemViewModel) -> REmoji {
+        let emoji = REmoji()
+        emoji.name = viewModel.name
+        emoji.checked = false
+        emoji.imageUrl = viewModel.hasImage ? viewModel.imageUrl.absoluteString : ""
+        emoji.pack = viewModel.pack
+        return emoji
     }
 }
