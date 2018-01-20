@@ -13,10 +13,9 @@ import RealmSwift
 
 class BaseViewController : UIViewController, BaseView {
     
-    var appDelegate: AppDelegate {
-        get { return UIApplication.shared.delegate as! AppDelegate }
+    var appDelegate: AppDelegate! {
+        return UIApplication.shared.delegate as! AppDelegate
     }
-    
     var basePresenter: BasePresenter!
     var currentTheme: String?
     

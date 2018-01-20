@@ -17,6 +17,7 @@ class MainStoryboard: StoryboardContext {
         static let toUsingList = "toUsingList"
         static let toShare = "toShare"
         static let toSettings = "toSettings"
+        static let toEditList = "toEditList"
     }
     
     func createListViewController() -> CreateListViewController {

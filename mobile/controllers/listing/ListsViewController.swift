@@ -78,8 +78,9 @@ class ListsViewController: BaseTableViewController, ListsView {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == MainStoryboard.Segue.toUsingList {
-            let dest = segue.destination as! UsingListViewController
-            dest.emojiList = sender as! REmojiList
+            let dest = segue.destination as! UINavigationController
+            let vc = dest.viewControllers.first! as! UsingListViewController
+            vc.emojiList = sender as! REmojiList
         }
     }
     

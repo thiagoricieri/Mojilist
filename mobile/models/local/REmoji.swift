@@ -16,3 +16,25 @@ class REmoji: Object {
     @objc dynamic var pack = ""
     @objc dynamic var checked = false 
 }
+
+class EmojiViewModel {
+    
+    private var model: REmoji!
+    
+    var name: String! {
+        return model.name
+    }
+    var imageUrl: String! {
+        return model.imageUrl
+    }
+    var pack: String! {
+        return model.pack
+    }
+    var isChecked: Bool! {
+        return model.checked
+    }
+    
+    init(with model: REmoji) {
+        self.model = model
+    }
+}

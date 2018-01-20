@@ -10,6 +10,10 @@
 		0993216394E0A7F1C4B7B0CD /* Pods_EmojilistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 126713B802D906CE644A5B7A /* Pods_EmojilistTests.framework */; };
 		38B9BD12E67C93F4457D853C /* Pods_Emojilist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BA8F7FA04B9CF012E9ADACA /* Pods_Emojilist.framework */; };
 		A9ED710255E3A6AFF67D9DBF /* Pods_EmojilistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B10D6AB784EDC4883C172BB /* Pods_EmojilistUITests.framework */; };
+		B0070EE720136F7D00426A0B /* AsciiListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0070EE620136F7D00426A0B /* AsciiListCell.swift */; };
+		B0070EE920136F9700426A0B /* ImageListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0070EE820136F9700426A0B /* ImageListCell.swift */; };
+		B0070EEB20136FFD00426A0B /* AsciiPackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0070EEA20136FFD00426A0B /* AsciiPackCell.swift */; };
+		B0070EED2013702600426A0B /* ImagePackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0070EEC2013702600426A0B /* ImagePackCell.swift */; };
 		B01C292D1FEAA46300C1AF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C292C1FEAA46300C1AF22 /* AppDelegate.swift */; };
 		B01C292F1FEAA46300C1AF22 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C292E1FEAA46300C1AF22 /* ListsViewController.swift */; };
 		B01C29341FEAA46300C1AF22 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01C29331FEAA46300C1AF22 /* assets.xcassets */; };
@@ -43,11 +47,11 @@
 		B064A1D320064AC7001ADB0E /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D220064AC7001ADB0E /* BaseTableViewController.swift */; };
 		B064A1D720064B0E001ADB0E /* BaseDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */; };
 		B064A1D920064ED4001ADB0E /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */; };
-		B064A1DB20064F21001ADB0E /* ListCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DA20064F21001ADB0E /* ListCells.swift */; };
+		B064A1DB20064F21001ADB0E /* BaseListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DA20064F21001ADB0E /* BaseListCell.swift */; };
 		B064A1DD200658BC001ADB0E /* FloatingButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B064A1DC200658BC001ADB0E /* FloatingButtons.swift */; };
 		B07A09612008D561005957C1 /* SelectPackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A095F2008D560005957C1 /* SelectPackViewController.swift */; };
 		B07A09622008D561005957C1 /* SelectPackPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09602008D560005957C1 /* SelectPackPresenter.swift */; };
-		B07A09642008D5A3005957C1 /* PackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09632008D5A3005957C1 /* PackCell.swift */; };
+		B07A09642008D5A3005957C1 /* BasePackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09632008D5A3005957C1 /* BasePackCell.swift */; };
 		B07A09682008F3A6005957C1 /* UsingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09672008F3A6005957C1 /* UsingListViewController.swift */; };
 		B07A096A2008F3AD005957C1 /* UsingListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07A09692008F3AD005957C1 /* UsingListPresenter.swift */; };
 		B07F7AC9200CDF5400CFBF41 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B07F7AC8200CDF5300CFBF41 /* GoogleService-Info.plist */; };
@@ -100,6 +104,10 @@
 		6B10D6AB784EDC4883C172BB /* Pods_EmojilistUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmojilistUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D3F0C8EDC45E0559A5D736F /* Pods-EmojilistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmojilistTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EmojilistTests/Pods-EmojilistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E3FA68C9C4C7C455BF80C4A /* Pods-Emojilist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Emojilist.release.xcconfig"; path = "Pods/Target Support Files/Pods-Emojilist/Pods-Emojilist.release.xcconfig"; sourceTree = "<group>"; };
+		B0070EE620136F7D00426A0B /* AsciiListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsciiListCell.swift; sourceTree = "<group>"; };
+		B0070EE820136F9700426A0B /* ImageListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListCell.swift; sourceTree = "<group>"; };
+		B0070EEA20136FFD00426A0B /* AsciiPackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsciiPackCell.swift; sourceTree = "<group>"; };
+		B0070EEC2013702600426A0B /* ImagePackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePackCell.swift; sourceTree = "<group>"; };
 		B01C29291FEAA46300C1AF22 /* Emojilist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emojilist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01C292C1FEAA46300C1AF22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B01C292E1FEAA46300C1AF22 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
@@ -139,11 +147,11 @@
 		B064A1D220064AC7001ADB0E /* BaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		B064A1D620064B0E001ADB0E /* BaseDataPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDataPresenter.swift; sourceTree = "<group>"; };
 		B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
-		B064A1DA20064F21001ADB0E /* ListCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCells.swift; sourceTree = "<group>"; };
+		B064A1DA20064F21001ADB0E /* BaseListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListCell.swift; sourceTree = "<group>"; };
 		B064A1DC200658BC001ADB0E /* FloatingButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtons.swift; sourceTree = "<group>"; };
 		B07A095F2008D560005957C1 /* SelectPackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPackViewController.swift; sourceTree = "<group>"; };
 		B07A09602008D560005957C1 /* SelectPackPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectPackPresenter.swift; sourceTree = "<group>"; };
-		B07A09632008D5A3005957C1 /* PackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PackCell.swift; sourceTree = "<group>"; };
+		B07A09632008D5A3005957C1 /* BasePackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePackCell.swift; sourceTree = "<group>"; };
 		B07A09672008F3A6005957C1 /* UsingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingListViewController.swift; sourceTree = "<group>"; };
 		B07A09692008F3AD005957C1 /* UsingListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingListPresenter.swift; sourceTree = "<group>"; };
 		B07F7AC8200CDF5300CFBF41 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -348,8 +356,8 @@
 		B064A1BF2006413B001ADB0E /* common */ = {
 			isa = PBXGroup;
 			children = (
-				B064A1CE20064A5E001ADB0E /* BasePresenter.swift */,
 				B064A1C020064149001ADB0E /* BaseViewController.swift */,
+				B064A1CE20064A5E001ADB0E /* BasePresenter.swift */,
 				B064A1D020064A74001ADB0E /* BaseView.swift */,
 				B064A1D220064AC7001ADB0E /* BaseTableViewController.swift */,
 				B064A1D820064ED4001ADB0E /* BaseTableViewCell.swift */,
@@ -438,7 +446,9 @@
 			children = (
 				B01C292E1FEAA46300C1AF22 /* ListsViewController.swift */,
 				B064A1CC20064825001ADB0E /* ListsPresenter.swift */,
-				B064A1DA20064F21001ADB0E /* ListCells.swift */,
+				B064A1DA20064F21001ADB0E /* BaseListCell.swift */,
+				B0070EE620136F7D00426A0B /* AsciiListCell.swift */,
+				B0070EE820136F9700426A0B /* ImageListCell.swift */,
 			);
 			path = listing;
 			sourceTree = "<group>";
@@ -450,7 +460,9 @@
 				B089DE9E20079507002D3879 /* CreateListPresenter.swift */,
 				B089DEA020079BF1002D3879 /* SelectEmojisViewController.swift */,
 				B089DEA220079BFD002D3879 /* SelectEmojisPresenter.swift */,
-				B07A09632008D5A3005957C1 /* PackCell.swift */,
+				B07A09632008D5A3005957C1 /* BasePackCell.swift */,
+				B0070EEA20136FFD00426A0B /* AsciiPackCell.swift */,
+				B0070EEC2013702600426A0B /* ImagePackCell.swift */,
 				B07A095F2008D560005957C1 /* SelectPackViewController.swift */,
 				B07A09602008D560005957C1 /* SelectPackPresenter.swift */,
 			);
@@ -807,11 +819,12 @@
 				B035FE061FFE5E8F003A332B /* Constants.swift in Sources */,
 				B07A09622008D561005957C1 /* SelectPackPresenter.swift in Sources */,
 				B064A1D720064B0E001ADB0E /* BaseDataPresenter.swift in Sources */,
-				B07A09642008D5A3005957C1 /* PackCell.swift in Sources */,
+				B07A09642008D5A3005957C1 /* BasePackCell.swift in Sources */,
 				B0D1196B200508D7005B2CBB /* StoreViewController.swift in Sources */,
 				B064A1CD20064825001ADB0E /* ListsPresenter.swift in Sources */,
 				B089DEA920079FE7002D3879 /* AsciiEmojiCell.swift in Sources */,
 				B064A1C92006455F001ADB0E /* REmojiPackItem.swift in Sources */,
+				B0070EE720136F7D00426A0B /* AsciiListCell.swift in Sources */,
 				B035FE041FFE5E8F003A332B /* AppConfig.swift in Sources */,
 				B089DEA120079BF1002D3879 /* SelectEmojisViewController.swift in Sources */,
 				B0B8A272200A5861003BA3FB /* EmojiDropView.swift in Sources */,
@@ -827,9 +840,12 @@
 				B035FE071FFE5E8F003A332B /* Funcs.swift in Sources */,
 				B035106D2010CB4A0027EFC7 /* AboutPresenter.swift in Sources */,
 				B0D11969200508C1005B2CBB /* AboutViewController.swift in Sources */,
+				B0070EEB20136FFD00426A0B /* AsciiPackCell.swift in Sources */,
 				B089DEAB2007A021002D3879 /* ImageEmojiCell.swift in Sources */,
 				B07A09682008F3A6005957C1 /* UsingListViewController.swift in Sources */,
+				B0070EED2013702600426A0B /* ImagePackCell.swift in Sources */,
 				B08CB104200CE2C900A6A605 /* Tracker.swift in Sources */,
+				B0070EE920136F9700426A0B /* ImageListCell.swift in Sources */,
 				B064A1DD200658BC001ADB0E /* FloatingButtons.swift in Sources */,
 				B035FE091FFE5E8F003A332B /* App.swift in Sources */,
 				B0B8A274200A6A2F003BA3FB /* Theme.swift in Sources */,
@@ -842,7 +858,7 @@
 				B064A1D120064A74001ADB0E /* BaseView.swift in Sources */,
 				B01C292D1FEAA46300C1AF22 /* AppDelegate.swift in Sources */,
 				B064A1D920064ED4001ADB0E /* BaseTableViewCell.swift in Sources */,
-				B064A1DB20064F21001ADB0E /* ListCells.swift in Sources */,
+				B064A1DB20064F21001ADB0E /* BaseListCell.swift in Sources */,
 				B035106F2010E0820027EFC7 /* WebViewController.swift in Sources */,
 				B089DE9D200793AE002D3879 /* MainStoryboard.swift in Sources */,
 				B035FE0E1FFE5FE6003A332B /* Extensions.swift in Sources */,

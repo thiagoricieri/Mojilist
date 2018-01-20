@@ -17,3 +17,25 @@ class REmojiList: Object {
     
     let emojis = List<REmoji>()
 }
+
+class EmojiListViewModel {
+    
+    private var model: REmojiList!
+    
+    var name: String! {
+        return model.name
+    }
+    var dateCreated: Date? {
+        return model.dateCreated
+    }
+    var timesUsed: Int! {
+        return model.timesUsed
+    }
+    var items: List<REmoji>! {
+        return model.emojis
+    }
+    
+    init(with model: REmojiList) {
+        self.model = model
+    }
+}
