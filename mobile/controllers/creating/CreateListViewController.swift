@@ -8,23 +8,18 @@
 
 import UIKit
 
-protocol CreateListView: BaseView {
-    
-    func goToSelectEmojis()
-}
-
-class CreateListViewController: BaseViewController, CreateListView {
+class CreateListViewController: BaseViewController {
     
     @IBOutlet weak var listNameField: UITextField!
     @IBOutlet weak var listNameLabel: UILabel!
     @IBOutlet weak var hintLabel: UILabel!
     @IBOutlet weak var nextBarButton: UIBarButtonItem!
     
-    var presenter: CreateListPresenter!
+    var viewModel: CreateListViewModel!
     
     override func instantiateDependencies() {
-        basePresenter = CreateListPresenterImpl(view: self)
-        presenter = basePresenter as! CreateListPresenter
+        baseViewModel = CreateListViewModel()
+        viewModel = baseViewModel as! CreateListViewModel
     }
     
     override func applyTheme(_ theme: Theme) {
@@ -50,18 +45,18 @@ class CreateListViewController: BaseViewController, CreateListView {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == MainStoryboard.Segue.toSelectEmojis {
             let dest = segue.destination as! SelectEmojisViewController
-            dest.listName = listNameField.text
+            dest.passListViewModel = EmojiListViewModel(named: listNameField.text!)
+        }
+    }
+    
+    @IBAction func actionNext(sender: Any?) {
+        if viewModel.validateInput(listName: listNameField.text) {
+            goToSelectEmojis()
         }
     }
     
     func goToSelectEmojis() {
         performSegue(withIdentifier: MainStoryboard.Segue.toSelectEmojis, sender: nil)
-    }
-    
-    @IBAction func actionNext(sender: Any?) {
-        if presenter.validateInput(listName: listNameField.text) {
-            goToSelectEmojis()
-        }
     }
 }
 

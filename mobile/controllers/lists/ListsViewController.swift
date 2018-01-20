@@ -8,10 +8,7 @@
 
 import UIKit
 
-protocol ListsView: BaseTableView {
-}
-
-class ListsViewController: BaseTableViewController, ListsView {
+class ListsViewController: BaseTableViewController {
     
     @IBOutlet weak var newListButton: PrimaryFloatingButton!
     @IBOutlet weak var storeButton: PrimaryFloatingButton!
@@ -22,11 +19,11 @@ class ListsViewController: BaseTableViewController, ListsView {
     @IBOutlet weak var downDecoration: UIImageView!
     @IBOutlet weak var emptyDecoration: UIImageView!
     
-    var presenter: ListsPresenter!
+    var viewModel: ListsViewModel!
     
     override func instantiateDependencies() {
-        basePresenter = ListsPresenterImpl(view: self)
-        presenter = basePresenter as! ListsPresenter
+        baseViewModel = ListsViewModel()
+        viewModel = baseViewModel as! ListsViewModel
     }
     
     override func setViewStyle() {
@@ -48,7 +45,7 @@ class ListsViewController: BaseTableViewController, ListsView {
     
     override func reload() {
         super.reload()
-        emptyView.isHidden = presenter.sourceCount() > 0
+        emptyView.isHidden = viewModel.itemsCount > 0
     }
     
     // MARK: - Table View
@@ -59,7 +56,7 @@ class ListsViewController: BaseTableViewController, ListsView {
         let cell = tableView.dequeueReusableCell(
             withIdentifier: AsciiListCell.identifier) as! AsciiListCell
         
-        let item = presenter.item(at: indexPath.row) as! REmojiList
+        let item = viewModel.item(at: indexPath)
         cell.configure(with: item)
         
         return cell
@@ -67,24 +64,28 @@ class ListsViewController: BaseTableViewController, ListsView {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
         performSegue(
             withIdentifier: MainStoryboard.Segue.toUsingList,
-            sender: presenter.item(at: indexPath.row))
+            sender: viewModel.item(at: indexPath))
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return AsciiListCell.cellHeight
     }
     
+    // MARK: - Segue
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == MainStoryboard.Segue.toUsingList {
             let dest = segue.destination as! UINavigationController
             let vc = dest.viewControllers.first! as! UsingListViewController
-            vc.emojiList = sender as! REmojiList
+            vc.passListViewModel = sender as! EmojiListViewModel
         }
     }
     
     // MARK: - Button Actions
+    
     @IBAction func actionNewList(_ sender: UIView) {
         performSegue(withIdentifier: MainStoryboard.Segue.toCreate, sender: nil)
     }

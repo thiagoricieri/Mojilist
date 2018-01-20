@@ -1,5 +1,5 @@
 //
-//  AboutViewController.swift
+//  SettingsViewController.swift
 //  Emojilist
 //
 //  Created by Thiago Ricieri on 09/01/2018.
@@ -10,18 +10,14 @@ import UIKit
 import MessageUI
 import StoreKit
 
-protocol AboutView: BaseView {
-}
-
-class AboutViewController: BaseTableViewController,
-        AboutView,
+class SettingsViewController: BaseTableViewController,
         MFMailComposeViewControllerDelegate {
     
-    var presenter: AboutPresenter!
+    var viewModel: SettingsViewModel!
     
     override func instantiateDependencies() {
-        basePresenter = AboutPresenterImpl(view: self)
-        presenter = basePresenter as! AboutPresenterImpl
+        baseViewModel = SettingsViewModel()
+        viewModel = baseViewModel as! SettingsViewModel
     }
     
     override func applyTheme(_ theme: Theme) {
@@ -38,13 +34,13 @@ class AboutViewController: BaseTableViewController,
     // MARK: - Table
     
     override func tableView(_ tableView: UITableView,
-                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let item = presenter.item(at: indexPath.row, section: indexPath.section)
+        let item = viewModel.item(at: indexPath)
         let cell = tableView.dequeueReusableCell(
             withIdentifier: item.cellIdentifier.rawValue) as! SettingsCell
         
-        let theme = provideApp().theme
+        let theme = viewModel.theme!
         theme.cellBackground(cell)
         theme.primaryText(cell.textLabel!)
         
@@ -70,10 +66,10 @@ class AboutViewController: BaseTableViewController,
         
         // Settings
         if item.name.contains("About.Settings.DefaultPack") {
-            cell.textLabel?.text = "\(item.name.localized) \(presenter.defaultPackName())"
+            cell.textLabel?.text = "\(item.name.localized) \(viewModel.defaultPackName)"
         }
         else if item.name.contains("About.Settings.Theme") {
-            cell.textLabel?.text = "\(item.name.localized) \(provideApp().theme.identifier().localized)"
+            cell.textLabel?.text = "\(item.name.localized) \(theme.identifier().localized)"
         }
         
         return cell
@@ -81,7 +77,8 @@ class AboutViewController: BaseTableViewController,
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let item = presenter.item(at: indexPath.row, section: indexPath.section)
+        
+        let item = viewModel.item(at: indexPath)
         
         if item.name == "About.MoreApps" {
             // None
@@ -94,7 +91,7 @@ class AboutViewController: BaseTableViewController,
         }
         else if item.name.contains("About.Promo.Share") {
             Tracker.shareApp()
-            Marketing.shareApp { controller in
+            Marketing.share { controller in
                 self.present(controller, animated: true)
             }
         }
@@ -141,15 +138,15 @@ class AboutViewController: BaseTableViewController,
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return presenter.section(at: section).title
+        return viewModel.section(at: section).title
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter.section(at: section).items.count
+        return viewModel.section(at: section).items.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return presenter.sourceCount()
+        return viewModel.itemsCount
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

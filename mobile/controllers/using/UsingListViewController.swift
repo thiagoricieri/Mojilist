@@ -10,44 +10,37 @@ import Foundation
 import UIKit
 import PopupDialog
 
-protocol UsingListView: BaseCollectionView {
+class UsingListViewController: BaseCollectionViewController {
     
-    func listDeleted()
-    func shareList()
-}
-
-class UsingListViewController: BaseCollectionViewController, UsingListView {
-    
-    var presenter: UsingListPresenter!
-    var emojiList: REmojiList!
+    var viewModel: UsingListViewModel!
+    var passListViewModel: EmojiListViewModel!
     
     @IBOutlet weak var listNameLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var settingsButton: SecondaryFloatingButton!
     @IBOutlet weak var shareButton: SecondaryFloatingButton!
-    
     @IBOutlet weak var topFadeDecoration: UIImageView!
     @IBOutlet weak var bottomFadeDecoration: UIImageView!
     
     override func instantiateDependencies() {
-        basePresenter = UsingListPresenterImpl(view: self)
-        presenter = basePresenter as! UsingListPresenter
-        presenter.source = emojiList.emojis
+        baseViewModel = UsingListViewModel(list: passListViewModel)
+        viewModel = baseViewModel as! UsingListViewModel
     }
     
     override func applyTheme(_ theme: Theme) {
         super.applyTheme(theme)
-        topFadeDecoration.image = UIImage(named: theme.topDecoration())
-        bottomFadeDecoration.image = UIImage(named: theme.bottomDecoration())
         theme.actionButton(doneButton)
         theme.background(self.view)
         theme.secondaryButton(shareButton)
         theme.secondaryButton(settingsButton)
         theme.primaryText(listNameLabel)
+        
+        topFadeDecoration.image = UIImage(named: theme.topDecoration())
+        bottomFadeDecoration.image = UIImage(named: theme.bottomDecoration())
     }
     
     override func setViewStyle() {
-        listNameLabel.text = emojiList.name
+        listNameLabel.text = viewModel.name
         doneButton.setTitle("UsingList.Done".localized, for: .normal)
         navigationController?.isNavigationBarHidden = true
     }
@@ -57,9 +50,9 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     override func collectionView(_ collectionView: UICollectionView,
                                  cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let emoji = presenter.item(at: indexPath.row) as! REmoji
+        let emoji = viewModel.item(at: indexPath)
         
-        if emoji.imageUrl.isEmpty {
+        if !emoji.hasImage {
             let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: AsciiEmojiCell.identifier, for: indexPath) as! AsciiEmojiCell
             cell.configure(with: emoji)
@@ -75,10 +68,10 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: false)
-        presenter.toggleEmoji(at: indexPath.row)
+        viewModel.toggleEmoji(at: indexPath)
         
         if let cell = collectionView.cellForItem(at: indexPath) as? BaseEmojiCell {
-            cell.configure(with: presenter.item(at: indexPath.row) as! REmoji)
+            cell.configure(with: viewModel.item(at: indexPath))
             cell.springView.animation = "pop"
             cell.springView.curve = "easeOut"
             cell.springView.duration = 0.5
@@ -91,11 +84,12 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     // MARK: - Actions
     
     func redoList() {
+        
         for cell in collection.visibleCells {
             let indexPath = collection.indexPath(for: cell)
-            let emoji = presenter.item(at: indexPath!.row) as! REmoji
+            let emoji = viewModel.item(at: indexPath!)
             
-            if let ccell = cell as? BaseEmojiCell, emoji.checked {
+            if let ccell = cell as? BaseEmojiCell, emoji.isChecked {
                 ccell.springView.animation = "swing"
                 ccell.springView.curve = "easeInOut"
                 ccell.springView.duration = 0.7
@@ -103,8 +97,11 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
                 ccell.uncheckEmoji()
             }
         }
-        presenter.reusedList(list: emojiList)
+        
+        viewModel.reuseList()
     }
+    
+    // MARK: - List Settings Options
     
     func settingsOptions() {
         let title = "UsingList.Settings.Title".localized
@@ -118,12 +115,14 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         let deleteButton = DestructiveButton(
                 title: "UsingList.Settings.DeleteList".localized,
                 dismissOnTap: true) {
+                    
             self.confirmDeletion()
         }
         
         let reuseButton = DefaultButton(
                 title: "UsingList.Settings.Redo".localized,
                 dismissOnTap: true) {
+                    
             self.redoList()
         }
         
@@ -140,7 +139,9 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
         let deleteButton = DestructiveButton(
                 title: "UsingList.Settings.DeleteListConfirmation".localized,
                 dismissOnTap: true) {
-            self.presenter.deleteList(list: self.emojiList)
+                    
+            self.viewModel.deleteList()
+            self.dismiss(animated: true)
         }
         
         popup.addButtons([dismissButton, deleteButton])
@@ -148,17 +149,15 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     }
     
     func shareList() {
-        Marketing.shareActivity(object: emojiList) { activityController in
+        viewModel.trackSharing()
+        Marketing.share(list: passListViewModel) { activityController in
             self.present(activityController, animated: true) { }
         }
     }
     
-    func listDeleted() {
-        dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func actionDone(sender: Any) {
         dismiss(animated: true, completion: nil)
+        viewModel.trackCompletedList()
         mediumImpact()
     }
     
@@ -170,11 +169,6 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     @IBAction func actionShare(sender: Any) {
         shareList()
         lightImpact()
-    }
-
-    deinit {
-        presenter.unload()
-        presenter = nil
     }
 }
 

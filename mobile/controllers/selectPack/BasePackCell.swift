@@ -17,7 +17,7 @@ class BasePackCell: BaseTableViewCell {
     @IBOutlet weak var packName: UILabel!
     @IBOutlet weak var separator: UIView!
     
-    func configure(with item: REmojiPack) {
+    func configure(with item: EmojiPackViewModel) {
         packName.text = item.name
     }
     

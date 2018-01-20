@@ -15,20 +15,18 @@ class ImagePackCell: BasePackCell {
     
     @IBOutlet var emojiImages: [UIImageView]!
     
-    override func configure(with item: REmojiPack) {
+    override func configure(with item: EmojiPackViewModel) {
         super.configure(with: item)
-        
-        let maxEmojis = 7
-        let allEmojis = item.emojis.count > maxEmojis ?
-            item.emojis[0...maxEmojis].map { $0 } :
-            item.emojis.map { $0 }
         
         emojiImages.forEach { imageView in
             let index = emojiImages.index(of: imageView)
-            if let i = index, allEmojis.indices.contains(i) {
-                let emoji = allEmojis[i]
-                imageView.sd_setImage(with: URL(string: emoji.imageUrl))
-            } else {
+            if  let i = index,
+                item.firstEmojis.indices.contains(i) {
+                
+                let emoji = item.firstEmojis[i]
+                imageView.sd_setImage(with: emoji.imageUrl)
+            }
+            else {
                 imageView.image = nil
             }
         }
