@@ -20,7 +20,7 @@ class ShareSnippetView: UIView,
     @IBOutlet weak var creditsName: UILabel!
     @IBOutlet weak var creditsUrl: UILabel!
     
-    var list: REmojiList?
+    var list: EmojiListViewModel?
     
     var maxWidth = 686
     var maxHeight = 514
@@ -46,7 +46,7 @@ class ShareSnippetView: UIView,
         theme.background(collection)
     }
     
-    func configure(with emojiList: REmojiList) {
+    func configure(with emojiList: EmojiListViewModel) {
         list = emojiList
         
         creditsName.text = "Share.Credits1".localized
@@ -56,13 +56,13 @@ class ShareSnippetView: UIView,
         maxWidth = Int(collection.bounds.width)
         maxHeight = Int(collection.bounds.height)
         
-        itemSize = recalculateBasedOnItems(list!.emojis) - margin
+        itemSize = recalculateBasedOnItems(list!.items) - margin
         layout.itemSize = CGSize(width: itemSize, height: itemSize)
         
         collection.reloadData()
     }
     
-    func recalculateBasedOnItems(_ emojis: List<REmoji>) -> Int {
+    func recalculateBasedOnItems(_ emojis: [EmojiViewModel]) -> Int {
         let minSize = 50
         let maxSize = 220
         
@@ -103,17 +103,18 @@ class ShareSnippetView: UIView,
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return list != nil ? list!.emojis.count : 0
+        return list != nil ? list!.items.count : 0
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: ShareCell.identifier,
             for: indexPath) as! ShareCell
         let del = UIApplication.shared.delegate as! AppDelegate
         
-        if let item = list?.emojis[indexPath.row] {
+        if let item = list?.items[indexPath.row] {
             cell.configure(with: item, squareSize: itemSize)
             cell.applyTheme(del.app.theme)
         }
@@ -132,7 +133,7 @@ class ShareCell: UICollectionViewCell {
         clipsToBounds = false
     }
     
-    func configure(with emoji: REmoji, squareSize: Int) {
+    func configure(with emoji: EmojiViewModel, squareSize: Int) {
         emojiView.configure(with: emoji)
         emojiView.resize(square: squareSize)
     }

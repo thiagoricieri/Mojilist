@@ -15,7 +15,7 @@ class BaseListCell: BaseTableViewCell {
     @IBOutlet weak var backgroundOverlay: UIView!
     @IBOutlet weak var separatorView: UIView!
     
-    func configure(with item: REmojiList) {
+    func configure(with item: EmojiListViewModel) {
         listName.text = item.name
     }
     

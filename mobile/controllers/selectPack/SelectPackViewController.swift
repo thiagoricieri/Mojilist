@@ -9,37 +9,36 @@
 import UIKit
 
 protocol SelectPackDelegate {
-    func packSelected(pack: REmojiPack)
-    func selectedPack() -> REmojiPack
+    func packSelected(pack: EmojiPackViewModel)
+    func selectedPack() -> EmojiPackViewModel
 }
 
-protocol SelectPackView: BaseTableView {
-}
-
-class SelectPackViewController: BaseTableViewController, SelectPackView {
+class SelectPackViewController: BaseTableViewController {
     
     @IBOutlet weak var newListButton: PrimaryFloatingButton!
     @IBOutlet weak var storeButton: PrimaryFloatingButton!
     
-    var presenter: SelectPackPresenter!
+    var viewModel: SelectPackViewModel!
     var delegate: SelectPackDelegate!
     
     override func instantiateDependencies() {
-        basePresenter = SelectPackPresenterImpl(view: self)
-        presenter = basePresenter as! SelectPackPresenter
+        baseViewModel = SelectPackViewModel()
+        viewModel = baseViewModel as! SelectPackViewModel
     }
     
     override func setViewStyle() {
         title = "SelectPack.Title".localized
     }
     
+    // MARK: - Table View Boilerplate
+    
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let item = presenter.item(at: indexPath.row) as! REmojiPack
+        let item = viewModel.item(at: indexPath)
         let cell: BasePackCell!
         
-        if item.ascii {
+        if item.isTextual {
             cell = tableView.dequeueReusableCell(
                 withIdentifier: AsciiPackCell.identifier) as! AsciiPackCell
         } else {
@@ -52,8 +51,8 @@ class SelectPackViewController: BaseTableViewController, SelectPackView {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = presenter.item(at: indexPath.row) as! REmojiPack
-        presenter.changedToPack(pack: item)
+        let item = viewModel.item(at: indexPath)
+        viewModel.trackChanged(toPack: item)
         delegate.packSelected(pack: item)
     }
     

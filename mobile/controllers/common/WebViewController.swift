@@ -15,6 +15,10 @@ class WebViewController: BaseViewController {
     
     var url = ""
     
+    override func instantiateDependencies() {
+        baseViewModel = BaseViewModel()
+    }
+    
     override func prepareViewForUser() {
         super.prepareViewForUser()
         

@@ -29,7 +29,9 @@ protocol App {
     func dateToHuman(fromSql: String) -> String
     func dateToHuman(from: String, toFormat: String) -> String
     func dateToHuman(fromSimpleSql: String) -> String
+    
     func changeVisuals(_ visuals: Visuals)
+    func standardEmojiPack() -> EmojiPackViewModel
 }
 
 // MARK: - Production App
@@ -47,7 +49,7 @@ class ProductionAppImpl: App {
     fileprivate(set) lazy var simpleSqlFormatter: DateFormatter = self.initSimpleSqlFormatter()
 	fileprivate(set) lazy var currencyFormatter: NumberFormatter = self.initCurrencyFormatter()
 	
-	public init() {
+	init() {
 		self.config = ProductionAppConfigImpl()
 		self.documentPath = ""
 	}
@@ -97,31 +99,31 @@ class ProductionAppImpl: App {
 		return df
 	}
     
-    public func dateToSql(fromHuman: String) -> String {
+    func dateToSql(fromHuman: String) -> String {
         let date = humamFormatter.date(from: fromHuman)
         return sqlFormatter.string(from: date!)
     }
     
-    public func dateToSimpleSql(fromHuman: String) -> String {
+    func dateToSimpleSql(fromHuman: String) -> String {
         let date = humamFormatter.date(from: fromHuman)
         return simpleSqlFormatter.string(from: date!)
     }
     
-    public func dateToHuman(fromSql: String) -> String {
+    func dateToHuman(fromSql: String) -> String {
         let date = sqlFormatter.date(from: fromSql)
         return humamFormatter.string(from: date!)
     }
     
-    public func convertToDate(fromSql: String) -> Date? {
+    func convertToDate(fromSql: String) -> Date? {
         return sqlFormatter.date(from: fromSql)
     }
     
-    public func dateToHuman(fromSimpleSql: String) -> String {
+    func dateToHuman(fromSimpleSql: String) -> String {
         let date = simpleSqlFormatter.date(from: fromSimpleSql)
         return humamFormatter.string(from: date!)
     }
     
-    public func dateToHuman(from: String, toFormat: String) -> String {
+    func dateToHuman(from: String, toFormat: String) -> String {
         let df = DateFormatter()
         df.dateFormat = toFormat
         if let date = sqlFormatter.date(from: from) {
@@ -130,14 +132,21 @@ class ProductionAppImpl: App {
         return ""
     }
     
-    public func convertToDate(fromSimpleSql: String) -> Date? {
+    func convertToDate(fromSimpleSql: String) -> Date? {
         return simpleSqlFormatter.date(from: fromSimpleSql)
     }
     
-    public func changeVisuals(_ visuals: Visuals) {
+    // MARK: - Others
+    
+    func changeVisuals(_ visuals: Visuals) {
         theme.visuals = visuals
         let defaults = UserDefaults.standard
         defaults.set(visuals.identifier, forKey: Env.App.theming)
+    }
+    
+    func standardEmojiPack() -> EmojiPackViewModel {
+        let pack = realm.objects(REmojiPack.self).filter("ascii = true").first!
+        return EmojiPackViewModel(with: pack)
     }
 }
 

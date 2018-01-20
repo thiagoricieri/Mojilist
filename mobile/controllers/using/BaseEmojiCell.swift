@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Spring
 
-class BaseEmojiCell: UICollectionViewCell {
+class BaseEmojiCell: BaseCollectionViewCell {
 
     @IBOutlet weak var protectionBackground: UIView!
     @IBOutlet weak var springView: SpringView!
@@ -22,11 +22,11 @@ class BaseEmojiCell: UICollectionViewCell {
         protectionBackground.layer.cornerRadius = protectionBackground.bounds.width/2
     }
     
-    func applyTheme(_ theme: Theme) {
+    override func applyTheme(_ theme: Theme) {
         theme.darkBackground(protectionBackground)
     }
     
-    func configure(with emoji: REmojiPackItem) { }
-    func configure(with emoji: REmoji) { }
+    func configure(with emoji: EmojiPackItemViewModel) { }
+    func configure(with emoji: EmojiViewModel) { }
     func uncheckEmoji() {  }
 }

@@ -9,16 +9,18 @@
 import Foundation
 import UIKit
 
-protocol BaseCollectionView: BaseView {
-}
-
 class BaseCollectionViewController: BaseViewController,
-        BaseCollectionView,
         UICollectionViewDelegate,
         UICollectionViewDataSource {
     
-    // Outlets
     @IBOutlet weak var collection: UICollectionView!
+    
+    override func applyTheme(_ theme: Theme) {
+        super.applyTheme(theme)
+        theme.background(collection)
+    }
+    
+    // MARK: - View Rendering
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,28 +31,22 @@ class BaseCollectionViewController: BaseViewController,
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let dataPresenter = basePresenter as? BaseDataPresenter {
-            dataPresenter.loadSource()
-            dataPresenter.downloadSource()
+        if let viewModel = baseViewModel as? BaseDataViewModel {
+            viewModel.loadSource()
             reload()
         }
     }
     
-    override func applyTheme(_ theme: Theme) {
-        super.applyTheme(theme)
-        theme.background(collection)
-    }
+    // MARK: - Collection Delegate
     
-    // MARK: - Convenience
     func reload() {
         collection.reloadData()
     }
     
-    // MARK: - Collection Delegate
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        if let dataPresenter = basePresenter as? BaseDataPresenter {
-            return dataPresenter.sourceCount()
+        if let viewModel = baseViewModel as? BaseDataViewModel {
+            return viewModel.itemsCount
         }
         return 0
     }
@@ -60,7 +56,7 @@ class BaseCollectionViewController: BaseViewController,
                         forItemAt indexPath: IndexPath) {
         
         if let c = cell as? BaseEmojiCell {
-            c.applyTheme(provideApp().theme)
+            c.applyTheme(baseViewModel.theme)
         }
     }
     

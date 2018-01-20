@@ -39,8 +39,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-    
-    func standardEmojiPack() -> REmojiPack {
-        return app.realm.objects(REmojiPack.self).filter("ascii = true").first!
-    }
 }

@@ -9,16 +9,18 @@
 import Foundation
 import UIKit
 
-protocol BaseTableView: BaseView {
-}
-
 class BaseTableViewController: BaseViewController,
-        BaseTableView,
         UITableViewDelegate,
         UITableViewDataSource {
     
-    // Outlets
     @IBOutlet weak var table: UITableView!
+    
+    override func applyTheme(_ theme: Theme) {
+        super.applyTheme(theme)
+        theme.background(table)
+    }
+    
+    // MARK: - View Rendering
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,28 +31,21 @@ class BaseTableViewController: BaseViewController,
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let dataPresenter = basePresenter as? BaseDataPresenter {
-            dataPresenter.loadSource()
-            dataPresenter.downloadSource()
+        if let viewModel = baseViewModel as? BaseDataViewModel {
+            viewModel.loadSource()
             reload()
         }
     }
     
-    override func applyTheme(_ theme: Theme) {
-        super.applyTheme(theme)
-        theme.background(table)
-    }
-    
-    // MARK: - Convenience
+    // MARK: - Table Delegate
     func reload() {
         table.reloadData()
     }
     
-    // MARK: - Table Delegate
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        if let dataPresenter = basePresenter as? BaseDataPresenter {
-            return dataPresenter.sourceCount()
+        if let viewModel = baseViewModel as? BaseDataViewModel {
+            return viewModel.itemsCount
         }
         return 0
     }
@@ -59,7 +54,7 @@ class BaseTableViewController: BaseViewController,
                    willDisplay cell: UITableViewCell,
                    forRowAt indexPath: IndexPath) {
         if let c = cell as? BaseTableViewCell {
-            c.applyTheme(provideApp().theme)
+            c.applyTheme(baseViewModel.theme)
         }
     }
     

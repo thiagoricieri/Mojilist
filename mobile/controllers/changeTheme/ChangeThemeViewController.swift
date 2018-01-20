@@ -9,17 +9,13 @@
 import Foundation
 import UIKit
 
-protocol ChangeThemeView: BaseView {
-}
-
-class ChangeThemeViewController: BaseTableViewController,
-        ChangeThemeView {
+class ChangeThemeViewController: BaseTableViewController {
     
-    var presenter: ChangeThemePresenterImpl!
+    var viewModel: ChangeThemeViewModel!
     
     override func instantiateDependencies() {
-        basePresenter = ChangeThemePresenterImpl(view: self)
-        presenter = basePresenter as! ChangeThemePresenterImpl
+        baseViewModel = ChangeThemeViewModel()
+        viewModel = baseViewModel as! ChangeThemeViewModel
     }
     
     override func setViewStyle() {
@@ -32,9 +28,9 @@ class ChangeThemeViewController: BaseTableViewController,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Theme")!
-        let newVisuals = presenter.visual(at: indexPath.row)
+        let newVisuals = viewModel.item(at: indexPath.row)
         
-        let theme = provideApp().theme
+        let theme = viewModel.theme!
         theme.cellBackground(cell)
         theme.primaryText(cell.textLabel!)
         
@@ -49,9 +45,9 @@ class ChangeThemeViewController: BaseTableViewController,
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let newVisuals = presenter.visual(at: indexPath.row)
-        provideApp().changeVisuals(newVisuals)
-        applyTheme(provideApp().theme)
+        let newVisuals = viewModel.item(at: indexPath.row)
+        viewModel.changeVisuals(newVisuals)
+        applyTheme(viewModel.theme)
         reload()
     }
 }

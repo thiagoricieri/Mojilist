@@ -11,31 +11,21 @@ import UIKit
 import MBProgressHUD
 import RealmSwift
 
-class BaseViewController : UIViewController, BaseView {
+class BaseViewController : UIViewController {
     
-    var appDelegate: AppDelegate! {
-        return UIApplication.shared.delegate as! AppDelegate
-    }
-    var basePresenter: BasePresenter!
+    var baseViewModel: BaseViewModel!
     var currentTheme: String?
     
     fileprivate(set) var currentHud: MBProgressHUD?
-    fileprivate(set) var previousBottomBar : UIView?
     
-    // Inheritage Scroll View
     @IBOutlet weak var scrollView: UIScrollView?
     
-    func provideApp() -> App {
-        return appDelegate.app
-    }
-    func provideRealm() -> Realm {
-        return provideApp().realm
-    }
+    // MARK: - View Boilerplate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        checkTheme()
         instantiateDependencies()
+        checkTheme()
         setViewStyle()
     }
     
@@ -45,15 +35,17 @@ class BaseViewController : UIViewController, BaseView {
         prepareViewForUser()
     }
     
-    func checkTheme() {
-        let appTheme = provideApp().theme.identifier()
-        if currentTheme == nil || currentTheme != appTheme {
-            currentTheme = appTheme
-            applyTheme(provideApp().theme)
-        }
-    }
+    // MARK: - Workflow
     
     func instantiateDependencies() {
+    }
+    
+    func checkTheme() {
+        let appTheme = baseViewModel.theme.identifier()
+        if currentTheme == nil || currentTheme != appTheme {
+            currentTheme = appTheme
+            applyTheme(baseViewModel.theme)
+        }
     }
     
     func applyTheme(_ theme: Theme) {
@@ -63,7 +55,6 @@ class BaseViewController : UIViewController, BaseView {
         if let nc = navigationController {
             theme.styleNavigationBar(nc.navigationBar)
         }
-        
         setNeedsStatusBarAppearanceUpdate()
     }
     
@@ -74,14 +65,7 @@ class BaseViewController : UIViewController, BaseView {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return provideApp().theme.statusBarStyle()
-    }
-    
-    deinit {
-        if basePresenter != nil {
-            basePresenter.unload()
-            basePresenter = nil
-        }
+        return baseViewModel.theme.statusBarStyle()
     }
 }
 
@@ -155,18 +139,5 @@ extension BaseViewController {
     
     func successAlert(message: String) {
         alertViewWithTitle(title: "Success".localized, message: message)
-    }
-}
-
-// MARK: - API Errors Warnings
-extension BaseViewController {
-    
-    func errorWarningFromAPI(_ response: Any?) {
-        if  let obj = response as? [AnyHashable: AnyObject],
-            let message = obj["message"] as? String {
-            self.errorAlert(message: message)
-        } else {
-            self.errorAlert(message: "\(String(describing: response))")
-        }
     }
 }

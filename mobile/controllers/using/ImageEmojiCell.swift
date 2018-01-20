@@ -16,18 +16,18 @@ class ImageEmojiCell: BaseEmojiCell {
     
     @IBOutlet weak var emojiImage: UIImageView!
     
-    override func configure(with emoji: REmojiPackItem) {
+    override func configure(with emoji: EmojiPackItemViewModel) {
         super.configure(with: emoji)
-        emojiImage.sd_setImage(with: URL(string: emoji.imageUrl))
+        emojiImage.sd_setImage(with: emoji.imageUrl)
     }
     
-    override func configure(with emoji: REmoji) {
+    override func configure(with emoji: EmojiViewModel) {
         super.configure(with: emoji)
-        emojiImage.sd_setImage(with: URL(string: emoji.imageUrl))
-        emojiImage.alpha = emoji.checked ? 1 : 0.2
+        emojiImage.sd_setImage(with: emoji.imageUrl)
+        emojiImage.alpha = emoji.alphaForCheckedStatus
     }
     
     override func uncheckEmoji() {
-        emojiImage.alpha = 0.2
+        emojiImage.alpha = CGFloat(EmojiViewModel.uncheckedAlpha)
     }
 }

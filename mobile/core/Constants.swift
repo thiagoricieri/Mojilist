@@ -29,6 +29,7 @@ public struct Env {
     public struct App {
         static let theming = "app-theming"
         static let defaultPack = "default-pack"
+        static let maxEmojisPerRow = 7
     }
 }
 

@@ -1,48 +1,33 @@
 //
-//  AboutPresenter.swift
+//  SettingsViewModel.swift
 //  Emojilist
 //
-//  Created by Thiago Ricieri on 18/01/2018.
+//  Created by Thiago Ricieri on 20/01/2018.
 //  Copyright © 2018 Ghost Ship. All rights reserved.
 //
 
 import Foundation
-import RealmSwift
 
-protocol AboutPresenter: BaseDataPresenter {
-    func item(at: Int, section: Int) -> SettingsOption
-    func section(at: Int) -> SettingsGroup
-    func defaultPackName() -> String
-}
-
-class AboutPresenterImpl: AboutPresenter {
+class SettingsViewModel: BaseDataViewModel {
     
-    var view: AboutView!
     var source = [SettingsGroup]()
     
-    init(view: AboutView) {
-        self.view = view
-    }
-    
-    func defaultPackName() -> String {
+    var defaultPackName: String! {
         let defaults = UserDefaults.standard
-        if let pack = defaults.string(forKey: Env.App.defaultPack) {
-            let packs = packFromRealm(slug: pack)
+        if let slug = defaults.string(forKey: Env.App.defaultPack) {
+            let predicate = NSPredicate(format: "slug = %@", slug)
+            let packs = realm.objects(REmojiPack.self).filter(predicate)
             if packs.count > 0 {
                 return packs.first!.name
             }
         }
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        return appDelegate.standardEmojiPack().name
+        return app.standardEmojiPack().name
+    }
+    override var itemsCount: Int! {
+        return source.count
     }
     
-    func packFromRealm(slug: String) -> Results<REmojiPack> {
-        let realm = view.provideRealm()
-        let predicate = NSPredicate(format: "slug = %@", slug)
-        return realm.objects(REmojiPack.self).filter(predicate)
-    }
-    
-    func loadSource() {
+    override func loadSource() {
         
         // Settings
         var settings = SettingsGroup()
@@ -145,29 +130,12 @@ class AboutPresenterImpl: AboutPresenter {
         source = [settings, promo, follow, about]
     }
     
-    func downloadSource() {
-        // None
-    }
-    
-    func sourceCount() -> Int {
-        return source.count
-    }
-    
-    func item(at: Int) -> AnyObject {
-        return "" as AnyObject
-    }
-    
-    func item(at: Int, section: Int) -> SettingsOption {
-        return source[section].items[at]
+    func item(at indexPath: IndexPath) -> SettingsOption {
+        return source[indexPath.section].items[indexPath.row]
     }
     
     func section(at: Int) -> SettingsGroup {
         return source[at]
-    }
-    
-    // MARK: - Base Presenter
-    func unload() {
-        self.view = nil
     }
 }
 

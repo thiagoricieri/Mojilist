@@ -16,7 +16,7 @@ class REmojiPackItem: Object {
     @objc dynamic var pack = ""
 }
 
-class EmojiPackItemViewModel {
+class EmojiPackItemViewModel: BaseViewModel {
     
     private var model: REmojiPackItem!
     
@@ -26,8 +26,11 @@ class EmojiPackItemViewModel {
     var pack: String! {
         return model.pack
     }
-    var imageUrl: String! {
-        return model.imageUrl
+    var imageUrl: URL! {
+        return URL(string: model.imageUrl)!
+    }
+    var hasImage: Bool! {
+        return !model.imageUrl.isEmpty
     }
     
     init(with model: REmojiPackItem) {
