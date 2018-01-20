@@ -65,7 +65,7 @@ class BaseViewController : UIViewController {
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        return baseViewModel.theme.statusBarStyle()
+        return baseViewModel == nil ? .default : baseViewModel.theme.statusBarStyle()
     }
 }
 

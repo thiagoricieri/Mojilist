@@ -16,6 +16,7 @@ class CreateListViewController: BaseViewController {
     @IBOutlet weak var nextBarButton: UIBarButtonItem!
     
     var viewModel: CreateListViewModel!
+    var passListViewModel: EmojiListViewModel?
     
     override func instantiateDependencies() {
         baseViewModel = CreateListViewModel()
@@ -40,12 +41,22 @@ class CreateListViewController: BaseViewController {
     
     override func prepareViewForUser() {
         listNameField.becomeFirstResponder()
+        if let listVM = passListViewModel {
+            listNameField.text = listVM.name
+        }
+        navigationController?.isNavigationBarHidden = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == MainStoryboard.Segue.toSelectEmojis {
             let dest = segue.destination as! SelectEmojisViewController
-            dest.passListViewModel = EmojiListViewModel(named: listNameField.text!)
+            
+            if let listVM = passListViewModel {
+                listVM.pendingName = listNameField.text!
+                dest.passListViewModel = listVM
+            } else {
+                dest.passListViewModel = EmojiListViewModel(named: listNameField.text!)
+            }
         }
     }
     

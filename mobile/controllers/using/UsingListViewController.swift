@@ -45,6 +45,11 @@ class UsingListViewController: BaseCollectionViewController {
         navigationController?.isNavigationBarHidden = true
     }
     
+    override func reload() {
+        super.reload()
+        setViewStyle()
+    }
+    
     // MARK: - Collection
     
     override func collectionView(_ collectionView: UICollectionView,
@@ -81,7 +86,7 @@ class UsingListViewController: BaseCollectionViewController {
         heavyImpact()
     }
     
-    // MARK: - Actions
+    // MARK: - List Settings Options
     
     func redoList() {
         
@@ -100,8 +105,6 @@ class UsingListViewController: BaseCollectionViewController {
         
         viewModel.reuseList()
     }
-    
-    // MARK: - List Settings Options
     
     func settingsOptions() {
         let title = "UsingList.Settings.Title".localized
@@ -126,7 +129,16 @@ class UsingListViewController: BaseCollectionViewController {
             self.redoList()
         }
         
-        popup.addButtons([dismissButton, deleteButton, reuseButton])
+        let editButton = DefaultButton(
+                title: "UsingList.Settings.Edit".localized,
+                dismissOnTap: true) {
+            
+            self.performSegue(
+                withIdentifier: MainStoryboard.Segue.toEditList,
+                sender: nil)
+        }
+        
+        popup.addButtons([reuseButton, editButton, deleteButton, dismissButton])
         self.present(popup, animated: true, completion: nil)
     }
     
@@ -154,6 +166,17 @@ class UsingListViewController: BaseCollectionViewController {
             self.present(activityController, animated: true) { }
         }
     }
+    
+    // MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == MainStoryboard.Segue.toEditList {
+            let dest = segue.destination as! CreateListViewController
+            dest.passListViewModel = viewModel.source
+        }
+    }
+    
+    // MARK: - Actions
     
     @IBAction func actionDone(sender: Any) {
         dismiss(animated: true, completion: nil)

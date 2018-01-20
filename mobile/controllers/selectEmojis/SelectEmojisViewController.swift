@@ -52,12 +52,13 @@ class SelectEmojisViewController: BaseCollectionViewController,
     
     override func setViewStyle() {
         title = viewModel.listName
-        createButton.setTitle("SelectEmojis.Create".localized, for: .normal)
-        createButton.setTitle("SelectEmojis.Create".localized, for: .disabled)
+        createButton.setTitle(viewModel.createButtonLabel.localized, for: .normal)
+        createButton.setTitle(viewModel.createButtonLabel.localized, for: .disabled)
         clearBarItem.title = "SelectEmojis.Clear".localized
         itemsInListLabel.text = "SelectEmojis.ItemsInList".localized
         badgeView.layer.cornerRadius = badgeView.bounds.width/2
         badgeView.clipsToBounds = true
+        updateBasket()
     }
     
     override func reload() {
@@ -191,7 +192,11 @@ class SelectEmojisViewController: BaseCollectionViewController,
     
     // MARK: - Actions
     @IBAction func actionCreate(sender: Any) {
-        viewModel.createList()
+        if viewModel.shouldUpdateList {
+            viewModel.updateList()
+        } else {
+            viewModel.createList()
+        }
         navigationController?.popToRootViewController(animated: true)
     }
     
