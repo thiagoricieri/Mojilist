@@ -18,3 +18,28 @@ class REmojiPack: Object {
     
     let emojis = List<REmojiPackItem>()
 }
+
+class EmojiPackViewModel {
+    
+    private var model: REmojiPack!
+    
+    var name: String! {
+        return model.name
+    }
+    var slug: String! {
+        return model.slug
+    }
+    var url: String! {
+        return model.url
+    }
+    var isTextual: Bool! {
+        return model.ascii
+    }
+    var items: List<REmojiPackItem>! {
+        return model.emojis
+    }
+    
+    init(with model: REmojiPack) {
+        self.model = model
+    }
+}

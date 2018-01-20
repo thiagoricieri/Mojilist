@@ -49,6 +49,7 @@ class UsingListViewController: BaseCollectionViewController, UsingListView {
     override func setViewStyle() {
         listNameLabel.text = emojiList.name
         doneButton.setTitle("UsingList.Done".localized, for: .normal)
+        navigationController?.isNavigationBarHidden = true
     }
     
     // MARK: - Collection
