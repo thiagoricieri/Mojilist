@@ -28,7 +28,7 @@ class SelectEmojisViewModel: BaseDataViewModel {
         return String(selectedCount)
     }
     var localizedPackName: String! {
-        return "SelectEmojis.SelectPack".localized + " \(source.name!)"
+        return "SelectEmojis.SelectPack".localized + " \(source.name!.localized)"
     }
     var shouldUpdateList: Bool! {
         return listViewModel.pendingName != nil

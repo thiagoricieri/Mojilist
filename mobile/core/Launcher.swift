@@ -104,11 +104,11 @@ class Launcher {
         try! realm.write {
             [
                 (
-                    name: "Pack.EmojiThings".localized,
+                    name: "Pack.EmojiThings",
                     emojis: thingsEmoji(),
                     slug: "things"
                 ), (
-                    name: "Pack.AllEmojis".localized,
+                    name: "Pack.AllEmojis",
                     emojis: allEmojis(),
                     slug: "all"
                 )

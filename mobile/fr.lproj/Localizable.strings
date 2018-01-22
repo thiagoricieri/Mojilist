@@ -8,89 +8,89 @@
 
 // Base
 "OK" = "OK";
-"Yes" = "Sim";
-"No" = "Não";
-"Warning" = "Atenção!";
-"Success" = "Sucesso!";
-"Dismiss" = "Dispensar";
-"Cancel" = "Cancelar";
-"Shared" = "Compartilhamento pronto!";
+"Yes" = "Oui";
+"No" = "Non";
+"Warning" = "Attention!";
+"Success" = "Succès!";
+"Dismiss" = "Rejeter";
+"Cancel" = "Annuler";
+"Shared" = "Partagé!";
 
 // Errors
-"Email.Error" = "Aparentemente seu aparelho não suporta envio de e-mail. Por favor, envie um e-mail para buh@ghostship.co para entrar em contato.";
+"Email.Error" = "Votre appareil ne peut pas envoi d'e-mails. S'il vous plaît, envoyez un courriel à buh@ghostship.co pour entrer en contact.";
 
 // Pack
-"Pack.EmojiThings" = "Emojis de Coisas!";
-"Pack.AllEmojis" = "Todos os Emojis!";
+"Pack.EmojiThings" = "Emojis des Choses!";
+"Pack.AllEmojis" = "Tous les Emojis!";
 
 // Lists
 "Lists.Title" = "MOJILIST";
-"Lists.New" = "Nova";
-"Lists.Settings" = "Ajustes";
-"Lists.Empty" = "Nenhuma lista!";
-"Lists.Empty.Msg" = "Você economiza muito mais tempo criando listas visuais. Use suas listas para compras da semana, material escolar, afazeres e mais!";
+"Lists.New" = "Nouvelle";
+"Lists.Settings" = "Paramètres";
+"Lists.Empty" = "Pas de liste!";
+"Lists.Empty.Msg" = "Vous économisez beaucoup plus de temps en créant des listes visuelles. Utilisez vos listes de courses, les affaires scolaires et plus encore!";
 
 // Using List
-"UsingList.Done" = "Pronto!";
-"UsingList.Settings.Title" = "Ajustes da lista";
-"UsingList.Settings.Msg" = "Você pode remover sua lista por completo do seu aparelho ou compartilhar uma imagem dela nas suas redes sociais.";
-"UsingList.Settings.Redo" = "Começar a lista do zero.";
-"UsingList.Settings.DeleteList" = "Deletar esta lista";
-"UsingList.Delete.Msg" = "Só para assegurar-se que você não tocou no botão de deletar sem querer, confirme a remoção da lista a seguir:";
-"UsingList.Settings.DeleteListConfirmation" = "Deletar a lista";
-"UsingList.Settings.Edit" = "Editar a lista";
+"UsingList.Done" = "Terminé!";
+"UsingList.Settings.Title" = "Paramètres de liste";
+"UsingList.Settings.Msg" = "Vous pouvez supprimer votre liste de votre appareil ou partager une photo de celui-ci sur vos réseaux sociaux.";
+"UsingList.Settings.Redo" = "Démarrer la liste.";
+"UsingList.Settings.DeleteList" = "Supprimer la liste.";
+"UsingList.Delete.Msg" = "Confirmez la suppression de la liste suivante:";
+"UsingList.Settings.DeleteListConfirmation" = "Supprimer la liste";
+"UsingList.Settings.Edit" = "Modifier la liste";
 
 // Share
-"Share.Credits1" = "Criado com Mojilist";
+"Share.Credits1" = "Créé avec Mojilist";
 "Share.Credits2" = "https://ghostship.co/mojilist";
 
 // Create List
-"CreateList.Title" = "Nova Lista";
-"CreateList.Text.Placeholder" = "Compras da semana";
-"CreateList.Label" = "Como vai se chamar a nova lista?";
-"CreateList.Hint" = "Dica: listas de afazeres, supermercado ou material escolar podem ser criadas rapidamente visualmente. Selecione emojis na próxima etapa e divirta-se!";
-"CreateList.Next" = "Seguinte";
+"CreateList.Title" = "Nouvelle Liste";
+"CreateList.Text.Placeholder" = "Les Courses";
+"CreateList.Label" = "Quelle sera la nouvelle liste appelée?";
+"CreateList.Hint" = "Les listes de choses à faire, les épiceries ou les affaires scolaires peuvent être créées rapidement et visuellement. Sélectionnez emojis dans la prochaine étape et profitez-en!";
+"CreateList.Next" = "Prochain";
 
 // Select emojis
-"SelectEmojis.Title" = "O que vai na lista?";
-"SelectEmojis.Create" = "Criar";
-"SelectEmojis.Update" = "Atualizar";
-"SelectEmojis.Clear" = "Esvaziar";
-"SelectEmojis.SelectPack" = "Pacote selecionado:";
-"SelectEmojis.ItemsInList" = "Itens na lista. Se precisar, toque uma vez para remover.";
+"SelectEmojis.Title" = "Qu'est-ce qui est sur la liste?";
+"SelectEmojis.Create" = "Créer";
+"SelectEmojis.Update" = "Mettre à jour";
+"SelectEmojis.Clear" = "Vider";
+"SelectEmojis.SelectPack" = "Package sélectionné:";
+"SelectEmojis.ItemsInList" = "Articles dans la liste. Si nécessaire, appuyez une fois pour supprimer.";
 
 // Select Pack
-"SelectPack.Title" = "Pacotes";
+"SelectPack.Title" = "Packages";
 
 // About
-"About.Title" = "Ajustes";
-"About.Settings" = "Personalize seu App!";
-"About.About" = "Sobre";
-"About.Promo" = "Compartilhe";
-"About.Follow" = "Siga nas redes sociais";
-"About.MoreApps" = "Mais apps!";
-"About.Settings.DefaultPack" = "Pacote padrão: ";
-"About.Settings.Theme" = "Tema usado: ";
-"About.Promo.Signup" = "Inscreva-se na Newsletter!";
-"About.Promo.Share" = "Compartilhe este app";
-"About.Promo.Rate" = "Avalie este app ❤️";
+"About.Title" = "Paramètres";
+"About.Settings" = "Personnalisez votre application!";
+"About.About" = "Environ";
+"About.Promo" = "Partager";
+"About.Follow" = "Suivez sur les réseaux sociaux";
+"About.MoreApps" = "Plus des apps!";
+"About.Settings.DefaultPack" = "Package sélectionné: ";
+"About.Settings.Theme" = "Thème utilisé: ";
+"About.Promo.Signup" = "Abonnez-vous à la newsletter!";
+"About.Promo.Share" = "Partagez cette application";
+"About.Promo.Rate" = "Noter cette application ❤️";
 "About.Follow.Instagram" = "Instagram";
 "About.Follow.Facebook" = "Facebook";
 "About.Follow.Twitter" = "Twitter";
-"About.Follow.Blog" = "Visite o Blog";
-"About.About.Contact" = "E-mail para o desenvolvedor";
-"About.About.Feature" = "Opine sobre o app";
-"About.About.Version" = "Versão do app";
-"About.Share.Copy" = "Baixe o Mojilist, uma alternativa visual para suas listas do dia-a-dia!";
+"About.Follow.Blog" = "Visitez le blog";
+"About.About.Contact" = "Contacter le développeur";
+"About.About.Feature" = "Donnez votre avis";
+"About.About.Version" = "Version de l'application";
+"About.Share.Copy" = "Téléchargez Mojilist, une alternative visuelle à vos listes des cours!";
 
 // Change Theme
-"ChangeTheme.Title" = "Temas";
+"ChangeTheme.Title" = "Thème";
 
 // Themes
-"Theme.Basic" = "🌞 Mojilist Diurno";
-"Theme.Dark" = "🌚 Mojilist Noturno";
-"Theme.Greeny" = "🍁 Maresia";
-"Theme.Blue" = "🌊 Deu Onda";
-"Theme.Drag" = "💄 Que Tiro Foi Esse?";
-"Theme.Dracula" = "💥 Sweet Dreams";
-"Theme.Candy" = "🍭 Agora Eu Fiquei Doce";
+"Theme.Basic" = "🌞 Mojilist du Jour";
+"Theme.Dark" = "🌚 Mojilist de la Nuit";
+"Theme.Greeny" = "🍁 Feuilles";
+"Theme.Blue" = "🌊 Vagues de la mer";
+"Theme.Drag" = "💄 La mode est choquante";
+"Theme.Dracula" = "💥 Beaux Rêves";
+"Theme.Candy" = "🍭 Plus de sucre, svp!";
