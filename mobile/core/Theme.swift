@@ -219,6 +219,7 @@ class Theme {
 protocol Visuals {
     
     var identifier: String { get }
+    var icon: String? { get }
     var primaryColor: UInt { get }
     var primaryColorDark: UInt { get }
     var accentColor: UInt { get }
@@ -248,6 +249,7 @@ protocol Visuals {
 struct BasicVisual: Visuals {
     
     var identifier = "Theme.Basic"
+    var icon: String? = nil
     
     var primaryColor = UInt(0xFFFFFF)
     var primaryColorDark = UInt(0xDDDDDD)
@@ -276,6 +278,7 @@ struct BasicVisual: Visuals {
 struct DarkVisual: Visuals {
     
     var identifier = "Theme.Dark"
+    var icon: String? = "MojilistDark"
     
     var primaryColor = UInt(0x333333)
     var primaryColorDark = UInt(0x000000)
@@ -304,6 +307,7 @@ struct DarkVisual: Visuals {
 struct GreenyVisual: Visuals {
     
     var identifier = "Theme.Greeny"
+    var icon: String? = "MojilistGreeny"
     
     var accentColor = UInt(0x00b3aa)
     var contrastColor = UInt(0xff7a03)
@@ -335,6 +339,7 @@ struct GreenyVisual: Visuals {
 struct BlueVisual: Visuals {
     
     var identifier = "Theme.Blue"
+    var icon: String? = "MojilistBlue"
     
     var accentColor = UInt(0xefe822)
     var contrastColor = UInt(0xef2266)
@@ -366,6 +371,7 @@ struct BlueVisual: Visuals {
 struct DragVisual: Visuals {
     
     var identifier = "Theme.Drag"
+    var icon: String? = "MojilistDrag"
     
     var accentColor = UInt(0xef2266)
     var contrastColor = UInt(0xefe822)
@@ -397,6 +403,7 @@ struct DragVisual: Visuals {
 struct DraculaVisual: Visuals {
     
     var identifier = "Theme.Dracula"
+    var icon: String? = "MojilistDracula"
     
     var accentColor = UInt(0x11dc16)
     var contrastColor = UInt(0xce0404)
@@ -428,6 +435,7 @@ struct DraculaVisual: Visuals {
 struct CandyVisual: Visuals {
     
     var identifier = "Theme.Candy"
+    var icon: String? = "MojilistCandy"
     
     var accentColor = UInt(0x1de3fb)
     var contrastColor = UInt(0xfb1dcf)
