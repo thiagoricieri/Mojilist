@@ -416,6 +416,7 @@
 		B035FDF91FFE5DCB003A332B /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				B01C29331FEAA46300C1AF22 /* assets.xcassets */,
 				B00DFF1D201569AE009ECF39 /* MojilistBlue@1x.png */,
 				B00DFF17201569AB009ECF39 /* MojilistBlue@2x.png */,
 				B00DFF18201569AB009ECF39 /* MojilistBlue@3x.png */,
@@ -434,7 +435,6 @@
 				B00DFF1120156905009ECF39 /* MojilistDark@1x.png */,
 				B00DFF1220156905009ECF39 /* MojilistDark@2x.png */,
 				B00DFF1020156904009ECF39 /* MojilistDark@3x.png */,
-				B01C29331FEAA46300C1AF22 /* assets.xcassets */,
 			);
 			path = resources;
 			sourceTree = "<group>";
