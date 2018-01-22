@@ -18,7 +18,7 @@ class BasePackCell: BaseTableViewCell {
     @IBOutlet weak var separator: UIView!
     
     func configure(with item: EmojiPackViewModel) {
-        packName.text = item.name
+        packName.text = item.name.localized
     }
     
     override func applyTheme(_ theme: Theme) {

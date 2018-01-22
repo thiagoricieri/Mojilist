@@ -8,89 +8,89 @@
 
 // Base
 "OK" = "OK";
-"Yes" = "Sim";
-"No" = "Não";
-"Warning" = "Atenção!";
-"Success" = "Sucesso!";
-"Dismiss" = "Dispensar";
-"Cancel" = "Cancelar";
-"Shared" = "Compartilhamento pronto!";
+"Yes" = "はい";
+"No" = "いいえ";
+"Warning" = "警告！";
+"Success" = "成功！";
+"Dismiss" = "却下する";
+"Cancel" = "キャンセル";
+"Shared" = "共有!";
 
 // Errors
-"Email.Error" = "Aparentemente seu aparelho não suporta envio de e-mail. Por favor, envie um e-mail para buh@ghostship.co para entrar em contato.";
+"Email.Error" = "残念ながら、お使いの端末は電子メールを送信するように設定されていません。 buh@ghostship.coまでお問い合わせください。";
 
 // Pack
-"Pack.EmojiThings" = "Emojis de Coisas!";
-"Pack.AllEmojis" = "Todos os Emojis!";
+"Pack.EmojiThings" = "物事エモジス!";
+"Pack.AllEmojis" = "すべてのEmojis!";
 
 // Lists
 "Lists.Title" = "MOJILIST";
-"Lists.New" = "Nova";
-"Lists.Settings" = "Ajustes";
-"Lists.Empty" = "Nenhuma lista!";
-"Lists.Empty.Msg" = "Você economiza muito mais tempo criando listas visuais. Use suas listas para compras da semana, material escolar, afazeres e mais!";
+"Lists.New" = "新しい";
+"Lists.Settings" = "設定";
+"Lists.Empty" = "空の!";
+"Lists.Empty.Msg" = "ビジュアルリストを作成することで、はるかに多くの時間を節約できます。 あなたの食料品、ショッピングアイテムなどにこれらのリストを使用してください！";
 
 // Using List
-"UsingList.Done" = "Pronto!";
-"UsingList.Settings.Title" = "Ajustes da lista";
-"UsingList.Settings.Msg" = "Você pode remover sua lista por completo do seu aparelho ou compartilhar uma imagem dela nas suas redes sociais.";
-"UsingList.Settings.Redo" = "Começar a lista do zero.";
-"UsingList.Settings.DeleteList" = "Deletar esta lista";
-"UsingList.Delete.Msg" = "Só para assegurar-se que você não tocou no botão de deletar sem querer, confirme a remoção da lista a seguir:";
-"UsingList.Settings.DeleteListConfirmation" = "Deletar a lista";
-"UsingList.Settings.Edit" = "Editar a lista";
+"UsingList.Done" = "完了!";
+"UsingList.Settings.Title" = "リストの設定";
+"UsingList.Settings.Msg" = "このリストを端末から削除したり、友だちと画像をテキストで共有したり、ソーシャルネットワーク上で共有することができます。";
+"UsingList.Settings.Redo" = "このリストを再起動します。";
+"UsingList.Settings.DeleteList" = "このリストを削除する";
+"UsingList.Delete.Msg" = "その場合は、もう一度このリストを削除することを確認してください。 この操作は元に戻すことはできません。";
+"UsingList.Settings.DeleteListConfirmation" = "リストを削除する";
+"UsingList.Settings.Edit" = "リストを編集する";
 
 // Share
-"Share.Credits1" = "Criado com Mojilist";
+"Share.Credits1" = "Mojilistで作成";
 "Share.Credits2" = "https://ghostship.co/mojilist";
 
 // Create List
-"CreateList.Title" = "Nova Lista";
-"CreateList.Text.Placeholder" = "Compras da semana";
-"CreateList.Label" = "Como vai se chamar a nova lista?";
-"CreateList.Hint" = "Dica: listas de afazeres, supermercado ou material escolar podem ser criadas rapidamente visualmente. Selecione emojis na próxima etapa e divirta-se!";
-"CreateList.Next" = "Seguinte";
+"CreateList.Title" = "新しいリスト";
+"CreateList.Text.Placeholder" = "食料品";
+"CreateList.Label" = "どのようにそれを呼びたいのですか？";
+"CreateList.Hint" = "食料品、スーパーマーケットまたはショッピングアイテムを視覚的に迅速に作成することができます。 次のステップで、絵文字アイテムを選択します。 楽しむ！";
+"CreateList.Next" = "次";
 
 // Select emojis
-"SelectEmojis.Title" = "O que vai na lista?";
-"SelectEmojis.Create" = "Criar";
-"SelectEmojis.Update" = "Atualizar";
-"SelectEmojis.Clear" = "Esvaziar";
-"SelectEmojis.SelectPack" = "Pacote selecionado:";
-"SelectEmojis.ItemsInList" = "Itens na lista. Se precisar, toque uma vez para remover.";
+"SelectEmojis.Title" = "何がリストに入りますか？";
+"SelectEmojis.Create" = "作成する";
+"SelectEmojis.Update" = "更新";
+"SelectEmojis.Clear" = "クリア";
+"SelectEmojis.SelectPack" = "選択したパック: ";
+"SelectEmojis.ItemsInList" = "リスト内の項目。 必要に応じて1つをタップして削除します.";
 
 // Select Pack
-"SelectPack.Title" = "Pacotes";
+"SelectPack.Title" = "パック";
 
 // About
-"About.Title" = "Ajustes";
-"About.Settings" = "Personalize seu App!";
-"About.About" = "Sobre";
-"About.Promo" = "Compartilhe";
-"About.Follow" = "Siga nas redes sociais";
-"About.MoreApps" = "Mais apps!";
-"About.Settings.DefaultPack" = "Pacote padrão: ";
-"About.Settings.Theme" = "Tema usado: ";
-"About.Promo.Signup" = "Inscreva-se na Newsletter!";
-"About.Promo.Share" = "Compartilhe este app";
-"About.Promo.Rate" = "Avalie este app ❤️";
+"About.Title" = "設定";
+"About.Settings" = "あなたのアプリケーションをカスタマイズ！";
+"About.About" = "約";
+"About.Promo" = "シェア";
+"About.Follow" = "フォローする";
+"About.MoreApps" = "より多くのアプリケーション！";
+"About.Settings.DefaultPack" = "デフォルトパック: ";
+"About.Settings.Theme" = "使用テーマ: ";
+"About.Promo.Signup" = "私たちのリストにサインアップする!";
+"About.Promo.Share" = "このアプリを友達と共有";
+"About.Promo.Rate" = "アプリを評価する ❤️";
 "About.Follow.Instagram" = "Instagram";
 "About.Follow.Facebook" = "Facebook";
 "About.Follow.Twitter" = "Twitter";
-"About.Follow.Blog" = "Visite o Blog";
-"About.About.Contact" = "E-mail para o desenvolvedor";
-"About.About.Feature" = "Opine sobre o app";
-"About.About.Version" = "Versão do app";
-"About.Share.Copy" = "Baixe o Mojilist, uma alternativa visual para suas listas do dia-a-dia!";
+"About.Follow.Blog" = "ブログをご覧ください";
+"About.About.Contact" = "開発者に連絡する";
+"About.About.Feature" = "意見を述べる";
+"About.About.Version" = "アプリ版";
+"About.Share.Copy" = "あなたの毎日のリストの視覚的な代替物であるMojilistをダウンロードしてください！";
 
 // Change Theme
-"ChangeTheme.Title" = "Temas";
+"ChangeTheme.Title" = "テーマ";
 
 // Themes
-"Theme.Basic" = "🌞 Mojilist Diurno";
-"Theme.Dark" = "🌚 Mojilist Noturno";
-"Theme.Greeny" = "🍁 Maresia";
-"Theme.Blue" = "🌊 Deu Onda";
-"Theme.Drag" = "💄 Que Tiro Foi Esse?";
-"Theme.Dracula" = "💥 Sweet Dreams";
-"Theme.Candy" = "🍭 Agora Eu Fiquei Doce";
+"Theme.Basic" = "🌞 日";
+"Theme.Dark" = "🌚 夜";
+"Theme.Greeny" = "🍁 青葉";
+"Theme.Blue" = "🌊 海洋波";
+"Theme.Drag" = "💄 チャーム";
+"Theme.Dracula" = "💥 良い夢を";
+"Theme.Candy" = "🍭 シュガーラッシュ";

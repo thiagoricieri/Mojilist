@@ -66,7 +66,7 @@ class SettingsViewController: BaseTableViewController,
         
         // Settings
         if item.name.contains("About.Settings.DefaultPack") {
-            cell.textLabel?.text = "\(item.name.localized) \(viewModel.defaultPackName)"
+            cell.textLabel?.text = "\(item.name.localized) \(viewModel.defaultPackName.localized)"
         }
         else if item.name.contains("About.Settings.Theme") {
             cell.textLabel?.text = "\(item.name.localized) \(theme.identifier().localized)"

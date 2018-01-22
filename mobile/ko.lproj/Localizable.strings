@@ -8,89 +8,89 @@
 
 // Base
 "OK" = "OK";
-"Yes" = "Sim";
-"No" = "Não";
-"Warning" = "Atenção!";
-"Success" = "Sucesso!";
-"Dismiss" = "Dispensar";
-"Cancel" = "Cancelar";
-"Shared" = "Compartilhamento pronto!";
+"Yes" = "예";
+"No" = "아니";
+"Warning" = "경고!";
+"Success" = "성공!";
+"Dismiss" = "버리다";
+"Cancel" = "취소";
+"Shared" = "공유 된!";
 
 // Errors
-"Email.Error" = "Aparentemente seu aparelho não suporta envio de e-mail. Por favor, envie um e-mail para buh@ghostship.co para entrar em contato.";
+"Email.Error" = "안타깝게도 기기가 이메일을 보내도록 설정되어 있지 않습니다. buh@ghostship.co로 연락하여 저희에게 연락하십시오.";
 
 // Pack
-"Pack.EmojiThings" = "Emojis de Coisas!";
-"Pack.AllEmojis" = "Todos os Emojis!";
+"Pack.EmojiThings" = "이모티콘!";
+"Pack.AllEmojis" = "모든 이모티콘!";
 
 // Lists
 "Lists.Title" = "MOJILIST";
-"Lists.New" = "Nova";
-"Lists.Settings" = "Ajustes";
-"Lists.Empty" = "Nenhuma lista!";
-"Lists.Empty.Msg" = "Você economiza muito mais tempo criando listas visuais. Use suas listas para compras da semana, material escolar, afazeres e mais!";
+"Lists.New" = "새로운";
+"Lists.Settings" = "설정";
+"Lists.Empty" = "목록이 없습니다!";
+"Lists.Empty.Msg" = "시각적 목록을 작성하면 훨씬 더 많은 시간을 절약 할 수 있습니다. 식료품 점, 쇼핑 용품 등을 위해이 목록을 사용하십시오!";
 
 // Using List
-"UsingList.Done" = "Pronto!";
-"UsingList.Settings.Title" = "Ajustes da lista";
-"UsingList.Settings.Msg" = "Você pode remover sua lista por completo do seu aparelho ou compartilhar uma imagem dela nas suas redes sociais.";
-"UsingList.Settings.Redo" = "Começar a lista do zero.";
-"UsingList.Settings.DeleteList" = "Deletar esta lista";
-"UsingList.Delete.Msg" = "Só para assegurar-se que você não tocou no botão de deletar sem querer, confirme a remoção da lista a seguir:";
-"UsingList.Settings.DeleteListConfirmation" = "Deletar a lista";
-"UsingList.Settings.Edit" = "Editar a lista";
+"UsingList.Done" = "끝난!";
+"UsingList.Settings.Title" = "목록 설정";
+"UsingList.Settings.Msg" = "이 목록을 장치에서 제거하거나 텍스트로 친구와 이미지를 공유하거나 소셜 네트워크에서 공유 할 수 있습니다.";
+"UsingList.Settings.Redo" = "이 목록을 다시 시작하십시오.";
+"UsingList.Settings.DeleteList" = "이 목록 삭제";
+"UsingList.Delete.Msg" = "이 경우 해당 목록을 삭제할 것인지 다시 확인하십시오. 이 작업은 실행 취소 할 수 없습니다.";
+"UsingList.Settings.DeleteListConfirmation" = "목록 삭제";
+"UsingList.Settings.Edit" = "목록 수정";
 
 // Share
-"Share.Credits1" = "Criado com Mojilist";
+"Share.Credits1" = "Mojilist로 만들었습니다.";
 "Share.Credits2" = "https://ghostship.co/mojilist";
 
 // Create List
-"CreateList.Title" = "Nova Lista";
-"CreateList.Text.Placeholder" = "Compras da semana";
-"CreateList.Label" = "Como vai se chamar a nova lista?";
-"CreateList.Hint" = "Dica: listas de afazeres, supermercado ou material escolar podem ser criadas rapidamente visualmente. Selecione emojis na próxima etapa e divirta-se!";
-"CreateList.Next" = "Seguinte";
+"CreateList.Title" = "새 목록";
+"CreateList.Text.Placeholder" = "식료 잡화류";
+"CreateList.Label" = "어떻게 부를까요?";
+"CreateList.Hint" = "팁 : 식료품 점, 슈퍼마켓 또는 쇼핑 아이템을 시각적으로 신속하게 만들 수 있습니다. 다음 단계에서 그림 이모티콘을 선택합니다. 재미있어!";
+"CreateList.Next" = "다음 것";
 
 // Select emojis
-"SelectEmojis.Title" = "O que vai na lista?";
-"SelectEmojis.Create" = "Criar";
-"SelectEmojis.Update" = "Atualizar";
-"SelectEmojis.Clear" = "Esvaziar";
-"SelectEmojis.SelectPack" = "Pacote selecionado:";
-"SelectEmojis.ItemsInList" = "Itens na lista. Se precisar, toque uma vez para remover.";
+"SelectEmojis.Title" = "무엇이 목록에 포함됩니까?";
+"SelectEmojis.Create" = "새로운";
+"SelectEmojis.Update" = "최신 정보";
+"SelectEmojis.Clear" = "명확한";
+"SelectEmojis.SelectPack" = "선택된 팩: ";
+"SelectEmojis.ItemsInList" = "목록의 항목. 필요한 경우 하나를 터치하여 제거하십시오.";
 
 // Select Pack
-"SelectPack.Title" = "Pacotes";
+"SelectPack.Title" = "팩";
 
 // About
-"About.Title" = "Ajustes";
-"About.Settings" = "Personalize seu App!";
-"About.About" = "Sobre";
-"About.Promo" = "Compartilhe";
-"About.Follow" = "Siga nas redes sociais";
-"About.MoreApps" = "Mais apps!";
-"About.Settings.DefaultPack" = "Pacote padrão: ";
-"About.Settings.Theme" = "Tema usado: ";
-"About.Promo.Signup" = "Inscreva-se na Newsletter!";
-"About.Promo.Share" = "Compartilhe este app";
-"About.Promo.Rate" = "Avalie este app ❤️";
+"About.Title" = "설정";
+"About.Settings" = "앱을 맞춤 설정하십시오!";
+"About.About" = "약";
+"About.Promo" = "몫";
+"About.Follow" = "따르다";
+"About.MoreApps" = "더 많은 애플 리케이션!";
+"About.Settings.DefaultPack" = "기본 팩: ";
+"About.Settings.Theme" = "사용한 테마: ";
+"About.Promo.Signup" = "우리 명부에 등록하십시오!";
+"About.Promo.Share" = "친구와이 앱 공유";
+"About.Promo.Rate" = "앱 평가하기 ❤️";
 "About.Follow.Instagram" = "Instagram";
 "About.Follow.Facebook" = "Facebook";
 "About.Follow.Twitter" = "Twitter";
-"About.Follow.Blog" = "Visite o Blog";
-"About.About.Contact" = "E-mail para o desenvolvedor";
-"About.About.Feature" = "Opine sobre o app";
-"About.About.Version" = "Versão do app";
-"About.Share.Copy" = "Baixe o Mojilist, uma alternativa visual para suas listas do dia-a-dia!";
+"About.Follow.Blog" = "블로그 방문";
+"About.About.Contact" = "개발자에게 문의하십시오.";
+"About.About.Feature" = "의견 보내기";
+"About.About.Version" = "앱 버전";
+"About.Share.Copy" = "Mojilist를 다운로드하십시오. 일상의 목록에 대한 시각적 대안!";
 
 // Change Theme
-"ChangeTheme.Title" = "Temas";
+"ChangeTheme.Title" = "테마";
 
 // Themes
-"Theme.Basic" = "🌞 Mojilist Diurno";
-"Theme.Dark" = "🌚 Mojilist Noturno";
-"Theme.Greeny" = "🍁 Maresia";
-"Theme.Blue" = "🌊 Deu Onda";
-"Theme.Drag" = "💄 Que Tiro Foi Esse?";
-"Theme.Dracula" = "💥 Sweet Dreams";
-"Theme.Candy" = "🍭 Agora Eu Fiquei Doce";
+"Theme.Basic" = "🌞 일";
+"Theme.Dark" = "🌚 밤";
+"Theme.Greeny" = "🍁 나무";
+"Theme.Blue" = "🌊 파도";
+"Theme.Drag" = "💄 매력";
+"Theme.Dracula" = "💥 달콤한 꿈";
+"Theme.Candy" = "🍭 설탕 러시";

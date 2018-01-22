@@ -21,7 +21,7 @@ class SettingsViewModel: BaseDataViewModel {
                 return packs.first!.name
             }
         }
-        return app.standardEmojiPack().name
+        return app.standardEmojiPack().name!
     }
     override var itemsCount: Int! {
         return source.count
