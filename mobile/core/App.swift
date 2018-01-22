@@ -142,6 +142,10 @@ class ProductionAppImpl: App {
         theme.visuals = visuals
         let defaults = UserDefaults.standard
         defaults.set(visuals.identifier, forKey: Env.App.theming)
+        
+        if UIApplication.shared.supportsAlternateIcons {
+            UIApplication.shared.setAlternateIconName(visuals.icon)
+        }
     }
     
     func standardEmojiPack() -> EmojiPackViewModel {

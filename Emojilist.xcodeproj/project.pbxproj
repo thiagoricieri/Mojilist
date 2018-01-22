@@ -24,6 +24,24 @@
 		B0070EFD2013F08B00426A0B /* SelectPackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0070EFC2013F08B00426A0B /* SelectPackViewModel.swift */; };
 		B0070EFF2013F28C00426A0B /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0070EFE2013F28C00426A0B /* SettingsViewModel.swift */; };
 		B0070F012013F57C00426A0B /* ChangeThemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0070F002013F57C00426A0B /* ChangeThemeViewModel.swift */; };
+		B00DFF1320156905009ECF39 /* MojilistDark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF1020156904009ECF39 /* MojilistDark@3x.png */; };
+		B00DFF1420156905009ECF39 /* MojilistDark@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF1120156905009ECF39 /* MojilistDark@1x.png */; };
+		B00DFF1520156905009ECF39 /* MojilistDark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF1220156905009ECF39 /* MojilistDark@2x.png */; };
+		B00DFF25201569B5009ECF39 /* MojilistDrag@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF16201569AA009ECF39 /* MojilistDrag@1x.png */; };
+		B00DFF26201569B5009ECF39 /* MojilistBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF17201569AB009ECF39 /* MojilistBlue@2x.png */; };
+		B00DFF27201569B5009ECF39 /* MojilistBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF18201569AB009ECF39 /* MojilistBlue@3x.png */; };
+		B00DFF28201569B5009ECF39 /* MojilistGreeny@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF19201569AC009ECF39 /* MojilistGreeny@1x.png */; };
+		B00DFF29201569B5009ECF39 /* MojilistCandy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF1A201569AC009ECF39 /* MojilistCandy@2x.png */; };
+		B00DFF2A201569B5009ECF39 /* MojilistDrag@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF1B201569AD009ECF39 /* MojilistDrag@2x.png */; };
+		B00DFF2B201569B5009ECF39 /* MojilistCandy@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF1C201569AE009ECF39 /* MojilistCandy@3x.png */; };
+		B00DFF2C201569B5009ECF39 /* MojilistBlue@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF1D201569AE009ECF39 /* MojilistBlue@1x.png */; };
+		B00DFF2D201569B5009ECF39 /* MojilistDracula@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF1E201569AF009ECF39 /* MojilistDracula@1x.png */; };
+		B00DFF2E201569B5009ECF39 /* MojilistDrag@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF1F201569AF009ECF39 /* MojilistDrag@3x.png */; };
+		B00DFF2F201569B5009ECF39 /* MojilistDracula@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF20201569B0009ECF39 /* MojilistDracula@2x.png */; };
+		B00DFF30201569B5009ECF39 /* MojilistGreeny@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF21201569B1009ECF39 /* MojilistGreeny@2x.png */; };
+		B00DFF31201569B5009ECF39 /* MojilistGreeny@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF22201569B2009ECF39 /* MojilistGreeny@3x.png */; };
+		B00DFF32201569B5009ECF39 /* MojilistDracula@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF23201569B4009ECF39 /* MojilistDracula@3x.png */; };
+		B00DFF33201569B5009ECF39 /* MojilistCandy@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = B00DFF24201569B5009ECF39 /* MojilistCandy@1x.png */; };
 		B01C292D1FEAA46300C1AF22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C292C1FEAA46300C1AF22 /* AppDelegate.swift */; };
 		B01C292F1FEAA46300C1AF22 /* ListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C292E1FEAA46300C1AF22 /* ListsViewController.swift */; };
 		B01C29341FEAA46300C1AF22 /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01C29331FEAA46300C1AF22 /* assets.xcassets */; };
@@ -118,6 +136,24 @@
 		B0070EFC2013F08B00426A0B /* SelectPackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPackViewModel.swift; sourceTree = "<group>"; };
 		B0070EFE2013F28C00426A0B /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		B0070F002013F57C00426A0B /* ChangeThemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeThemeViewModel.swift; sourceTree = "<group>"; };
+		B00DFF1020156904009ECF39 /* MojilistDark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistDark@3x.png"; sourceTree = "<group>"; };
+		B00DFF1120156905009ECF39 /* MojilistDark@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistDark@1x.png"; sourceTree = "<group>"; };
+		B00DFF1220156905009ECF39 /* MojilistDark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistDark@2x.png"; sourceTree = "<group>"; };
+		B00DFF16201569AA009ECF39 /* MojilistDrag@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistDrag@1x.png"; sourceTree = "<group>"; };
+		B00DFF17201569AB009ECF39 /* MojilistBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistBlue@2x.png"; sourceTree = "<group>"; };
+		B00DFF18201569AB009ECF39 /* MojilistBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistBlue@3x.png"; sourceTree = "<group>"; };
+		B00DFF19201569AC009ECF39 /* MojilistGreeny@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistGreeny@1x.png"; sourceTree = "<group>"; };
+		B00DFF1A201569AC009ECF39 /* MojilistCandy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistCandy@2x.png"; sourceTree = "<group>"; };
+		B00DFF1B201569AD009ECF39 /* MojilistDrag@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistDrag@2x.png"; sourceTree = "<group>"; };
+		B00DFF1C201569AE009ECF39 /* MojilistCandy@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistCandy@3x.png"; sourceTree = "<group>"; };
+		B00DFF1D201569AE009ECF39 /* MojilistBlue@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistBlue@1x.png"; sourceTree = "<group>"; };
+		B00DFF1E201569AF009ECF39 /* MojilistDracula@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistDracula@1x.png"; sourceTree = "<group>"; };
+		B00DFF1F201569AF009ECF39 /* MojilistDrag@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistDrag@3x.png"; sourceTree = "<group>"; };
+		B00DFF20201569B0009ECF39 /* MojilistDracula@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistDracula@2x.png"; sourceTree = "<group>"; };
+		B00DFF21201569B1009ECF39 /* MojilistGreeny@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistGreeny@2x.png"; sourceTree = "<group>"; };
+		B00DFF22201569B2009ECF39 /* MojilistGreeny@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistGreeny@3x.png"; sourceTree = "<group>"; };
+		B00DFF23201569B4009ECF39 /* MojilistDracula@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistDracula@3x.png"; sourceTree = "<group>"; };
+		B00DFF24201569B5009ECF39 /* MojilistCandy@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MojilistCandy@1x.png"; sourceTree = "<group>"; };
 		B01C29291FEAA46300C1AF22 /* Emojilist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emojilist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01C292C1FEAA46300C1AF22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B01C292E1FEAA46300C1AF22 /* ListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsViewController.swift; sourceTree = "<group>"; };
@@ -380,6 +416,24 @@
 		B035FDF91FFE5DCB003A332B /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				B00DFF1D201569AE009ECF39 /* MojilistBlue@1x.png */,
+				B00DFF17201569AB009ECF39 /* MojilistBlue@2x.png */,
+				B00DFF18201569AB009ECF39 /* MojilistBlue@3x.png */,
+				B00DFF24201569B5009ECF39 /* MojilistCandy@1x.png */,
+				B00DFF1A201569AC009ECF39 /* MojilistCandy@2x.png */,
+				B00DFF1C201569AE009ECF39 /* MojilistCandy@3x.png */,
+				B00DFF1E201569AF009ECF39 /* MojilistDracula@1x.png */,
+				B00DFF20201569B0009ECF39 /* MojilistDracula@2x.png */,
+				B00DFF23201569B4009ECF39 /* MojilistDracula@3x.png */,
+				B00DFF16201569AA009ECF39 /* MojilistDrag@1x.png */,
+				B00DFF1B201569AD009ECF39 /* MojilistDrag@2x.png */,
+				B00DFF1F201569AF009ECF39 /* MojilistDrag@3x.png */,
+				B00DFF19201569AC009ECF39 /* MojilistGreeny@1x.png */,
+				B00DFF21201569B1009ECF39 /* MojilistGreeny@2x.png */,
+				B00DFF22201569B2009ECF39 /* MojilistGreeny@3x.png */,
+				B00DFF1120156905009ECF39 /* MojilistDark@1x.png */,
+				B00DFF1220156905009ECF39 /* MojilistDark@2x.png */,
+				B00DFF1020156904009ECF39 /* MojilistDark@3x.png */,
 				B01C29331FEAA46300C1AF22 /* assets.xcassets */,
 			);
 			path = resources;
@@ -619,14 +673,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00DFF28201569B5009ECF39 /* MojilistGreeny@1x.png in Resources */,
+				B00DFF1420156905009ECF39 /* MojilistDark@1x.png in Resources */,
 				B035FDFC1FFE5E1F003A332B /* LaunchScreen.storyboard in Resources */,
 				B0B8A270200A582C003BA3FB /* Resources.xib in Resources */,
 				B07F7AC9200CDF5400CFBF41 /* GoogleService-Info.plist in Resources */,
+				B00DFF27201569B5009ECF39 /* MojilistBlue@3x.png in Resources */,
+				B00DFF25201569B5009ECF39 /* MojilistDrag@1x.png in Resources */,
 				B01C29341FEAA46300C1AF22 /* assets.xcassets in Resources */,
+				B00DFF32201569B5009ECF39 /* MojilistDracula@3x.png in Resources */,
 				B0D1195E20050711005B2CBB /* About.storyboard in Resources */,
+				B00DFF33201569B5009ECF39 /* MojilistCandy@1x.png in Resources */,
+				B00DFF26201569B5009ECF39 /* MojilistBlue@2x.png in Resources */,
+				B00DFF2F201569B5009ECF39 /* MojilistDracula@2x.png in Resources */,
+				B00DFF2C201569B5009ECF39 /* MojilistBlue@1x.png in Resources */,
+				B00DFF2E201569B5009ECF39 /* MojilistDrag@3x.png in Resources */,
+				B00DFF1520156905009ECF39 /* MojilistDark@2x.png in Resources */,
 				B08CB108200CF40A00A6A605 /* ShareCell.xib in Resources */,
 				B064A1BE200640F9001ADB0E /* Localizable.strings in Resources */,
 				B0D1195C20050703005B2CBB /* Store.storyboard in Resources */,
+				B00DFF2D201569B5009ECF39 /* MojilistDracula@1x.png in Resources */,
+				B00DFF31201569B5009ECF39 /* MojilistGreeny@3x.png in Resources */,
+				B00DFF2A201569B5009ECF39 /* MojilistDrag@2x.png in Resources */,
+				B00DFF1320156905009ECF39 /* MojilistDark@3x.png in Resources */,
+				B00DFF2B201569B5009ECF39 /* MojilistCandy@3x.png in Resources */,
+				B00DFF30201569B5009ECF39 /* MojilistGreeny@2x.png in Resources */,
+				B00DFF29201569B5009ECF39 /* MojilistCandy@2x.png in Resources */,
 				B035FDF21FFE5C73003A332B /* fastlane in Resources */,
 				B035FDFD1FFE5E1F003A332B /* Main.storyboard in Resources */,
 			);
@@ -1028,7 +1100,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D782899657D80424DE5D977F /* Pods-Emojilist.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Mojilist;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8H5Z8M869P;
 				INFOPLIST_FILE = "$(SRCROOT)/mobile/Info.plist";
@@ -1044,7 +1116,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6E3FA68C9C4C7C455BF80C4A /* Pods-Emojilist.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Mojilist;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8H5Z8M869P;
 				INFOPLIST_FILE = "$(SRCROOT)/mobile/Info.plist";
