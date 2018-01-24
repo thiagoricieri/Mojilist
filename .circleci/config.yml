@@ -6,19 +6,20 @@ version: 2
 jobs:
   build:
 
-    # Specify the Xcode version to use
     macos:
       xcode: "9.1.0"
 
     steps:
       - checkout
 
-      # Update fastlane
+      - run:
+          name: Update CocoaPods
+          command: sudo gem install cocoapods
+
       - run:
           name: Update Fastlane
           command: sudo gem install fastlane
 
-      # Run fastlane
       - run:
           name: Fastlane Beta
           command: fastlane beta
