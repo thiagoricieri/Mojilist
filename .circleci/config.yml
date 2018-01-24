@@ -21,6 +21,10 @@ jobs:
           command: sudo gem install fastlane
 
       - run:
+          name: Run Match
+          command: match appstore
+
+      - run:
           name: Fastlane Beta
           command: fastlane beta
 
