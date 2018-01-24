@@ -13,6 +13,11 @@ jobs:
     steps:
       - checkout
 
+      # Update fastlane
+      - run:
+          name: Update Fastlane
+          command: sudo gem install fastlane
+
       # Run fastlane
       - run:
           name: Fastlane Beta
