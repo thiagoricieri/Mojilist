@@ -329,7 +329,7 @@
 				B01C292C1FEAA46300C1AF22 /* AppDelegate.swift */,
 				B01C29381FEAA46300C1AF22 /* Info.plist */,
 				B07F7AC8200CDF5300CFBF41 /* GoogleService-Info.plist */,
-				B00DFF3620156D38009ECF39 /* Localizable.strings */,
+				B023911D201B58040080CCC1 /* localized */,
 				B035FDF51FFE5DA4003A332B /* core */,
 				B0D119542004F6CC005B2CBB /* data */,
 				B035FDF81FFE5DBC003A332B /* models */,
@@ -356,6 +356,14 @@
 				B01C294E1FEAA46300C1AF22 /* Info.plist */,
 			);
 			path = ui_tests;
+			sourceTree = "<group>";
+		};
+		B023911D201B58040080CCC1 /* localized */ = {
+			isa = PBXGroup;
+			children = (
+				B00DFF3620156D38009ECF39 /* Localizable.strings */,
+			);
+			path = localized;
 			sourceTree = "<group>";
 		};
 		B035FDF51FFE5DA4003A332B /* core */ = {
@@ -1146,7 +1154,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8H5Z8M869P;
 				INFOPLIST_FILE = "$(SRCROOT)/mobile/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ghostship.ios.Emojilist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1163,7 +1170,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8H5Z8M869P;
 				INFOPLIST_FILE = "$(SRCROOT)/mobile/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.ghostship.ios.Emojilist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
