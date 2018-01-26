@@ -16,6 +16,7 @@ public typealias InBackgroundResponse = (DataResponse<Any>) -> Void
 public typealias ApiObject = NSObject
 public typealias OnProcessFinished = (Bool, Any?) -> (Void)
 public typealias Dict = [String: AnyObject]
+public typealias LaunchParams = [UIApplicationLaunchOptionsKey: Any]
 
 public protocol Parametizable {
     func parametize() -> Dict

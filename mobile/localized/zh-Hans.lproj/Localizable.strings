@@ -1,0 +1,96 @@
+/* 
+  Localizable.strings
+  Emojilist
+
+  Created by Thiago Ricieri on 10/01/2018.
+  Copyright © 2018 Ghost Ship. All rights reserved.
+*/
+
+// Base
+"OK" = "OK";
+"Yes" = "是";
+"No" = "没有";
+"Warning" = "警告！";
+"Success" = "成功！";
+"Dismiss" = "解雇";
+"Cancel" = "取消";
+"Shared" = "共享！";
+
+// Errors
+"Email.Error" = "不幸的是，您的设备未配置为发送电子邮件。 请发送邮件至buh@ghostship.co与我们联系。";
+
+// Pack
+"Pack.EmojiThings" = "事情'Emojis！";
+"Pack.AllEmojis" = "所有的表情符号！";
+
+// Lists
+"Lists.Title" = "MOJILIST";
+"Lists.New" = "新";
+"Lists.Settings" = "设置";
+"Lists.Empty" = "空！";
+"Lists.Empty.Msg" = "通过创建可视化列表，您将节省更多的时间。 使用这些名单为您的杂货，购物项目和更多！";
+
+// Using List
+"UsingList.Done" = "完成！";
+"UsingList.Settings.Title" = "列表的设置";
+"UsingList.Settings.Msg" = "您可以从设备中删除此列表，也可以通过文字与朋友分享图片或在社交网络上分享。";
+"UsingList.Settings.Redo" = "重新启动此列表。";
+"UsingList.Settings.DeleteList" = "删除这个列表";
+"UsingList.Delete.Msg" = "为防万一，请再次确认您要删除此列表。 此操作无法撤消。";
+"UsingList.Settings.DeleteListConfirmation" = "删除列表";
+"UsingList.Settings.Edit" = "编辑列表";
+
+// Share
+"Share.Credits1" = "与Mojilist创建";
+"Share.Credits2" = "https://ghostship.co/mojilist";
+
+// Create List
+"CreateList.Title" = "新列表";
+"CreateList.Text.Placeholder" = "杂货";
+"CreateList.Label" = "你想怎么称呼它？";
+"CreateList.Hint" = "食品杂货，超市或购物物品可以快速创建视觉。 您将在下一步中选择表情符号项目。 玩的开心！";
+"CreateList.Next" = "下一个";
+
+// Select emojis
+"SelectEmojis.Title" = "什么进入名单？";
+"SelectEmojis.Create" = "创建";
+"SelectEmojis.Update" = "更新";
+"SelectEmojis.Clear" = "明确";
+"SelectEmojis.SelectPack" = "选定的包: ";
+"SelectEmojis.ItemsInList" = "列表中的项目。 如果需要，触摸一下将其删除。";
+
+// Select Pack
+"SelectPack.Title" = "包";
+
+// About
+"About.Title" = "设置";
+"About.Settings" = "自定义您的应用程序！";
+"About.About" = "关于";
+"About.Promo" = "分享";
+"About.Follow" = "跟随";
+"About.MoreApps" = "更多应用程序！";
+"About.Settings.DefaultPack" = "默认包： ";
+"About.Settings.Theme" = "使用的主题: ";
+"About.Promo.Signup" = "注册我们的名单！";
+"About.Promo.Share" = "与朋友分享这个应用程序";
+"About.Promo.Rate" = "评价应用程序 ❤️";
+"About.Follow.Instagram" = "Instagram";
+"About.Follow.Facebook" = "Facebook";
+"About.Follow.Twitter" = "Twitter";
+"About.Follow.Blog" = "访问博客";
+"About.About.Contact" = "联系开发人员";
+"About.About.Feature" = "发表您的意见";
+"About.About.Version" = "应用版本";
+"About.Share.Copy" = "下载Mojilist，为您的日常列表的视觉替代！";
+
+// Change Theme
+"ChangeTheme.Title" = "主题";
+
+// Themes
+"Theme.Basic" = "🌞 天";
+"Theme.Dark" = "🌚 晚";
+"Theme.Greeny" = "🍁 绿叶";
+"Theme.Blue" = "🌊 海浪";
+"Theme.Drag" = "💄 口红";
+"Theme.Dracula" = "💥 甜蜜的梦";
+"Theme.Candy" = "🍭 糖抢";

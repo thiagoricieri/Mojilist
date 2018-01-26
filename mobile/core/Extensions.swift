@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Optionals
 extension Optional {
@@ -24,6 +25,34 @@ extension Optional {
     
     func isNotNil() -> Bool {
         return self != nil
+    }
+}
+
+extension UIImage {
+    convenience init(view: UIView) {
+        UIGraphicsBeginImageContextWithOptions(view.frame.size, false, 0)
+        view.layer.render(in: UIGraphicsGetCurrentContext()!)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        self.init(cgImage: image!.cgImage!)
+    }
+}
+
+extension Bundle {
+    
+    static func loadView<T>(fromNib name: String, withType type: T.Type) -> T {
+        guard let nibs = Bundle.main.loadNibNamed(name, owner: nil, options: nil) as? [UIView] else {
+            fatalError("Could not load view with type")
+        }
+        
+        for nib in nibs {
+            if let view = nib as? T {
+                return view
+            }
+        }
+        
+        fatalError("Could not load view with type " + String(describing: type))
     }
 }
 

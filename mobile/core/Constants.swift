@@ -20,22 +20,16 @@ public struct Env {
     public struct Key {
         static let userAgent = "User-Agent"
     }
-}
-
-// MARK: - Visuals
-public struct Visuals {
     
-    // Typefaces
-    public enum Typeface : String {
-        case DinProBold = "DINPro-CondBold"
+    public struct Promo {
+        static let shareUrl = "https://ghostship.co/mojilist"
+        static let email = "buh@ghostship.co"
     }
     
-    // Colors
-    public enum Colors : Int {
-        case grayLight = 0xA6A6A6
-        func color() -> UIColor {
-            return UIColorFromRGB(rgb: UInt(self.rawValue))
-        }
+    public struct App {
+        static let theming = "app-theming"
+        static let defaultPack = "default-pack"
+        static let maxEmojisPerRow = 7
     }
 }
 
