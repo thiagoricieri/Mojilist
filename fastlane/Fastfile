@@ -3,23 +3,14 @@
 # All available actions: https://docs.fastlane.tools/actions
 # can also be listed using the `fastlane actions` command
 
-# Change the syntax highlighting to Ruby
-# All lines starting with a # are ignored when running `fastlane`
-
-# If you want to automatically update fastlane if a new version is available:
-# update_fastlane
-
-# This is the minimum version number required.
-# Update this, if you use features of a newer version
+update_fastlane
 min_fastlane_version("2.72.0")
-
 default_platform(:ios)
 
 platform :ios do
   before_all do
     # ENV["SLACK_URL"] = "https://hooks.slack.com/services/..."
     cocoapods
-    # cocoapods
   end
 
   desc "Runs all the tests"
@@ -30,7 +21,7 @@ platform :ios do
   desc "Submit a new Beta Build to Apple TestFlight"
   desc "This will also make sure the profile is up to date"
   lane :beta do
-    sync_code_signing(type: "appstore") # more information: https://codesigning.guide
+    # sync_code_signing(type: "appstore") # more information: https://codesigning.guide
     build_app(scheme: "Emojilist") # more options available
     upload_to_testflight
 
@@ -64,7 +55,6 @@ platform :ios do
     # )
   end
 end
-
 
 # More information about multiple platforms in fastlane: https://docs.fastlane.tools/advanced/#control-configuration-by-lane-and-by-platform
 # All available actions: https://docs.fastlane.tools/actions
