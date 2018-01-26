@@ -1090,7 +1090,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8nd-x0-8wa" customClass="PrimaryFloatingButton" customModule="Emojilist" customModuleProvider="target">
-                                <rect key="frame" x="142" y="571" width="90" height="60"/>
+                                <rect key="frame" x="142.5" y="571" width="90" height="60"/>
                                 <color key="backgroundColor" red="0.00063899887030000003" green="0.63360309599999998" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="1Ma-zs-yys"/>
@@ -1106,7 +1106,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYs-Ug-GsN" customClass="SecondaryFloatingButton" customModule="Emojilist" customModuleProvider="target">
-                                <rect key="frame" x="264" y="576" width="50" height="50"/>
+                                <rect key="frame" x="264.5" y="576" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EEb-TL-UyA"/>
@@ -1119,7 +1119,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAW-X5-lY7" customClass="SecondaryFloatingButton" customModule="Emojilist" customModuleProvider="target">
-                                <rect key="frame" x="60" y="576" width="50" height="50"/>
+                                <rect key="frame" x="60.5" y="576" width="50" height="50"/>
                                 <color key="backgroundColor" red="0.99989169840000003" green="1" blue="0.99988096950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="mNf-Px-7sh"/>
