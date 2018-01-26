@@ -32,9 +32,3 @@ public struct Env {
         static let maxEmojisPerRow = 7
     }
 }
-
-// MARK: - Credentials
-protocol Credentials {
-    static var clientId : String { get }
-    static var clientSecret : String { get }
-}

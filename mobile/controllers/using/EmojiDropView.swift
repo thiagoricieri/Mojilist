@@ -10,14 +10,15 @@ import Foundation
 import UIKit
 import Spring
 import SDWebImage
+import Saw
 
-class EmojiDropView: SpringView {
+public class EmojiDropView: SpringView {
     
-    @IBOutlet weak var emojiText: UILabel!
-    @IBOutlet weak var emojiImage: UIImageView!
-    @IBOutlet weak var protectedArea: UIView!
+    @IBOutlet public weak var emojiText: UILabel!
+    @IBOutlet public weak var emojiImage: UIImageView!
+    @IBOutlet public weak var protectedArea: UIView!
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         emojiText.adjustsFontSizeToFitWidth = true
         protectedArea.layer.cornerRadius = protectedArea.bounds.width/2
         protectedArea.backgroundColor = UIColorFromRGB(rgb: 0xF1F1F1)
@@ -27,12 +28,12 @@ class EmojiDropView: SpringView {
         //protectedArea.layer.shadowOffset = CGSize(width: 0, height: 6)
     }
     
-    func applyTheme(_ theme: Theme) {
+    public func applyTheme(_ theme: Theme) {
         theme.darkBackground(protectedArea)
         theme.primaryText(emojiText)
     }
     
-    func configure(with emoji: EmojiPackItemViewModel) {
+    public func configure(with emoji: EmojiPackItemViewModel) {
         if !emoji.hasImage {
             emojiImage.isHidden = true
             emojiText.isHidden = false
@@ -44,7 +45,7 @@ class EmojiDropView: SpringView {
         }
     }
     
-    func configure(with emoji: EmojiViewModel) {
+    public func configure(with emoji: EmojiViewModel) {
         if !emoji.hasImage {
             emojiImage.isHidden = true
             emojiText.isHidden = false
@@ -56,12 +57,12 @@ class EmojiDropView: SpringView {
         }
     }
     
-    func resize(square itemSize: Int) {
+    public func resize(square itemSize: Int) {
         protectedArea.layer.cornerRadius = CGFloat(itemSize/2)
         emojiText.font = UIFont(name: emojiText.font.fontName, size: CGFloat(itemSize) * 0.6)
     }
     
-    func dropAnimation(toX: CGFloat, toY: CGFloat) {
+    public func dropAnimation(toX: CGFloat, toY: CGFloat) {
         x = toX
         animateToNext {
             self.y = toY
@@ -72,3 +73,4 @@ class EmojiDropView: SpringView {
         }
     }
 }
+

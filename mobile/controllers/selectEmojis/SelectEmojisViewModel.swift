@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Saw
 
 class SelectEmojisViewModel: BaseDataViewModel {
     
@@ -38,7 +39,6 @@ class SelectEmojisViewModel: BaseDataViewModel {
     }
     
     init(listViewModel: EmojiListViewModel) {
-        super.init()
         self.listViewModel = listViewModel
         
         let defaults = UserDefaults.standard

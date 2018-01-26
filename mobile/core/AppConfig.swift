@@ -7,18 +7,7 @@
 //
 
 import Foundation
-
-/* 
-	App protocol will represent
-	default configuration to build
-	and consume the application
-*/
-public protocol AppConfig {
-	var environment: Env.Host { get }
-	var name: String { get }
-	var restUrl: String { get }
-	var googleAnalytics: String { get }
-}
+import Saw
 
 // MARK: - Production App
 public struct ProductionAppConfigImpl: AppConfig {

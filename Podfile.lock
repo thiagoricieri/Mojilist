@@ -34,39 +34,34 @@ PODS:
   - Realm/Headers (3.1.0)
   - RealmSwift (3.1.0):
     - Realm (= 3.1.0)
-  - Saw (0.1.0)
+  - Saw (0.1.1):
+    - Alamofire
+    - MBProgressHUD
+    - RealmSwift
   - SDWebImage (3.7.6):
     - SDWebImage/Core (= 3.7.6)
   - SDWebImage/Core (3.7.6)
   - Spring (1.0.5)
 
 DEPENDENCIES:
-  - Alamofire
   - Crashlytics (~> 3.8)
   - DateToolsSwift
   - Fabric
   - Firebase/Core
   - HTTPStatusCodes (~> 3.1.0)
-  - MBProgressHUD
-  - PopupDialog (~> 0.6)
-  - RealmSwift
+  - PopupDialog
   - Saw (from `https://github.com/thiagoricieri/Saw-iOS.git`)
   - SDWebImage (~> 3.7.3)
-  - Spring (from `https://github.com/MengTo/Spring.git`)
+  - Spring
 
 EXTERNAL SOURCES:
   Saw:
     :git: https://github.com/thiagoricieri/Saw-iOS.git
-  Spring:
-    :git: https://github.com/MengTo/Spring.git
 
 CHECKOUT OPTIONS:
   Saw:
-    :commit: 617ee5ae336356764bac96085b8d9abf1a721172
+    :commit: 7088520c44b2b1fd058ef8c82e62884812cb3c3f
     :git: https://github.com/thiagoricieri/Saw-iOS.git
-  Spring:
-    :commit: 19b04d730d3edabbb02a39e58121d1d3220690ee
-    :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
@@ -85,10 +80,10 @@ SPEC CHECKSUMS:
   PopupDialog: 4abc6db5b22b7c8029e2162bde8891ee6aa4b6c8
   Realm: 09513d7c054678d65cd02ce09871f805b0d758ac
   RealmSwift: e868fee9b10e5490ad94b6b6ecd9027944da1824
-  Saw: bdb357186d16670f919f44306ae2f81836c79052
+  Saw: cb39418dd506bb5838fea4189e115825f1e079be
   SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
-  Spring: 48aad470f3ead043b2da98b64e0bf0630b7ebc42
+  Spring: 17901566c8ecf3a1327902b940406c64512f9bb1
 
-PODFILE CHECKSUM: d722567ad8b83bfc58935496bb6694e943483a91
+PODFILE CHECKSUM: c13c5088b05d018822328043ec2995c59a48b023
 
 COCOAPODS: 1.4.0

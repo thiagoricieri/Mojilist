@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RealmSwift
+import Saw
 
 class ShareSnippetView: UIView,
         UICollectionViewDelegate,

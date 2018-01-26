@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import SDWebImage
+import Saw
 
 class BasePackCell: BaseTableViewCell {
     

@@ -8,17 +8,19 @@
 
 import UIKit
 import RealmSwift
+import Saw
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, SawAppDelegate {
 
     var launcher = Launcher()
     var window: UIWindow?
+    
     var app: App = {
         #if DEBUG
-            return StagingAppImpl()
+            return MojilistStagingAppImpl()
         #else
-            return ProductionAppImpl()
+            return MojilistProductionAppImpl()
         #endif
     }()
 
