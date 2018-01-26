@@ -1,0 +1,96 @@
+/* 
+  Localizable.strings
+  Emojilist
+
+  Created by Thiago Ricieri on 10/01/2018.
+  Copyright © 2018 Ghost Ship. All rights reserved.
+*/
+
+// Base
+"OK" = "OK";
+"Yes" = "Yes";
+"No" = "No";
+"Warning" = "Warning!";
+"Success" = "Success!";
+"Dismiss" = "Dismiss";
+"Cancel" = "Cancel";
+"Shared" = "Shared!";
+
+// Errors
+"Email.Error" = "Unfortunately, your device is not configured to send emails. Please, send a message to buh@ghostship.co to contact us.";
+
+// Pack
+"Pack.EmojiThings" = "Things' Emojis!";
+"Pack.AllEmojis" = "All Emojis!";
+
+// Lists
+"Lists.Title" = "MOJILIST";
+"Lists.New" = "New";
+"Lists.Settings" = "Settings";
+"Lists.Empty" = "No list!";
+"Lists.Empty.Msg" = "You will save much more time by creating visual list. Use these lists for your groceries, shopping items and more!";
+
+// Using List
+"UsingList.Done" = "Done!";
+"UsingList.Settings.Title" = "List's Settings";
+"UsingList.Settings.Msg" = "You can remove this list from your device or share an image of it with friends by text or share it on your social networks.";
+"UsingList.Settings.Redo" = "Restart this list.";
+"UsingList.Settings.DeleteList" = "Delete this list";
+"UsingList.Delete.Msg" = "Just in case, please confirm again you want to delete this list. This action cannot be undone.";
+"UsingList.Settings.DeleteListConfirmation" = "Delete the list";
+"UsingList.Settings.Edit" = "Edit the list";
+
+// Share
+"Share.Credits1" = "Created with Mojilist";
+"Share.Credits2" = "https://ghostship.co/mojilist";
+
+// Create List
+"CreateList.Title" = "New List";
+"CreateList.Text.Placeholder" = "Groceries";
+"CreateList.Label" = "How do you want to call it?";
+"CreateList.Hint" = "Tip: groceries, supermarket or shopping items can be quickly created visually. You will select emoji items in the next step. Have fun!";
+"CreateList.Next" = "Next";
+
+// Select emojis
+"SelectEmojis.Title" = "What goes into the list?";
+"SelectEmojis.Create" = "Create";
+"SelectEmojis.Update" = "Update";
+"SelectEmojis.Clear" = "Clear";
+"SelectEmojis.SelectPack" = "Selected Pack: ";
+"SelectEmojis.ItemsInList" = "Items in the list. Touch in one to remove it, if needed.";
+
+// Select Pack
+"SelectPack.Title" = "Packs";
+
+// About
+"About.Title" = "Settings";
+"About.Settings" = "Customize your App!";
+"About.About" = "About";
+"About.Promo" = "Share";
+"About.Follow" = "Follow";
+"About.MoreApps" = "More apps!";
+"About.Settings.DefaultPack" = "Default pack: ";
+"About.Settings.Theme" = "Theme used: ";
+"About.Promo.Signup" = "Signup to our list!";
+"About.Promo.Share" = "Share this app with friends";
+"About.Promo.Rate" = "Rate the app ❤️";
+"About.Follow.Instagram" = "Instagram";
+"About.Follow.Facebook" = "Facebook";
+"About.Follow.Twitter" = "Twitter";
+"About.Follow.Blog" = "Visit the Blog";
+"About.About.Contact" = "Contact the developer";
+"About.About.Feature" = "Send an opinion";
+"About.About.Version" = "App version";
+"About.Share.Copy" = "Download Mojilist, a visual alternative for your everyday's lists!";
+
+// Change Theme
+"ChangeTheme.Title" = "Themes";
+
+// Themes
+"Theme.Basic" = "🌞 Mojilist by Day";
+"Theme.Dark" = "🌚 Mojilist by Night";
+"Theme.Greeny" = "🍁 Green leaves";
+"Theme.Blue" = "🌊 Ocean waves";
+"Theme.Drag" = "💄 Charm";
+"Theme.Dracula" = "💥 Sweet Dreams";
+"Theme.Candy" = "🍭 Sugar Rush";

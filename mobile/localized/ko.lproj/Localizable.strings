@@ -1,0 +1,96 @@
+/* 
+  Localizable.strings
+  Emojilist
+
+  Created by Thiago Ricieri on 10/01/2018.
+  Copyright © 2018 Ghost Ship. All rights reserved.
+*/
+
+// Base
+"OK" = "OK";
+"Yes" = "예";
+"No" = "아니";
+"Warning" = "경고!";
+"Success" = "성공!";
+"Dismiss" = "버리다";
+"Cancel" = "취소";
+"Shared" = "공유 된!";
+
+// Errors
+"Email.Error" = "안타깝게도 기기가 이메일을 보내도록 설정되어 있지 않습니다. buh@ghostship.co로 연락하여 저희에게 연락하십시오.";
+
+// Pack
+"Pack.EmojiThings" = "이모티콘!";
+"Pack.AllEmojis" = "모든 이모티콘!";
+
+// Lists
+"Lists.Title" = "MOJILIST";
+"Lists.New" = "새로운";
+"Lists.Settings" = "설정";
+"Lists.Empty" = "목록이 없습니다!";
+"Lists.Empty.Msg" = "시각적 목록을 작성하면 훨씬 더 많은 시간을 절약 할 수 있습니다. 식료품 점, 쇼핑 용품 등을 위해이 목록을 사용하십시오!";
+
+// Using List
+"UsingList.Done" = "끝난!";
+"UsingList.Settings.Title" = "목록 설정";
+"UsingList.Settings.Msg" = "이 목록을 장치에서 제거하거나 텍스트로 친구와 이미지를 공유하거나 소셜 네트워크에서 공유 할 수 있습니다.";
+"UsingList.Settings.Redo" = "이 목록을 다시 시작하십시오.";
+"UsingList.Settings.DeleteList" = "이 목록 삭제";
+"UsingList.Delete.Msg" = "이 경우 해당 목록을 삭제할 것인지 다시 확인하십시오. 이 작업은 실행 취소 할 수 없습니다.";
+"UsingList.Settings.DeleteListConfirmation" = "목록 삭제";
+"UsingList.Settings.Edit" = "목록 수정";
+
+// Share
+"Share.Credits1" = "Mojilist로 만들었습니다.";
+"Share.Credits2" = "https://ghostship.co/mojilist";
+
+// Create List
+"CreateList.Title" = "새 목록";
+"CreateList.Text.Placeholder" = "식료 잡화류";
+"CreateList.Label" = "어떻게 부를까요?";
+"CreateList.Hint" = "팁 : 식료품 점, 슈퍼마켓 또는 쇼핑 아이템을 시각적으로 신속하게 만들 수 있습니다. 다음 단계에서 그림 이모티콘을 선택합니다. 재미있어!";
+"CreateList.Next" = "다음 것";
+
+// Select emojis
+"SelectEmojis.Title" = "무엇이 목록에 포함됩니까?";
+"SelectEmojis.Create" = "새로운";
+"SelectEmojis.Update" = "최신 정보";
+"SelectEmojis.Clear" = "명확한";
+"SelectEmojis.SelectPack" = "선택된 팩: ";
+"SelectEmojis.ItemsInList" = "목록의 항목. 필요한 경우 하나를 터치하여 제거하십시오.";
+
+// Select Pack
+"SelectPack.Title" = "팩";
+
+// About
+"About.Title" = "설정";
+"About.Settings" = "앱을 맞춤 설정하십시오!";
+"About.About" = "약";
+"About.Promo" = "몫";
+"About.Follow" = "따르다";
+"About.MoreApps" = "더 많은 애플 리케이션!";
+"About.Settings.DefaultPack" = "기본 팩: ";
+"About.Settings.Theme" = "사용한 테마: ";
+"About.Promo.Signup" = "우리 명부에 등록하십시오!";
+"About.Promo.Share" = "친구와이 앱 공유";
+"About.Promo.Rate" = "앱 평가하기 ❤️";
+"About.Follow.Instagram" = "Instagram";
+"About.Follow.Facebook" = "Facebook";
+"About.Follow.Twitter" = "Twitter";
+"About.Follow.Blog" = "블로그 방문";
+"About.About.Contact" = "개발자에게 문의하십시오.";
+"About.About.Feature" = "의견 보내기";
+"About.About.Version" = "앱 버전";
+"About.Share.Copy" = "Mojilist를 다운로드하십시오. 일상의 목록에 대한 시각적 대안!";
+
+// Change Theme
+"ChangeTheme.Title" = "테마";
+
+// Themes
+"Theme.Basic" = "🌞 일";
+"Theme.Dark" = "🌚 밤";
+"Theme.Greeny" = "🍁 나무";
+"Theme.Blue" = "🌊 파도";
+"Theme.Drag" = "💄 매력";
+"Theme.Dracula" = "💥 달콤한 꿈";
+"Theme.Candy" = "🍭 설탕 러시";
